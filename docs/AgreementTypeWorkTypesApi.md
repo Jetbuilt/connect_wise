@@ -1,0 +1,529 @@
+# ConnectWise::AgreementTypeWorkTypesApi
+
+All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**delete_finance_agreement_types_by_parent_id_worktypes_by_id**](AgreementTypeWorkTypesApi.md#delete_finance_agreement_types_by_parent_id_worktypes_by_id) | **DELETE** /finance/agreementTypes/{parentId}/worktypes/{id} | Delete AgreementTypeWorkType |
+| [**get_finance_agreement_types_by_parent_id_worktypes**](AgreementTypeWorkTypesApi.md#get_finance_agreement_types_by_parent_id_worktypes) | **GET** /finance/agreementTypes/{parentId}/worktypes | Get List of AgreementTypeWorkType |
+| [**get_finance_agreement_types_by_parent_id_worktypes_by_id**](AgreementTypeWorkTypesApi.md#get_finance_agreement_types_by_parent_id_worktypes_by_id) | **GET** /finance/agreementTypes/{parentId}/worktypes/{id} | Get AgreementTypeWorkType |
+| [**get_finance_agreement_types_by_parent_id_worktypes_count**](AgreementTypeWorkTypesApi.md#get_finance_agreement_types_by_parent_id_worktypes_count) | **GET** /finance/agreementTypes/{parentId}/worktypes/count | Get Count of AgreementTypeWorkType |
+| [**patch_finance_agreement_types_by_parent_id_worktypes_by_id**](AgreementTypeWorkTypesApi.md#patch_finance_agreement_types_by_parent_id_worktypes_by_id) | **PATCH** /finance/agreementTypes/{parentId}/worktypes/{id} | Patch AgreementTypeWorkType |
+| [**post_finance_agreement_types_by_parent_id_worktypes**](AgreementTypeWorkTypesApi.md#post_finance_agreement_types_by_parent_id_worktypes) | **POST** /finance/agreementTypes/{parentId}/worktypes | Post AgreementTypeWorkType |
+| [**put_finance_agreement_types_by_parent_id_worktypes_by_id**](AgreementTypeWorkTypesApi.md#put_finance_agreement_types_by_parent_id_worktypes_by_id) | **PUT** /finance/agreementTypes/{parentId}/worktypes/{id} | Put AgreementTypeWorkType |
+
+
+## delete_finance_agreement_types_by_parent_id_worktypes_by_id
+
+> delete_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id)
+
+Delete AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+id = 56 # Integer | worktypeId
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+
+begin
+  # Delete AgreementTypeWorkType
+  api_instance.delete_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id)
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->delete_finance_agreement_types_by_parent_id_worktypes_by_id: #{e}"
+end
+```
+
+#### Using the delete_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> delete_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id)
+
+```ruby
+begin
+  # Delete AgreementTypeWorkType
+  data, status_code, headers = api_instance.delete_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->delete_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | worktypeId |  |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## get_finance_agreement_types_by_parent_id_worktypes
+
+> <Array<AgreementTypeWorkType>> get_finance_agreement_types_by_parent_id_worktypes(parent_id, client_id, opts)
+
+Get List of AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get List of AgreementTypeWorkType
+  result = api_instance.get_finance_agreement_types_by_parent_id_worktypes(parent_id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes: #{e}"
+end
+```
+
+#### Using the get_finance_agreement_types_by_parent_id_worktypes_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<AgreementTypeWorkType>>, Integer, Hash)> get_finance_agreement_types_by_parent_id_worktypes_with_http_info(parent_id, client_id, opts)
+
+```ruby
+begin
+  # Get List of AgreementTypeWorkType
+  data, status_code, headers = api_instance.get_finance_agreement_types_by_parent_id_worktypes_with_http_info(parent_id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<AgreementTypeWorkType>>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Array&lt;AgreementTypeWorkType&gt;**](AgreementTypeWorkType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
+
+## get_finance_agreement_types_by_parent_id_worktypes_by_id
+
+> <AgreementTypeWorkType> get_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, opts)
+
+Get AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+id = 56 # Integer | worktypeId
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get AgreementTypeWorkType
+  result = api_instance.get_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes_by_id: #{e}"
+end
+```
+
+#### Using the get_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementTypeWorkType>, Integer, Hash)> get_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, opts)
+
+```ruby
+begin
+  # Get AgreementTypeWorkType
+  data, status_code, headers = api_instance.get_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementTypeWorkType>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | worktypeId |  |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**AgreementTypeWorkType**](AgreementTypeWorkType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
+
+## get_finance_agreement_types_by_parent_id_worktypes_count
+
+> <Count> get_finance_agreement_types_by_parent_id_worktypes_count(parent_id, client_id, opts)
+
+Get Count of AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get Count of AgreementTypeWorkType
+  result = api_instance.get_finance_agreement_types_by_parent_id_worktypes_count(parent_id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes_count: #{e}"
+end
+```
+
+#### Using the get_finance_agreement_types_by_parent_id_worktypes_count_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Count>, Integer, Hash)> get_finance_agreement_types_by_parent_id_worktypes_count_with_http_info(parent_id, client_id, opts)
+
+```ruby
+begin
+  # Get Count of AgreementTypeWorkType
+  data, status_code, headers = api_instance.get_finance_agreement_types_by_parent_id_worktypes_count_with_http_info(parent_id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Count>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->get_finance_agreement_types_by_parent_id_worktypes_count_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Count**](Count.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
+
+## patch_finance_agreement_types_by_parent_id_worktypes_by_id
+
+> <AgreementTypeWorkType> patch_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, patch_operation)
+
+Patch AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+id = 56 # Integer | worktypeId
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+patch_operation = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | List of PatchOperation
+
+begin
+  # Patch AgreementTypeWorkType
+  result = api_instance.patch_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, patch_operation)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->patch_finance_agreement_types_by_parent_id_worktypes_by_id: #{e}"
+end
+```
+
+#### Using the patch_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementTypeWorkType>, Integer, Hash)> patch_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+
+```ruby
+begin
+  # Patch AgreementTypeWorkType
+  data, status_code, headers = api_instance.patch_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementTypeWorkType>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->patch_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | worktypeId |  |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **patch_operation** | [**Array&lt;PatchOperation&gt;**](PatchOperation.md) | List of PatchOperation |  |
+
+### Return type
+
+[**AgreementTypeWorkType**](AgreementTypeWorkType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
+
+## post_finance_agreement_types_by_parent_id_worktypes
+
+> <AgreementTypeWorkType> post_finance_agreement_types_by_parent_id_worktypes(parent_id, client_id, agreement_type_work_type)
+
+Post AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+agreement_type_work_type = ConnectWise::AgreementTypeWorkType.new({rate_type: 'AdjAmount', bill_time: 'Billable', overage_rate_type: 'AdjAmount'}) # AgreementTypeWorkType | workType
+
+begin
+  # Post AgreementTypeWorkType
+  result = api_instance.post_finance_agreement_types_by_parent_id_worktypes(parent_id, client_id, agreement_type_work_type)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->post_finance_agreement_types_by_parent_id_worktypes: #{e}"
+end
+```
+
+#### Using the post_finance_agreement_types_by_parent_id_worktypes_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementTypeWorkType>, Integer, Hash)> post_finance_agreement_types_by_parent_id_worktypes_with_http_info(parent_id, client_id, agreement_type_work_type)
+
+```ruby
+begin
+  # Post AgreementTypeWorkType
+  data, status_code, headers = api_instance.post_finance_agreement_types_by_parent_id_worktypes_with_http_info(parent_id, client_id, agreement_type_work_type)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementTypeWorkType>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->post_finance_agreement_types_by_parent_id_worktypes_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **agreement_type_work_type** | [**AgreementTypeWorkType**](AgreementTypeWorkType.md) | workType |  |
+
+### Return type
+
+[**AgreementTypeWorkType**](AgreementTypeWorkType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
+
+## put_finance_agreement_types_by_parent_id_worktypes_by_id
+
+> <AgreementTypeWorkType> put_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, agreement_type_work_type)
+
+Put AgreementTypeWorkType
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementTypeWorkTypesApi.new
+id = 56 # Integer | worktypeId
+parent_id = 56 # Integer | agreementTypeId
+client_id = 'client_id_example' # String | 
+agreement_type_work_type = ConnectWise::AgreementTypeWorkType.new({rate_type: 'AdjAmount', bill_time: 'Billable', overage_rate_type: 'AdjAmount'}) # AgreementTypeWorkType | workType
+
+begin
+  # Put AgreementTypeWorkType
+  result = api_instance.put_finance_agreement_types_by_parent_id_worktypes_by_id(id, parent_id, client_id, agreement_type_work_type)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->put_finance_agreement_types_by_parent_id_worktypes_by_id: #{e}"
+end
+```
+
+#### Using the put_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementTypeWorkType>, Integer, Hash)> put_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, agreement_type_work_type)
+
+```ruby
+begin
+  # Put AgreementTypeWorkType
+  data, status_code, headers = api_instance.put_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info(id, parent_id, client_id, agreement_type_work_type)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementTypeWorkType>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementTypeWorkTypesApi->put_finance_agreement_types_by_parent_id_worktypes_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | worktypeId |  |
+| **parent_id** | **Integer** | agreementTypeId |  |
+| **client_id** | **String** |  |  |
+| **agreement_type_work_type** | [**AgreementTypeWorkType**](AgreementTypeWorkType.md) | workType |  |
+
+### Return type
+
+[**AgreementTypeWorkType**](AgreementTypeWorkType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+
