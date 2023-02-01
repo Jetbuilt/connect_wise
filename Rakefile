@@ -5,7 +5,7 @@ require 'rubocop/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 RuboCop::RakeTask.new
 
-task default: :spec
+task default: %i[spec rubocop]
 
 desc 'Runs openapi-generator generate from ./openapi.json, and then rubocop:autocorrect'
 task :generate do
