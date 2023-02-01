@@ -19,7 +19,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'faraday', '>= 1.0.1', '< 3.0'
   s.add_runtime_dependency 'faraday-multipart'
 
-  s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
+  s.add_development_dependency 'rake', '~> 13.0'
+  s.add_development_dependency 'rspec', '~> 3.12'
+  s.add_development_dependency 'rubocop', '~> 1.44.1'
 
   s.files         = `find *`.split("\n").uniq.sort.reject(&:empty?)
   s.executables   = []
