@@ -316,7 +316,7 @@ module ConnectWise
 
     def build_request_url(path, opts = {})
       # Add leading and trailing slashes to path
-      path = "/#{path}".gsub(%r{/+}, '/')
+      path = "/#{path}".squeeze('/')
       @config.base_url(opts[:operation]) + path
     end
 

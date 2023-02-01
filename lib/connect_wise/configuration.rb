@@ -178,13 +178,13 @@ module ConnectWise
 
     def base_path=(base_path)
       # Add leading and trailing slashes to base_path
-      @base_path = "/#{base_path}".gsub(%r{/+}, '/')
+      @base_path = "/#{base_path}".squeeze('/')
       @base_path = '' if @base_path == '/'
     end
 
     # Returns base URL for specified operation based on server settings
     def base_url(_operation = nil)
-      "#{scheme}://#{[host, base_path].join('/').gsub(%r{/+}, '/')}".sub(%r{/+\z}, '')
+      "#{scheme}://#{[host, base_path].join('/').squeeze('/')}".sub(%r{/+\z}, '')
     end
 
     # Gets API key (with prefix if set).
