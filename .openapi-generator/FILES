@@ -1,7 +1,5 @@
 .gitignore
 .rspec
-.rubocop.yml
-Gemfile
 README.md
 connect_wise.gemspec
 docs/AccountingBatch.md

@@ -24,5 +24,8 @@
 
 Rakefile
 .gitlab-ci.yml
+.rubocop.yml
 .travis.yml
 git_push.sh
+Gemfile
+connect_wise.gemspec
