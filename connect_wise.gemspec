@@ -25,7 +25,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop-performance', '~> 1.15.0'
   s.add_development_dependency 'rubocop-rake', '~> 0.6.0'
 
-  s.files         = Dir['lib/**/*.rb']
+  s.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(docs|spec|templates)/})
+  end
+
   s.executables   = []
   s.require_paths = ['lib']
 end
