@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop-performance', '~> 1.15.0'
   s.add_development_dependency 'rubocop-rake', '~> 0.6.0'
 
-  s.files         = `find *`.split("\n").uniq.sort.reject(&:empty?)
+  s.files         = Dir['lib/**/*.rb']
   s.executables   = []
   s.require_paths = ['lib']
 end
