@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | Invoice Template Setup Id | [optional] |
+| **id** | **Integer** | Gets or sets invoice Template Setup Id. | [optional] |
 | **name** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 

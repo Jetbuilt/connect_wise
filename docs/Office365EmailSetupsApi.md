@@ -1,12 +1,13 @@
 # ConnectWise::Office365EmailSetupsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**delete_system_office365_email_setups_by_id**](Office365EmailSetupsApi.md#delete_system_office365_email_setups_by_id) | **DELETE** /system/office365/emailSetups/{id} | Delete Office365EmailSetup |
 | [**get_system_office365_email_setups**](Office365EmailSetupsApi.md#get_system_office365_email_setups) | **GET** /system/office365/emailSetups | Get List of Office365EmailSetup |
 | [**get_system_office365_email_setups_by_id**](Office365EmailSetupsApi.md#get_system_office365_email_setups_by_id) | **GET** /system/office365/emailSetups/{id} | Get Office365EmailSetup |
+| [**get_system_office365_email_setups_by_id_get_emails**](Office365EmailSetupsApi.md#get_system_office365_email_setups_by_id_get_emails) | **GET** /system/office365/emailSetups/{id}/getEmails/ | Get List of UserEmails from inbound ticket service |
 | [**get_system_office365_email_setups_count**](Office365EmailSetupsApi.md#get_system_office365_email_setups_count) | **GET** /system/office365/emailSetups/count | Get Count of Office365EmailSetup |
 | [**patch_system_office365_email_setups_by_id**](Office365EmailSetupsApi.md#patch_system_office365_email_setups_by_id) | **PATCH** /system/office365/emailSetups/{id} | Patch Office365EmailSetup |
 | [**post_system_office365_email_setups**](Office365EmailSetupsApi.md#post_system_office365_email_setups) | **POST** /system/office365/emailSetups | Post Office365EmailSetup |
@@ -155,7 +156,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_office365_email_setups_by_id
@@ -237,7 +238,89 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_system_office365_email_setups_by_id_get_emails
+
+> <Array<UserEmail>> get_system_office365_email_setups_by_id_get_emails(id, client_id, opts)
+
+Get List of UserEmails from inbound ticket service
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::Office365EmailSetupsApi.new
+id = 56 # Integer | emailSetupId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get List of UserEmails from inbound ticket service
+  result = api_instance.get_system_office365_email_setups_by_id_get_emails(id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling Office365EmailSetupsApi->get_system_office365_email_setups_by_id_get_emails: #{e}"
+end
+```
+
+#### Using the get_system_office365_email_setups_by_id_get_emails_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<UserEmail>>, Integer, Hash)> get_system_office365_email_setups_by_id_get_emails_with_http_info(id, client_id, opts)
+
+```ruby
+begin
+  # Get List of UserEmails from inbound ticket service
+  data, status_code, headers = api_instance.get_system_office365_email_setups_by_id_get_emails_with_http_info(id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<UserEmail>>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling Office365EmailSetupsApi->get_system_office365_email_setups_by_id_get_emails_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | emailSetupId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Array&lt;UserEmail&gt;**](UserEmail.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_office365_email_setups_count
@@ -317,7 +400,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_office365_email_setups_by_id
@@ -383,7 +466,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_office365_email_setups
@@ -400,7 +483,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::Office365EmailSetupsApi.new
 client_id = 'client_id_example' # String | 
-office365_email_setup = ConnectWise::Office365EmailSetup.new({name: 'name_example', username: 'username_example', inbox_folder: 'inbox_folder_example', processed_folder: 'processed_folder_example', failed_folder: 'failed_folder_example'}) # Office365EmailSetup | entity
+office365_email_setup = ConnectWise::Office365EmailSetup.new({name: 'name_example', inbox_folder: 'inbox_folder_example', processed_folder: 'processed_folder_example', failed_folder: 'failed_folder_example'}) # Office365EmailSetup | entity
 
 begin
   # Post Office365EmailSetup
@@ -447,7 +530,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_office365_email_setups_by_id_authorize
@@ -511,7 +594,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_office365_email_setups_by_id_test_connection
@@ -575,7 +658,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_system_office365_email_setups_by_id
@@ -593,7 +676,7 @@ require 'connect_wise'
 api_instance = ConnectWise::Office365EmailSetupsApi.new
 id = 56 # Integer | emailSetupId
 client_id = 'client_id_example' # String | 
-office365_email_setup = ConnectWise::Office365EmailSetup.new({name: 'name_example', username: 'username_example', inbox_folder: 'inbox_folder_example', processed_folder: 'processed_folder_example', failed_folder: 'failed_folder_example'}) # Office365EmailSetup | entity
+office365_email_setup = ConnectWise::Office365EmailSetup.new({name: 'name_example', inbox_folder: 'inbox_folder_example', processed_folder: 'processed_folder_example', failed_folder: 'failed_folder_example'}) # Office365EmailSetup | entity
 
 begin
   # Put Office365EmailSetup
@@ -641,5 +724,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **kpi** | [**KPIReference**](KPIReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **kpi** | [**KPIReference**](KPIReference.md) |  | [optional] |
 | **sort_order** | **Integer** |  | [optional] |
 | **report_card** | [**ReportCardReference**](ReportCardReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -16,8 +16,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::ReportCardDetail.new(
-  id: null,
   kpi: null,
+  id: null,
   sort_order: null,
   report_card: null,
   _info: null

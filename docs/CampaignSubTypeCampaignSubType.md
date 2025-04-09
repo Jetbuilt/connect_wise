@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**CampaignTypeReference**](CampaignTypeReference.md) |  |  |
 | **name** | **String** |  Max length: 100; |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**CampaignTypeReference**](CampaignTypeReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -15,9 +15,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::CampaignSubTypeCampaignSubType.new(
+  type: null,
   name: null,
   id: null,
-  type: null,
   _info: null
 )
 ```

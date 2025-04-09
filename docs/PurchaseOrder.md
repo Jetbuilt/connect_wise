@@ -4,10 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **status** | [**PurchaseOrderStatusReference**](PurchaseOrderStatusReference.md) |  |  |
+| **terms** | [**BillingTermsReference**](BillingTermsReference.md) |  |  |
+| **vendor_company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **business_unit_id** | **Integer** |  | [optional] |
+| **business_unit** | [**BillingUnitReference**](BillingUnitReference.md) |  | [optional] |
 | **cancel_reason** | **String** |  | [optional] |
 | **closed_flag** | **Boolean** | The closed flag can only be updated via updating the purchase order status to a closed/open status. | [optional] |
+| **closed_by** | **String** |  | [optional] |
 | **customer_city** | **String** |  | [optional] |
 | **customer_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **customer_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
@@ -29,29 +34,28 @@
 | **freight_tax_total** | **Float** |  | [optional] |
 | **internal_notes** | **String** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **po_date** | **Time** |  Required On Updates; | [optional] |
 | **po_number** | **String** |  Required On Updates; Max length: 50; | [optional] |
 | **sales_tax** | **Float** |  | [optional] |
 | **shipment_date** | **Time** |  | [optional] |
 | **shipment_method** | [**ShipmentMethodReference**](ShipmentMethodReference.md) |  | [optional] |
 | **shipping_instructions** | **String** |  | [optional] |
-| **status** | [**PurchaseOrderStatusReference**](PurchaseOrderStatusReference.md) |  | [optional] |
 | **sub_total** | **Float** |  | [optional] |
 | **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **tax_freight_flag** | **Boolean** |  | [optional] |
 | **tax_po_flag** | **Boolean** |  | [optional] |
-| **terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] |
 | **total** | **Float** |  | [optional] |
 | **tracking_number** | **String** |  Max length: 50; | [optional] |
-| **update_shipment_info** | **Boolean** | Determines whether or not to update all of the shipment info for each associated line item when new shipment info is passed in | [optional] |
-| **update_vendor_order_number** | **Boolean** | Determines whether or not to update vendor order number for each associated line item when new vendor order number is passed in | [optional] |
-| **vendor_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
+| **update_shipment_info** | **Boolean** | Determines whether or not to update all of the shipment info for each associated line item when new shipment info is passed in. | [optional] |
+| **update_vendor_order_number** | **Boolean** | Determines whether or not to update vendor order number for each associated line item when new vendor order number is passed in. | [optional] |
 | **vendor_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **vendor_invoice_date** | **Time** |  | [optional] |
 | **vendor_invoice_number** | **String** |  Max length: 50; | [optional] |
 | **vendor_order_number** | **String** |  Max length: 50; | [optional] |
 | **vendor_site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] |
+| **warehouse_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
@@ -62,10 +66,15 @@
 require 'connect_wise'
 
 instance = ConnectWise::PurchaseOrder.new(
+  status: null,
+  terms: null,
+  vendor_company: null,
   id: null,
   business_unit_id: null,
+  business_unit: null,
   cancel_reason: null,
   closed_flag: null,
+  closed_by: null,
   customer_city: null,
   customer_company: null,
   customer_contact: null,
@@ -87,29 +96,28 @@ instance = ConnectWise::PurchaseOrder.new(
   freight_tax_total: null,
   internal_notes: null,
   location_id: null,
+  location: null,
   po_date: null,
   po_number: null,
   sales_tax: null,
   shipment_date: null,
   shipment_method: null,
   shipping_instructions: null,
-  status: null,
   sub_total: null,
   tax_code: null,
   tax_freight_flag: null,
   tax_po_flag: null,
-  terms: null,
   total: null,
   tracking_number: null,
   update_shipment_info: null,
   update_vendor_order_number: null,
-  vendor_company: null,
   vendor_contact: null,
   vendor_invoice_date: null,
   vendor_invoice_number: null,
   vendor_order_number: null,
   vendor_site: null,
   warehouse: null,
+  warehouse_contact: null,
   currency: null,
   _info: null,
   custom_fields: null

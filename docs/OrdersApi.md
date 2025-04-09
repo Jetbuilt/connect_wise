@@ -1,12 +1,13 @@
 # ConnectWise::OrdersApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**delete_sales_orders_by_id**](OrdersApi.md#delete_sales_orders_by_id) | **DELETE** /sales/orders/{id} | Delete Order |
 | [**get_sales_orders**](OrdersApi.md#get_sales_orders) | **GET** /sales/orders | Get List of Order |
 | [**get_sales_orders_by_id**](OrdersApi.md#get_sales_orders_by_id) | **GET** /sales/orders/{id} | Get Order |
+| [**get_sales_orders_conversions_by_id**](OrdersApi.md#get_sales_orders_conversions_by_id) | **GET** /sales/orders/conversions/{id} | Get Conversion |
 | [**get_sales_orders_count**](OrdersApi.md#get_sales_orders_count) | **GET** /sales/orders/count | Get Count of Order |
 | [**patch_sales_orders_by_id**](OrdersApi.md#patch_sales_orders_by_id) | **PATCH** /sales/orders/{id} | Patch Order |
 | [**post_sales_orders**](OrdersApi.md#post_sales_orders) | **POST** /sales/orders | Post List of Order |
@@ -154,7 +155,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_orders_by_id
@@ -236,7 +237,89 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_sales_orders_conversions_by_id
+
+> <Array<SalesConversion>> get_sales_orders_conversions_by_id(id, client_id, opts)
+
+Get Conversion
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::OrdersApi.new
+id = 56 # Integer | orderId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get Conversion
+  result = api_instance.get_sales_orders_conversions_by_id(id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling OrdersApi->get_sales_orders_conversions_by_id: #{e}"
+end
+```
+
+#### Using the get_sales_orders_conversions_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SalesConversion>>, Integer, Hash)> get_sales_orders_conversions_by_id_with_http_info(id, client_id, opts)
+
+```ruby
+begin
+  # Get Conversion
+  data, status_code, headers = api_instance.get_sales_orders_conversions_by_id_with_http_info(id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SalesConversion>>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling OrdersApi->get_sales_orders_conversions_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | orderId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SalesConversion&gt;**](SalesConversion.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_orders_count
@@ -316,7 +399,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_orders_by_id
@@ -382,7 +465,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_orders
@@ -399,7 +482,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::OrdersApi.new
 client_id = 'client_id_example' # String | 
-order = ConnectWise::Order.new # Order | order
+order = ConnectWise::Order.new({company: ConnectWise::CompanyReference.new, status: ConnectWise::OrderStatusReference.new, sales_rep: ConnectWise::MemberReference.new}) # Order | order
 
 begin
   # Post List of Order
@@ -446,7 +529,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_orders_by_id_convert_to_service_ticket
@@ -510,7 +593,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_orders_by_id
@@ -528,7 +611,7 @@ require 'connect_wise'
 api_instance = ConnectWise::OrdersApi.new
 id = 56 # Integer | orderId
 client_id = 'client_id_example' # String | 
-order = ConnectWise::Order.new # Order | order
+order = ConnectWise::Order.new({company: ConnectWise::CompanyReference.new, status: ConnectWise::OrderStatusReference.new, sales_rep: ConnectWise::MemberReference.new}) # Order | order
 
 begin
   # Put Order
@@ -576,5 +659,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

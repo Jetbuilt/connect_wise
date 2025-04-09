@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **group** | [**GroupReference**](GroupReference.md) |  |  |
 | **id** | **Integer** |  Required On Updates; | [optional] |
-| **group** | [**GroupReference**](GroupReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **default_contact_flag** | **Boolean** |  | [optional] |
 | **all_contacts_flag** | **Boolean** |  | [optional] |
@@ -20,8 +20,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::CompanyGroup.new(
-  id: null,
   group: null,
+  id: null,
   company: null,
   default_contact_flag: null,
   all_contacts_flag: null,

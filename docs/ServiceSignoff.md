@@ -12,12 +12,12 @@
 | **billing_terms_flag** | **Boolean** |  | [optional] |
 | **summary_flag** | **Boolean** |  | [optional] |
 | **discussion_flag** | **Boolean** |  | [optional] |
-| **task_flag** | **Boolean** | On add/post, if this is set to true but no value is set for task, task is defaulted to ServiceTasks.All | [optional] |
-| **task** | **String** | On add/post, if this is set but no value is set for taskFlag, taskFlag is set to true | [optional] |
+| **task_flag** | **Boolean** | On add/post, if this is set to true but no value is set for task, task is defaulted to ServiceTasks.All. | [optional] |
+| **task** | **String** | On add/post, if this is set but no value is set for taskFlag, taskFlag is set to true. | [optional] |
 | **configurations_flag** | **Boolean** |  | [optional] |
 | **internal_notes_flag** | **Boolean** |  | [optional] |
 | **resolution_flag** | **Boolean** |  | [optional] |
-| **time_flag** | **Boolean** | On add/post, if any time related flag is set to true, this is also set to true | [optional] |
+| **time_flag** | **Boolean** | On add/post, if any time related flag is set to true, this is also set to true. | [optional] |
 | **time_member_flag** | **Boolean** |  | [optional] |
 | **time_date_flag** | **Boolean** |  | [optional] |
 | **time_start_end_flag** | **Boolean** |  | [optional] |
@@ -31,7 +31,7 @@
 | **time_manual_flag** | **Boolean** |  | [optional] |
 | **time_manual_entry** | **Integer** |  | [optional] |
 | **time_tax_flag** | **Boolean** |  | [optional] |
-| **expense_flag** | **Boolean** | On add/post, if any expense related flag is set to true, this is also set to true | [optional] |
+| **expense_flag** | **Boolean** | On add/post, if any expense related flag is set to true, this is also set to true. | [optional] |
 | **expense_date_flag** | **Boolean** |  | [optional] |
 | **expense_member_flag** | **Boolean** |  | [optional] |
 | **expense_type_flag** | **Boolean** |  | [optional] |
@@ -42,7 +42,7 @@
 | **expense_tax_flag** | **Boolean** |  | [optional] |
 | **expense_manual_flag** | **Boolean** |  | [optional] |
 | **expense_manual_entry** | **Integer** |  | [optional] |
-| **product_flag** | **Boolean** | On add/post, if any product related flag is set to true, this is also set to true | [optional] |
+| **product_flag** | **Boolean** | On add/post, if any product related flag is set to true, this is also set to true. | [optional] |
 | **product_description_flag** | **Boolean** |  | [optional] |
 | **product_bill_flag** | **Boolean** |  | [optional] |
 | **product_quantity_flag** | **Boolean** |  | [optional] |
@@ -53,10 +53,10 @@
 | **product_manual_entry** | **Integer** |  | [optional] |
 | **product_tax_flag** | **Boolean** |  | [optional] |
 | **technician_signoff_flag** | **Boolean** |  | [optional] |
-| **customer_signoff_text_flag** | **Boolean** | On add/post, if customerSignoffText.Length &gt; 0, this is set to true | [optional] |
+| **customer_signoff_text_flag** | **Boolean** | On add/post, if customerSignoffText.Length &gt; 0, this is set to true. | [optional] |
 | **customer_signoff_text** | **String** |  Max length: 4000; | [optional] |
 | **customer_signoff_fields_flag** | **Boolean** |  | [optional] |
-| **billing_methods_text_flag** | **Boolean** | On add/post, if billingMethodsText.Length &gt; 0, this is set to true | [optional] |
+| **billing_methods_text_flag** | **Boolean** | On add/post, if billingMethodsText.Length &gt; 0, this is set to true. | [optional] |
 | **billing_methods_text** | **String** |  Max length: 2000; | [optional] |
 | **credit_card_fields_flag** | **Boolean** |  | [optional] |
 | **default_ff_flag** | **Boolean** |  | [optional] |

@@ -11,10 +11,10 @@
 | **entity** | [**IRestIdentifiedItem**](IRestIdentifiedItem.md) |  | [optional] |
 | **filters** | [**FilterValues**](FilterValues.md) |  | [optional] |
 | **page** | [**PageValues**](PageValues.md) |  | [optional] |
-| **format** | **String** |  | [optional] |
 | **fields** | **String** |  | [optional] |
 | **misc_properties** | **Hash&lt;String, Object&gt;** |  | [optional] |
 | **member_context** | **String** |  | [optional] |
+| **update_only_ces_properties** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -29,10 +29,10 @@ instance = ConnectWise::ApiRequest.new(
   entity: null,
   filters: null,
   page: null,
-  format: null,
   fields: null,
   misc_properties: null,
-  member_context: null
+  member_context: null,
+  update_only_ces_properties: null
 )
 ```
 

@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -16,8 +16,8 @@ require 'connect_wise'
 
 instance = ConnectWise::Certification.new(
   name: null,
-  id: null,
   company: null,
+  id: null,
   _info: null
 )
 ```

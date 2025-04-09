@@ -1,6 +1,6 @@
 # ConnectWise::ProjectBoardTeamMembersApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -160,7 +160,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_boards_by_grandparent_id_teams_by_parent_id_members_by_id
@@ -246,7 +246,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_project_boards_by_grandparent_id_teams_by_parent_id_members_by_id
@@ -316,7 +316,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_boards_by_grandparent_id_teams_by_parent_id_members
@@ -335,7 +335,7 @@ api_instance = ConnectWise::ProjectBoardTeamMembersApi.new
 parent_id = 56 # Integer | teamId
 grandparent_id = 56 # Integer | boardId
 client_id = 'client_id_example' # String | 
-project_board_team_member = ConnectWise::ProjectBoardTeamMember.new # ProjectBoardTeamMember | teamMember
+project_board_team_member = ConnectWise::ProjectBoardTeamMember.new({member: ConnectWise::MemberReference.new, project_role: ConnectWise::ProjectRoleReference.new}) # ProjectBoardTeamMember | teamMember
 
 begin
   # Post ProjectBoardTeamMember
@@ -384,7 +384,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_project_boards_by_grandparent_id_teams_by_parent_id_members_by_id
@@ -404,7 +404,7 @@ id = 56 # Integer | memberId
 parent_id = 56 # Integer | teamId
 grandparent_id = 56 # Integer | boardId
 client_id = 'client_id_example' # String | 
-project_board_team_member = ConnectWise::ProjectBoardTeamMember.new # ProjectBoardTeamMember | teamMember
+project_board_team_member = ConnectWise::ProjectBoardTeamMember.new({member: ConnectWise::MemberReference.new, project_role: ConnectWise::ProjectRoleReference.new}) # ProjectBoardTeamMember | teamMember
 
 begin
   # Put ProjectBoardTeamMember
@@ -454,5 +454,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

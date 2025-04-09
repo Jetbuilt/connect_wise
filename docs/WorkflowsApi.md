@@ -1,6 +1,6 @@
 # ConnectWise::WorkflowsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -154,7 +154,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_workflows_by_id
@@ -236,7 +236,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_workflows_count
@@ -316,7 +316,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_workflows_by_id
@@ -382,7 +382,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_workflows
@@ -399,7 +399,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::WorkflowsApi.new
 client_id = 'client_id_example' # String | 
-workflow = ConnectWise::Workflow.new({name: 'name_example'}) # Workflow | workflow
+workflow = ConnectWise::Workflow.new({name: 'name_example', table_type: ConnectWise::WorkflowTableTypeReference.new}) # Workflow | workflow
 
 begin
   # Post Workflow
@@ -446,7 +446,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_workflows_by_id_copy
@@ -510,7 +510,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_system_workflows_by_id
@@ -528,7 +528,7 @@ require 'connect_wise'
 api_instance = ConnectWise::WorkflowsApi.new
 id = 56 # Integer | workflowId
 client_id = 'client_id_example' # String | 
-workflow = ConnectWise::Workflow.new({name: 'name_example'}) # Workflow | workflow
+workflow = ConnectWise::Workflow.new({name: 'name_example', table_type: ConnectWise::WorkflowTableTypeReference.new}) # Workflow | workflow
 
 begin
   # Put Workflow
@@ -576,5 +576,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

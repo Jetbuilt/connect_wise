@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **structure_level** | [**CorporateStructureLevelReference**](CorporateStructureLevelReference.md) |  |  |
 | **name** | **String** |  Max length: 50; |  |
 | **id** | **Integer** |  | [optional] |
 | **owner_level_id** | **Integer** |  | [optional] |
-| **structure_level** | [**CorporateStructureLevelReference**](CorporateStructureLevelReference.md) |  | [optional] |
 | **manager** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **reports_to** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **sales_rep** | **String** |  Max length: 50; | [optional] |
@@ -35,10 +35,10 @@
 require 'connect_wise'
 
 instance = ConnectWise::Location.new(
+  structure_level: null,
   name: null,
   id: null,
   owner_level_id: null,
-  structure_level: null,
   manager: null,
   reports_to: null,
   sales_rep: null,

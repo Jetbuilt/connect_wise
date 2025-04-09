@@ -4,7 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **member** | [**MemberReference**](MemberReference.md) |  |  |
 | **status** | **String** |  |  |
+| **ticket** | [**TicketReference**](TicketReference.md) |  |  |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
 | **billable_option** | **String** |  | [optional] |
@@ -14,12 +16,10 @@
 | **id** | **Integer** |  | [optional] |
 | **internal_notes** | **String** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
-| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **mobile_guid** | **String** |  | [optional] |
 | **notes** | **String** |  Max length: 4000; | [optional] |
 | **service_status** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] |
 | **start_time** | **Time** |  | [optional] |
-| **ticket** | [**TicketReference**](TicketReference.md) |  | [optional] |
 | **ticket_mobile_guid** | **String** |  | [optional] |
 | **total_pause_time** | **Integer** |  | [optional] |
 | **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  | [optional] |
@@ -36,7 +36,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::TicketStopwatch.new(
+  member: null,
   status: null,
+  ticket: null,
   _info: null,
   agreement: null,
   billable_option: null,
@@ -46,12 +48,10 @@ instance = ConnectWise::TicketStopwatch.new(
   id: null,
   internal_notes: null,
   location_id: null,
-  member: null,
   mobile_guid: null,
   notes: null,
   service_status: null,
   start_time: null,
-  ticket: null,
   ticket_mobile_guid: null,
   total_pause_time: null,
   work_role: null,

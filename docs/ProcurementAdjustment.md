@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **identifier** | **String** |  Max length: 50; |  |
+| **type** | [**AdjustmentTypeReference**](AdjustmentTypeReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**AdjustmentTypeReference**](AdjustmentTypeReference.md) |  | [optional] |
 | **reason** | **String** |  Max length: 100; | [optional] |
 | **notes** | **String** |  | [optional] |
 | **closed_flag** | **Boolean** |  | [optional] |
@@ -22,8 +22,8 @@ require 'connect_wise'
 
 instance = ConnectWise::ProcurementAdjustment.new(
   identifier: null,
-  id: null,
   type: null,
+  id: null,
   reason: null,
   notes: null,
   closed_flag: null,

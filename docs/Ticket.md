@@ -5,13 +5,13 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **summary** | **String** |  Max length: 100; |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **record_type** | **String** |  | [optional] |
 | **board** | [**BoardReference**](BoardReference.md) |  | [optional] |
 | **status** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] |
 | **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  | [optional] |
 | **work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **site_name** | **String** |  Max length: 50; | [optional] |
 | **address_line1** | **String** |  Max length: 50; | [optional] |
@@ -37,6 +37,7 @@
 | **budget_hours** | **Float** |  | [optional] |
 | **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
+| **agreement_type** | **String** |  | [optional] |
 | **severity** | **String** |  Required On Updates; | [optional] |
 | **impact** | **String** |  Required On Updates; | [optional] |
 | **external_x_ref** | **String** |  Max length: 100; | [optional] |
@@ -49,12 +50,12 @@
 | **automatic_email_resource_flag** | **Boolean** |  | [optional] |
 | **automatic_email_cc_flag** | **Boolean** |  | [optional] |
 | **automatic_email_cc** | **String** |  Max length: 1000; | [optional] |
-| **initial_description** | **String** | Only available for POST, will not be returned in the response | [optional] |
-| **initial_internal_analysis** | **String** | Only available for POST, will not be returned in the response | [optional] |
-| **initial_resolution** | **String** | Only available for POST, will not be returned in the response | [optional] |
+| **initial_description** | **String** | Only available for POST, will not be returned in the response. | [optional] |
+| **initial_internal_analysis** | **String** | Only available for POST, will not be returned in the response. | [optional] |
+| **initial_resolution** | **String** | Only available for POST, will not be returned in the response. | [optional] |
 | **initial_description_from** | **String** |  | [optional] |
 | **contact_email_lookup** | **String** |  | [optional] |
-| **process_notifications** | **Boolean** | Can be set to false to skip notification processing when adding or updating a ticket (Defaults to True) | [optional] |
+| **process_notifications** | **Boolean** | Can be set to false to skip notification processing when adding or updating a ticket (Defaults to True). | [optional] |
 | **skip_callback** | **Boolean** |  | [optional] |
 | **closed_date** | **String** |  | [optional] |
 | **closed_by** | **String** |  | [optional] |
@@ -101,10 +102,23 @@
 | **mobile_guid** | **String** |  | [optional] |
 | **sla** | [**SLAReference**](SLAReference.md) |  | [optional] |
 | **sla_status** | **String** |  | [optional] |
+| **request_for_change_flag** | **Boolean** |  | [optional] |
 | **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] |
 | **merged_parent_ticket** | [**TicketReference**](TicketReference.md) |  | [optional] |
 | **integrator_tags** | **Array&lt;String&gt;** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **escalation_start_date_utc** | **String** |  | [optional] |
+| **escalation_level** | **Integer** |  | [optional] |
+| **minutes_before_waiting** | **Integer** |  | [optional] |
+| **responded_skipped_minutes** | **Integer** |  | [optional] |
+| **resplan_skipped_minutes** | **Integer** |  | [optional] |
+| **responded_hours** | **Float** |  | [optional] |
+| **responded_by** | **String** |  | [optional] |
+| **resplan_hours** | **Float** |  | [optional] |
+| **resplan_by** | **String** |  | [optional] |
+| **resolution_hours** | **Float** |  | [optional] |
+| **resolved_by** | **String** |  | [optional] |
+| **minutes_waiting** | **Integer** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
 ## Example
@@ -114,13 +128,13 @@ require 'connect_wise'
 
 instance = ConnectWise::Ticket.new(
   summary: null,
+  company: null,
   id: null,
   record_type: null,
   board: null,
   status: null,
   work_role: null,
   work_type: null,
-  company: null,
   site: null,
   site_name: null,
   address_line1: null,
@@ -146,6 +160,7 @@ instance = ConnectWise::Ticket.new(
   budget_hours: null,
   opportunity: null,
   agreement: null,
+  agreement_type: null,
   severity: null,
   impact: null,
   external_x_ref: null,
@@ -210,10 +225,23 @@ instance = ConnectWise::Ticket.new(
   mobile_guid: null,
   sla: null,
   sla_status: null,
+  request_for_change_flag: null,
   currency: null,
   merged_parent_ticket: null,
   integrator_tags: null,
   _info: null,
+  escalation_start_date_utc: null,
+  escalation_level: null,
+  minutes_before_waiting: null,
+  responded_skipped_minutes: null,
+  resplan_skipped_minutes: null,
+  responded_hours: null,
+  responded_by: null,
+  resplan_hours: null,
+  resplan_by: null,
+  resolution_hours: null,
+  resolved_by: null,
+  minutes_waiting: null,
   custom_fields: null
 )
 ```

@@ -9,6 +9,7 @@
 | **sequence_number** | **Integer** | Must be between 1 and 500.  This defines the order in which the custom fields will appear |  |
 | **field_type_identifier** | **String** |  |  |
 | **id** | **Integer** | ID of the custom user defined field | [optional] |
+| **screen_id** | **String** | Field ScreenID Max length: 25; | [optional] |
 | **help_text** | **String** | Help text to accompany the custom field Max length: 1000; | [optional] |
 | **number_decimals** | **Integer** | Only valid for Number or percent | [optional] |
 | **entry_type_identifier** | **String** |  | [optional] |
@@ -24,6 +25,7 @@
 | **remove_all_business_units** | **Boolean** |  | [optional] |
 | **add_all_locations** | **Boolean** |  | [optional] |
 | **remove_all_locations** | **Boolean** |  | [optional] |
+| **connect_wise_id** | **String** |  | [optional] |
 | **date_created** | **Time** | Date in UTC the custom field was created | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
@@ -38,6 +40,7 @@ instance = ConnectWise::UserDefinedField.new(
   sequence_number: null,
   field_type_identifier: null,
   id: null,
+  screen_id: null,
   help_text: null,
   number_decimals: null,
   entry_type_identifier: null,
@@ -53,6 +56,7 @@ instance = ConnectWise::UserDefinedField.new(
   remove_all_business_units: null,
   add_all_locations: null,
   remove_all_locations: null,
+  connect_wise_id: null,
   date_created: null,
   _info: null
 )

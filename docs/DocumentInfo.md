@@ -16,6 +16,8 @@
 | **read_only_flag** | **Boolean** |  | [optional] |
 | **size** | **Integer** |  | [optional] |
 | **url_flag** | **Boolean** |  | [optional] |
+| **created_on_date** | **String** |  | [optional] |
+| **document_type** | [**DocumentTypeReference**](DocumentTypeReference.md) |  | [optional] |
 | **guid** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
@@ -37,7 +39,9 @@ instance = ConnectWise::DocumentInfo.new(
   read_only_flag: null,
   size: null,
   url_flag: null,
-  guid: null,
+  created_on_date: null,
+  document_type: null,
+  guid: 00000000-0000-0000-0000-000000000000,
   _info: null
 )
 ```

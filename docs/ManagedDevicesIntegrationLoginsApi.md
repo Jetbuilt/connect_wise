@@ -1,6 +1,6 @@
 # ConnectWise::ManagedDevicesIntegrationLoginsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -76,7 +76,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_managed_devices_integrations_by_parent_id_logins
@@ -158,7 +158,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_managed_devices_integrations_by_parent_id_logins_by_id
@@ -242,7 +242,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_managed_devices_integrations_by_parent_id_logins_count
@@ -324,7 +324,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_managed_devices_integrations_by_parent_id_logins_by_id
@@ -392,7 +392,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_managed_devices_integrations_by_parent_id_logins
@@ -410,7 +410,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ManagedDevicesIntegrationLoginsApi.new
 parent_id = 56 # Integer | managedDevicesIntegrationId
 client_id = 'client_id_example' # String | 
-managed_devices_integration_login = ConnectWise::ManagedDevicesIntegrationLogin.new({username: 'username_example'}) # ManagedDevicesIntegrationLogin | login
+managed_devices_integration_login = ConnectWise::ManagedDevicesIntegrationLogin.new({username: 'username_example', member: ConnectWise::MemberReference.new}) # ManagedDevicesIntegrationLogin | login
 
 begin
   # Post ManagedDevicesIntegrationLogin
@@ -458,7 +458,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_managed_devices_integrations_by_parent_id_logins_by_id
@@ -477,7 +477,7 @@ api_instance = ConnectWise::ManagedDevicesIntegrationLoginsApi.new
 id = 56 # Integer | loginId
 parent_id = 56 # Integer | managedDevicesIntegrationId
 client_id = 'client_id_example' # String | 
-managed_devices_integration_login = ConnectWise::ManagedDevicesIntegrationLogin.new({username: 'username_example'}) # ManagedDevicesIntegrationLogin | login
+managed_devices_integration_login = ConnectWise::ManagedDevicesIntegrationLogin.new({username: 'username_example', member: ConnectWise::MemberReference.new}) # ManagedDevicesIntegrationLogin | login
 
 begin
   # Put ManagedDevicesIntegrationLogin
@@ -526,5 +526,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

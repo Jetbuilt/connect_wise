@@ -1,11 +1,12 @@
 # ConnectWise::WorkflowActionUserDefinedFieldsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**delete_system_workflows_userdefinedfields_actions_by_parent_id**](WorkflowActionUserDefinedFieldsApi.md#delete_system_workflows_userdefinedfields_actions_by_parent_id) | **DELETE** /system/workflows/userdefinedfields/actions/{parentId} | Delete WorkflowActionUserDefinedField |
-| [**get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id**](WorkflowActionUserDefinedFieldsApi.md#get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id) | **GET** /system/workflows/userdefinedfields/events{grandparentId}/actions/{parentId} | Get List of WorkflowActionUserDefinedField |
+| [**get_system_workflows_userdefinedfields_events_actions**](WorkflowActionUserDefinedFieldsApi.md#get_system_workflows_userdefinedfields_events_actions) | **GET** /system/workflows/userdefinedfields/events/actions | Get List of WorkflowActionUserDefinedField |
+| [**get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id**](WorkflowActionUserDefinedFieldsApi.md#get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id) | **GET** /system/workflows/userdefinedfields/events/{grandparentId}/actions/{parentId} | Get List of WorkflowActionUserDefinedField |
 | [**patch_system_workflows_userdefinedfields_by_id**](WorkflowActionUserDefinedFieldsApi.md#patch_system_workflows_userdefinedfields_by_id) | **PATCH** /system/workflows/userdefinedfields/{id} | Patch WorkflowActionUserDefinedField |
 | [**post_system_workflows_userdefinedfields_events_by_grandparent_id**](WorkflowActionUserDefinedFieldsApi.md#post_system_workflows_userdefinedfields_events_by_grandparent_id) | **POST** /system/workflows/userdefinedfields/events/{grandparentId} | Post WorkflowActionUserDefinedField |
 | [**put_system_workflows_userdefinedfields_by_id**](WorkflowActionUserDefinedFieldsApi.md#put_system_workflows_userdefinedfields_by_id) | **PUT** /system/workflows/userdefinedfields/{id} | Put WorkflowActionUserDefinedField |
@@ -74,9 +75,89 @@ No authorization required
 - **Accept**: Not defined
 
 
-## get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id
+## get_system_workflows_userdefinedfields_events_actions
 
-> <Array<WorkflowActionUserDefinedField>> get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id(parent_id, grandparent_id, client_id, opts)
+> <Array<WorkflowActionUserDefinedField>> get_system_workflows_userdefinedfields_events_actions(client_id, opts)
+
+Get List of WorkflowActionUserDefinedField
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::WorkflowActionUserDefinedFieldsApi.new
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get List of WorkflowActionUserDefinedField
+  result = api_instance.get_system_workflows_userdefinedfields_events_actions(client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_events_actions: #{e}"
+end
+```
+
+#### Using the get_system_workflows_userdefinedfields_events_actions_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<WorkflowActionUserDefinedField>>, Integer, Hash)> get_system_workflows_userdefinedfields_events_actions_with_http_info(client_id, opts)
+
+```ruby
+begin
+  # Get List of WorkflowActionUserDefinedField
+  data, status_code, headers = api_instance.get_system_workflows_userdefinedfields_events_actions_with_http_info(client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<WorkflowActionUserDefinedField>>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_events_actions_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Array&lt;WorkflowActionUserDefinedField&gt;**](WorkflowActionUserDefinedField.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id
+
+> <Array<WorkflowActionUserDefinedField>> get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id(parent_id, grandparent_id, client_id, opts)
 
 Get List of WorkflowActionUserDefinedField
 
@@ -103,28 +184,28 @@ opts = {
 
 begin
   # Get List of WorkflowActionUserDefinedField
-  result = api_instance.get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id(parent_id, grandparent_id, client_id, opts)
+  result = api_instance.get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id(parent_id, grandparent_id, client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
-  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id: #{e}"
+  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id: #{e}"
 end
 ```
 
-#### Using the get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id_with_http_info variant
+#### Using the get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<WorkflowActionUserDefinedField>>, Integer, Hash)> get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id_with_http_info(parent_id, grandparent_id, client_id, opts)
+> <Array(<Array<WorkflowActionUserDefinedField>>, Integer, Hash)> get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id_with_http_info(parent_id, grandparent_id, client_id, opts)
 
 ```ruby
 begin
   # Get List of WorkflowActionUserDefinedField
-  data, status_code, headers = api_instance.get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id_with_http_info(parent_id, grandparent_id, client_id, opts)
+  data, status_code, headers = api_instance.get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id_with_http_info(parent_id, grandparent_id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<WorkflowActionUserDefinedField>>
 rescue ConnectWise::ApiError => e
-  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_by_grandparent_id_actions_by_parent_id_with_http_info: #{e}"
+  puts "Error when calling WorkflowActionUserDefinedFieldsApi->get_system_workflows_userdefinedfields_events_by_grandparent_id_actions_by_parent_id_with_http_info: #{e}"
 end
 ```
 
@@ -155,7 +236,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_workflows_userdefinedfields_by_id
@@ -221,7 +302,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_workflows_userdefinedfields_events_by_grandparent_id
@@ -287,7 +368,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_system_workflows_userdefinedfields_by_id
@@ -353,5 +434,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

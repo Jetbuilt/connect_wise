@@ -6,10 +6,10 @@
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 80; |  |
 | **vendor_type** | **String** |  |  |
+| **integrator_login** | [**IntegratorLoginReference**](IntegratorLoginReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **url** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **integrator_login** | [**IntegratorLoginReference**](IntegratorLoginReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **user_name** | **String** |  | [optional] |
 | **password** | **String** |  | [optional] |
 | **psg** | **String** |  | [optional] |
@@ -26,10 +26,10 @@ require 'connect_wise'
 instance = ConnectWise::TicketSync.new(
   name: null,
   vendor_type: null,
-  url: null,
-  id: null,
   integrator_login: null,
   company: null,
+  url: null,
+  id: null,
   user_name: null,
   password: null,
   psg: null,

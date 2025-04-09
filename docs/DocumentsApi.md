@@ -1,6 +1,6 @@
 # ConnectWise::DocumentsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -93,8 +93,8 @@ require 'connect_wise'
 api_instance = ConnectWise::DocumentsApi.new
 client_id = 'client_id_example' # String | 
 opts = {
-  record_id: 56, # Integer | recordId
   record_type: 'Activity', # String | recordType
+  record_id: 56, # Integer | recordId
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
   custom_field_conditions: 'custom_field_conditions_example', # String | 
@@ -137,8 +137,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **record_id** | **Integer** | recordId | [optional] |
 | **record_type** | **String** | recordType | [optional] |
+| **record_id** | **Integer** | recordId | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -159,7 +159,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_documents_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_documents_by_id_download
@@ -427,8 +427,8 @@ require 'connect_wise'
 api_instance = ConnectWise::DocumentsApi.new
 client_id = 'client_id_example' # String | 
 opts = {
-  record_id: 56, # Integer | recordId
   record_type: 'Activity', # String | recordType
+  record_id: 56, # Integer | recordId
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
   custom_field_conditions: 'custom_field_conditions_example', # String | 
@@ -471,8 +471,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **record_id** | **Integer** | recordId | [optional] |
 | **record_type** | **String** | recordType | [optional] |
+| **record_id** | **Integer** | recordId | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -493,7 +493,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_documents_uploadsample
@@ -652,7 +652,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: multipart/form-data
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_documents_by_id
@@ -716,5 +716,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

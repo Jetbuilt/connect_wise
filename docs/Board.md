@@ -5,9 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
+| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
-| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **inactive_flag** | **Boolean** |  | [optional] |
 | **sign_off_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  | [optional] |
 | **send_to_contact_flag** | **Boolean** |  | [optional] |
@@ -50,20 +50,23 @@
 | **internal_analysis_sort** | **String** |  | [optional] |
 | **email_connector_allow_reopen_closed_flag** | **Boolean** |  | [optional] |
 | **email_connector_reopen_status** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] |
-| **email_connector_reopen_resources_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] |
-| **email_connector_new_ticket_no_match_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] |
-| **email_connector_never_reopen_by_days_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] |
-| **email_connector_reopen_days_limit** | **Integer** | This field can only be set when emailConnectorNeverReopenByDaysFlag and emailConnectorAllowReopenClosed are both true             This field is required when emailConnectorNeverReopenByDaysFlag is true | [optional] |
-| **email_connector_never_reopen_by_days_closed_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true | [optional] |
-| **email_connector_reopen_days_closed_limit** | **Integer** | This field can only be set when emailConnectorNeverReopenByDaysClosedFlag and emailConnectorAllowReopenClosed are both true             This field is required when emailConnectorNeverReopenByDaysClosedFlag is true | [optional] |
+| **email_connector_reopen_resources_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true. | [optional] |
+| **email_connector_new_ticket_no_match_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true. | [optional] |
+| **email_connector_never_reopen_by_days_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true. | [optional] |
+| **email_connector_reopen_days_limit** | **Integer** | This field can only be set when emailConnectorNeverReopenByDaysFlag and emailConnectorAllowReopenClosed are both true             This field is required when emailConnectorNeverReopenByDaysFlag is true. | [optional] |
+| **email_connector_never_reopen_by_days_closed_flag** | **Boolean** | This field can only be set when emailConnectorAllowReopenClosed is true. | [optional] |
+| **email_connector_reopen_days_closed_limit** | **Integer** | This field can only be set when emailConnectorNeverReopenByDaysClosedFlag and emailConnectorAllowReopenClosed are both true             This field is required when emailConnectorNeverReopenByDaysClosedFlag is true. | [optional] |
 | **use_member_display_name_flag** | **Boolean** |  | [optional] |
 | **send_to_cc_flag** | **Boolean** |  | [optional] |
 | **auto_assign_ticket_owner_flag** | **Boolean** |  | [optional] |
+| **auto_assign_limit_flag** | **Boolean** |  | [optional] |
+| **auto_assign_limit_amount** | **Integer** | This field can only be set when autoAssignLimitFlag is true | [optional] |
 | **closed_loop_all_flag** | **Boolean** |  | [optional] |
 | **percentage_calculation** | **String** |  | [optional] |
 | **all_sort** | **String** |  | [optional] |
 | **mark_first_note_issue_flag** | **Boolean** |  | [optional] |
 | **restrict_board_by_default_flag** | **Boolean** |  | [optional] |
+| **send_to_bundled_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -73,9 +76,9 @@ require 'connect_wise'
 
 instance = ConnectWise::Board.new(
   name: null,
-  id: null,
   location: null,
   department: null,
+  id: null,
   inactive_flag: null,
   sign_off_template: null,
   send_to_contact_flag: null,
@@ -127,11 +130,14 @@ instance = ConnectWise::Board.new(
   use_member_display_name_flag: null,
   send_to_cc_flag: null,
   auto_assign_ticket_owner_flag: null,
+  auto_assign_limit_flag: null,
+  auto_assign_limit_amount: null,
   closed_loop_all_flag: null,
   percentage_calculation: null,
   all_sort: null,
   mark_first_note_issue_flag: null,
   restrict_board_by_default_flag: null,
+  send_to_bundled_flag: null,
   _info: null
 )
 ```

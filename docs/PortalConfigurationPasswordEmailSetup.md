@@ -8,13 +8,13 @@
 | **valid_password_email_use_custom_email_flag** | **Boolean** |  | [optional] |
 | **valid_password_email_from_first_name** | **String** |  | [optional] |
 | **valid_password_email_from_last_name** | **String** |  | [optional] |
-| **valid_password_email_from_email** | **String** | Required when validPasswordEmailUseCustomEmailFlag is true | [optional] |
+| **valid_password_email_from_email** | **String** | Gets or sets             required when validPasswordEmailUseCustomEmailFlag is true. | [optional] |
 | **valid_password_email_subject** | **String** |  | [optional] |
 | **valid_password_email_body** | **String** |  | [optional] |
 | **invalid_password_email_use_custom_email_flag** | **Boolean** |  | [optional] |
 | **invalid_password_email_from_first_name** | **String** |  | [optional] |
 | **invalid_password_email_from_last_name** | **String** |  | [optional] |
-| **invalid_password_email_from_email** | **String** | Required when invalidPasswordEmailUseCustomEmailFlag is true | [optional] |
+| **invalid_password_email_from_email** | **String** | Gets or sets             required when invalidPasswordEmailUseCustomEmailFlag is true. | [optional] |
 | **invalid_password_email_subject** | **String** |  | [optional] |
 | **invalid_password_email_body** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |

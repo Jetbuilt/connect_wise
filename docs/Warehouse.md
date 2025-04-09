@@ -5,11 +5,11 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
+| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
-| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
-| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **manager** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **location_xref** | **String** |  Max length: 10; | [optional] |
@@ -27,11 +27,11 @@ require 'connect_wise'
 
 instance = ConnectWise::Warehouse.new(
   name: null,
+  location: null,
+  department: null,
   id: null,
   company: null,
-  location: null,
   contact: null,
-  department: null,
   manager: null,
   site: null,
   location_xref: null,

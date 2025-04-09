@@ -9,13 +9,15 @@
 | **thru_date** | **Time** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
 | **summarize_invoices** | **String** |  | [optional] |
-| **export_invoices_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement) | [optional] |
+| **export_invoices_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement). | [optional] |
 | **included_invoice_ids** | **Array&lt;Integer&gt;** |  | [optional] |
 | **excluded_invoice_ids** | **Array&lt;Integer&gt;** |  | [optional] |
-| **export_expenses_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement) | [optional] |
+| **export_expenses_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement). | [optional] |
 | **included_expense_ids** | **Array&lt;Integer&gt;** |  | [optional] |
 | **excluded_expense_ids** | **Array&lt;Integer&gt;** |  | [optional] |
-| **export_products_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement) | [optional] |
+| **export_payments_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement). | [optional] |
+| **included_payment_ids** | **Array&lt;Integer&gt;** |  | [optional] |
+| **export_products_flag** | **Boolean** | Batch export must include invoices, expenses, or products (procurement). | [optional] |
 | **included_product_ids** | **Array&lt;String&gt;** |  | [optional] |
 | **excluded_product_ids** | **Array&lt;String&gt;** |  | [optional] |
 
@@ -36,6 +38,8 @@ instance = ConnectWise::ExportAccountingBatchRequest.new(
   export_expenses_flag: null,
   included_expense_ids: null,
   excluded_expense_ids: null,
+  export_payments_flag: null,
+  included_payment_ids: null,
   export_products_flag: null,
   included_product_ids: null,
   excluded_product_ids: null

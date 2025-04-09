@@ -1,6 +1,6 @@
 # ConnectWise::ConfigurationsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -8,6 +8,7 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**delete_company_configurations_by_id**](ConfigurationsApi.md#delete_company_configurations_by_id) | **DELETE** /company/configurations/{id} | Delete Configuration |
 | [**get_company_configurations**](ConfigurationsApi.md#get_company_configurations) | **GET** /company/configurations | Get List of Configuration |
 | [**get_company_configurations_by_id**](ConfigurationsApi.md#get_company_configurations_by_id) | **GET** /company/configurations/{id} | Get Configuration |
+| [**get_company_configurations_by_id_quick_access_count**](ConfigurationsApi.md#get_company_configurations_by_id_quick_access_count) | **GET** /company/configurations/{id}/quickAccess/count | Get Configuration Tab Count |
 | [**get_company_configurations_count**](ConfigurationsApi.md#get_company_configurations_count) | **GET** /company/configurations/count | Get Count of Configuration |
 | [**patch_company_configurations_by_id**](ConfigurationsApi.md#patch_company_configurations_by_id) | **PATCH** /company/configurations/{id} | Patch Configuration |
 | [**patch_company_configurations_by_id_change_type**](ConfigurationsApi.md#patch_company_configurations_by_id_change_type) | **PATCH** /company/configurations/{id}/changeType | Patch Configuration |
@@ -76,7 +77,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## delete_company_configurations_by_id
@@ -144,7 +145,7 @@ No authorization required
 
 ## get_company_configurations
 
-> <Array<CompanyConfiguration>> get_company_configurations(client_id, managed_identifier, opts)
+> <Array<CompanyConfiguration>> get_company_configurations(client_id, opts)
 
 Get List of Configuration
 
@@ -156,8 +157,8 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ConfigurationsApi.new
 client_id = 'client_id_example' # String | 
-managed_identifier = 'managed_identifier_example' # String | managedIdentifier
 opts = {
+  managed_identifier: 'managed_identifier_example', # String | managedIdentifier
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
   custom_field_conditions: 'custom_field_conditions_example', # String | 
@@ -170,7 +171,7 @@ opts = {
 
 begin
   # Get List of Configuration
-  result = api_instance.get_company_configurations(client_id, managed_identifier, opts)
+  result = api_instance.get_company_configurations(client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling ConfigurationsApi->get_company_configurations: #{e}"
@@ -181,12 +182,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<CompanyConfiguration>>, Integer, Hash)> get_company_configurations_with_http_info(client_id, managed_identifier, opts)
+> <Array(<Array<CompanyConfiguration>>, Integer, Hash)> get_company_configurations_with_http_info(client_id, opts)
 
 ```ruby
 begin
   # Get List of Configuration
-  data, status_code, headers = api_instance.get_company_configurations_with_http_info(client_id, managed_identifier, opts)
+  data, status_code, headers = api_instance.get_company_configurations_with_http_info(client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CompanyConfiguration>>
@@ -200,7 +201,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **managed_identifier** | **String** | managedIdentifier |  |
+| **managed_identifier** | **String** | managedIdentifier | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -221,7 +222,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_configurations_by_id
@@ -303,14 +304,14 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
-## get_company_configurations_count
+## get_company_configurations_by_id_quick_access_count
 
-> <Count> get_company_configurations_count(client_id, managed_identifier, opts)
+> Object get_company_configurations_by_id_quick_access_count(id, client_id, opts)
 
-Get Count of Configuration
+Get Configuration Tab Count
 
 ### Examples
 
@@ -319,8 +320,8 @@ require 'time'
 require 'connect_wise'
 
 api_instance = ConnectWise::ConfigurationsApi.new
+id = 56 # Integer | configurationId
 client_id = 'client_id_example' # String | 
-managed_identifier = 'managed_identifier_example' # String | managedIdentifier
 opts = {
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
@@ -333,8 +334,90 @@ opts = {
 }
 
 begin
+  # Get Configuration Tab Count
+  result = api_instance.get_company_configurations_by_id_quick_access_count(id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ConfigurationsApi->get_company_configurations_by_id_quick_access_count: #{e}"
+end
+```
+
+#### Using the get_company_configurations_by_id_quick_access_count_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> get_company_configurations_by_id_quick_access_count_with_http_info(id, client_id, opts)
+
+```ruby
+begin
+  # Get Configuration Tab Count
+  data, status_code, headers = api_instance.get_company_configurations_by_id_quick_access_count_with_http_info(id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ConfigurationsApi->get_company_configurations_by_id_quick_access_count_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | configurationId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_company_configurations_count
+
+> <Count> get_company_configurations_count(client_id, opts)
+
+Get Count of Configuration
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::ConfigurationsApi.new
+client_id = 'client_id_example' # String | 
+opts = {
+  managed_identifier: 'managed_identifier_example', # String | managedIdentifier
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
   # Get Count of Configuration
-  result = api_instance.get_company_configurations_count(client_id, managed_identifier, opts)
+  result = api_instance.get_company_configurations_count(client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling ConfigurationsApi->get_company_configurations_count: #{e}"
@@ -345,12 +428,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Count>, Integer, Hash)> get_company_configurations_count_with_http_info(client_id, managed_identifier, opts)
+> <Array(<Count>, Integer, Hash)> get_company_configurations_count_with_http_info(client_id, opts)
 
 ```ruby
 begin
   # Get Count of Configuration
-  data, status_code, headers = api_instance.get_company_configurations_count_with_http_info(client_id, managed_identifier, opts)
+  data, status_code, headers = api_instance.get_company_configurations_count_with_http_info(client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Count>
@@ -364,7 +447,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **managed_identifier** | **String** | managedIdentifier |  |
+| **managed_identifier** | **String** | managedIdentifier | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -385,7 +468,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_configurations_by_id
@@ -405,7 +488,7 @@ id = 56 # Integer | configurationId
 client_id = 'client_id_example' # String | 
 patch_operation = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | List of PatchOperation
 opts = {
-  managed_information: { ... } # ManagedInformation | managedInformation
+  managed_information: ConnectWise::ManagedInformation.new # ManagedInformation | managedInformation
 }
 
 begin
@@ -455,7 +538,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_configurations_by_id_change_type
@@ -521,7 +604,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_configurations
@@ -538,9 +621,9 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ConfigurationsApi.new
 client_id = 'client_id_example' # String | 
-company_configuration = ConnectWise::CompanyConfiguration.new({name: 'name_example'}) # CompanyConfiguration | configuration
+company_configuration = ConnectWise::CompanyConfiguration.new({name: 'name_example', type: ConnectWise::ConfigurationTypeReference.new, company: ConnectWise::CompanyReference.new}) # CompanyConfiguration | configuration
 opts = {
-  managed_information: { ... } # ManagedInformation | managedInformation
+  managed_information: ConnectWise::ManagedInformation.new # ManagedInformation | managedInformation
 }
 
 begin
@@ -589,12 +672,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_configurations_bulk
 
-> <CompanyConfiguration> post_company_configurations_bulk(client_id, company_configuration)
+> <CompanyConfiguration> post_company_configurations_bulk(client_id, company_configuration, opts)
 
 Post Configuration
 
@@ -606,11 +689,14 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ConfigurationsApi.new
 client_id = 'client_id_example' # String | 
-company_configuration = [ConnectWise::CompanyConfiguration.new({name: 'name_example'})] # Array<CompanyConfiguration> | List of Configuration
+company_configuration = [ConnectWise::CompanyConfiguration.new({name: 'name_example', type: ConnectWise::ConfigurationTypeReference.new, company: ConnectWise::CompanyReference.new})] # Array<CompanyConfiguration> | List of Configuration
+opts = {
+  managed_information: ConnectWise::ManagedInformation.new # ManagedInformation | managedInformation
+}
 
 begin
   # Post Configuration
-  result = api_instance.post_company_configurations_bulk(client_id, company_configuration)
+  result = api_instance.post_company_configurations_bulk(client_id, company_configuration, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling ConfigurationsApi->post_company_configurations_bulk: #{e}"
@@ -621,12 +707,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CompanyConfiguration>, Integer, Hash)> post_company_configurations_bulk_with_http_info(client_id, company_configuration)
+> <Array(<CompanyConfiguration>, Integer, Hash)> post_company_configurations_bulk_with_http_info(client_id, company_configuration, opts)
 
 ```ruby
 begin
   # Post Configuration
-  data, status_code, headers = api_instance.post_company_configurations_bulk_with_http_info(client_id, company_configuration)
+  data, status_code, headers = api_instance.post_company_configurations_bulk_with_http_info(client_id, company_configuration, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CompanyConfiguration>
@@ -641,6 +727,7 @@ end
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
 | **company_configuration** | [**Array&lt;CompanyConfiguration&gt;**](CompanyConfiguration.md) | List of Configuration |  |
+| **managed_information** | [**ManagedInformation**](.md) | managedInformation | [optional] |
 
 ### Return type
 
@@ -653,12 +740,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_configurations_bulk
 
-> <CompanyConfiguration> put_company_configurations_bulk(client_id, company_configuration)
+> <CompanyConfiguration> put_company_configurations_bulk(client_id, company_configuration, opts)
 
 Put Configuration
 
@@ -670,11 +757,14 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ConfigurationsApi.new
 client_id = 'client_id_example' # String | 
-company_configuration = [ConnectWise::CompanyConfiguration.new({name: 'name_example'})] # Array<CompanyConfiguration> | List of Configuration
+company_configuration = [ConnectWise::CompanyConfiguration.new({name: 'name_example', type: ConnectWise::ConfigurationTypeReference.new, company: ConnectWise::CompanyReference.new})] # Array<CompanyConfiguration> | List of Configuration
+opts = {
+  managed_information: ConnectWise::ManagedInformation.new # ManagedInformation | managedInformation
+}
 
 begin
   # Put Configuration
-  result = api_instance.put_company_configurations_bulk(client_id, company_configuration)
+  result = api_instance.put_company_configurations_bulk(client_id, company_configuration, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling ConfigurationsApi->put_company_configurations_bulk: #{e}"
@@ -685,12 +775,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CompanyConfiguration>, Integer, Hash)> put_company_configurations_bulk_with_http_info(client_id, company_configuration)
+> <Array(<CompanyConfiguration>, Integer, Hash)> put_company_configurations_bulk_with_http_info(client_id, company_configuration, opts)
 
 ```ruby
 begin
   # Put Configuration
-  data, status_code, headers = api_instance.put_company_configurations_bulk_with_http_info(client_id, company_configuration)
+  data, status_code, headers = api_instance.put_company_configurations_bulk_with_http_info(client_id, company_configuration, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CompanyConfiguration>
@@ -705,6 +795,7 @@ end
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
 | **company_configuration** | [**Array&lt;CompanyConfiguration&gt;**](CompanyConfiguration.md) | List of Configuration |  |
+| **managed_information** | [**ManagedInformation**](.md) | managedInformation | [optional] |
 
 ### Return type
 
@@ -717,7 +808,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_configurations_by_id
@@ -735,9 +826,9 @@ require 'connect_wise'
 api_instance = ConnectWise::ConfigurationsApi.new
 id = 56 # Integer | configurationId
 client_id = 'client_id_example' # String | 
-company_configuration = ConnectWise::CompanyConfiguration.new({name: 'name_example'}) # CompanyConfiguration | configuration
+company_configuration = ConnectWise::CompanyConfiguration.new({name: 'name_example', type: ConnectWise::ConfigurationTypeReference.new, company: ConnectWise::CompanyReference.new}) # CompanyConfiguration | configuration
 opts = {
-  managed_information: { ... } # ManagedInformation | managedInformation
+  managed_information: ConnectWise::ManagedInformation.new # ManagedInformation | managedInformation
 }
 
 begin
@@ -787,5 +878,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **accounting_package** | [**AccountingPackageReference**](AccountingPackageReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **accounting_package** | [**AccountingPackageReference**](AccountingPackageReference.md) |  | [optional] |
 | **direct_transfer_flag** | **Boolean** |  | [optional] |
 | **include_invoices_flag** | **Boolean** |  | [optional] |
 | **invoice_format** | **String** |  | [optional] |
@@ -14,6 +14,7 @@
 | **expense_format** | **String** |  | [optional] |
 | **suppress_memo_flag** | **Boolean** |  | [optional] |
 | **sync_payment_info_flag** | **Boolean** |  | [optional] |
+| **sync_wise_pay_payment_info_flag** | **Boolean** |  | [optional] |
 | **include_sales_tax_flag** | **Boolean** |  | [optional] |
 | **enable_tax_groups_flag** | **Boolean** |  | [optional] |
 | **zero_dollar_tax_amounts_flag** | **Boolean** |  | [optional] |
@@ -23,6 +24,7 @@
 | **send_uom_flag** | **Boolean** |  | [optional] |
 | **include_cogs_entries_flag** | **Boolean** |  | [optional] |
 | **include_cogs_drop_ship_flag** | **Boolean** |  | [optional] |
+| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
 
@@ -30,8 +32,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::AccountingPackageSetup.new(
-  id: null,
   accounting_package: null,
+  id: null,
   direct_transfer_flag: null,
   include_invoices_flag: null,
   invoice_format: null,
@@ -40,6 +42,7 @@ instance = ConnectWise::AccountingPackageSetup.new(
   expense_format: null,
   suppress_memo_flag: null,
   sync_payment_info_flag: null,
+  sync_wise_pay_payment_info_flag: null,
   include_sales_tax_flag: null,
   enable_tax_groups_flag: null,
   zero_dollar_tax_amounts_flag: null,
@@ -48,7 +51,8 @@ instance = ConnectWise::AccountingPackageSetup.new(
   send_component_amount_flag: null,
   send_uom_flag: null,
   include_cogs_entries_flag: null,
-  include_cogs_drop_ship_flag: null
+  include_cogs_drop_ship_flag: null,
+  _info: null
 )
 ```
 

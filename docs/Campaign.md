@@ -5,10 +5,10 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **type** | [**CampaignTypeReference**](CampaignTypeReference.md) |  |  |
+| **sub_type** | [**CampaignSubTypeReference**](CampaignSubTypeReference.md) |  |  |
 | **start_date** | **Time** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**CampaignTypeReference**](CampaignTypeReference.md) |  | [optional] |
-| **sub_type** | [**CampaignSubTypeReference**](CampaignSubTypeReference.md) |  | [optional] |
 | **status** | [**CampaignStatusReference**](CampaignStatusReference.md) |  | [optional] |
 | **end_date** | **Time** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
@@ -38,10 +38,10 @@ require 'connect_wise'
 
 instance = ConnectWise::Campaign.new(
   name: null,
-  start_date: null,
-  id: null,
   type: null,
   sub_type: null,
+  start_date: null,
+  id: null,
   status: null,
   end_date: null,
   location_id: null,

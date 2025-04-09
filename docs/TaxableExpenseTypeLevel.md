@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **tax_code_level** | [**TaxCodeLevelReference**](TaxCodeLevelReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **tax_code_level** | [**TaxCodeLevelReference**](TaxCodeLevelReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -14,8 +14,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::TaxableExpenseTypeLevel.new(
-  id: null,
   tax_code_level: null,
+  id: null,
   _info: null
 )
 ```

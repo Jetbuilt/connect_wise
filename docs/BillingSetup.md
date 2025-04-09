@@ -8,6 +8,7 @@
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
 | **invoice_title** | **String** |  Max length: 50; |  |
 | **payable_name** | **String** |  Max length: 50; |  |
+| **overall_invoice_default** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  |  |
 | **email_template** | [**EmailTemplateReference**](EmailTemplateReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **address_one** | **String** |  Max length: 50; | [optional] |
@@ -20,7 +21,6 @@
 | **topcomment** | **String** |  Max length: 4000; | [optional] |
 | **invoice_footer** | **String** |  Max length: 500; | [optional] |
 | **quote_footer** | **String** |  Max length: 1000; | [optional] |
-| **overall_invoice_default** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] |
 | **standard_invoice_actual** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] |
 | **standard_invoice_fixed** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] |
 | **progress_invoice** | [**InvoiceTemplateReference**](InvoiceTemplateReference.md) |  | [optional] |
@@ -54,6 +54,7 @@
 | **print_logo_flag** | **Boolean** |  | [optional] |
 | **read_receipt_flag** | **Boolean** |  | [optional] |
 | **delivery_receipt_flag** | **Boolean** |  | [optional] |
+| **attach_xml_invoice_flag** | **Boolean** |  | [optional] |
 | **disable_routing_email_flag** | **Boolean** |  | [optional] |
 | **localized_country** | [**CountryReference**](CountryReference.md) |  | [optional] |
 | **business_number** | **String** |  Max length: 50; | [optional] |
@@ -74,6 +75,7 @@ instance = ConnectWise::BillingSetup.new(
   location: null,
   invoice_title: null,
   payable_name: null,
+  overall_invoice_default: null,
   email_template: null,
   id: null,
   address_one: null,
@@ -86,7 +88,6 @@ instance = ConnectWise::BillingSetup.new(
   topcomment: null,
   invoice_footer: null,
   quote_footer: null,
-  overall_invoice_default: null,
   standard_invoice_actual: null,
   standard_invoice_fixed: null,
   progress_invoice: null,
@@ -120,6 +121,7 @@ instance = ConnectWise::BillingSetup.new(
   print_logo_flag: null,
   read_receipt_flag: null,
   delivery_receipt_flag: null,
+  attach_xml_invoice_flag: null,
   disable_routing_email_flag: null,
   localized_country: null,
   business_number: null,

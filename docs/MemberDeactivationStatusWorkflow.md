@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **count** | **Integer** |  | [optional] |
 | **id** | **Integer** |  | [optional] |
 | **name** | **String** |  | [optional] |
+| **count** | **Integer** |  | [optional] |
 | **re_assign_to_member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 
 ## Example
@@ -15,9 +15,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::MemberDeactivationStatusWorkflow.new(
-  count: null,
   id: null,
   name: null,
+  count: null,
   re_assign_to_member: null
 )
 ```

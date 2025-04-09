@@ -1,6 +1,6 @@
 # ConnectWise::OpportunityForecastItemsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_opportunities_by_parent_id_forecast_by_id
@@ -225,7 +225,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_parent_id_forecast_by_id
@@ -244,7 +244,7 @@ api_instance = ConnectWise::OpportunityForecastItemsApi.new
 id = 56 # Integer | forecastId
 parent_id = 56 # Integer | opportunityId
 client_id = 'client_id_example' # String | 
-forecast_item = ConnectWise::ForecastItem.new({forecast_type: 'Other1'}) # ForecastItem | forecast
+forecast_item = ConnectWise::ForecastItem.new({opportunity: ConnectWise::OpportunityReference.new, status: ConnectWise::OpportunityStatusReference.new, forecast_type: 'Other1'}) # ForecastItem | forecast
 
 begin
   # Post ForecastItem
@@ -293,7 +293,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_opportunities_by_parent_id_forecast_by_id
@@ -312,7 +312,7 @@ api_instance = ConnectWise::OpportunityForecastItemsApi.new
 id = 56 # Integer | forecastId
 parent_id = 56 # Integer | opportunityId
 client_id = 'client_id_example' # String | 
-forecast_item = ConnectWise::ForecastItem.new({forecast_type: 'Other1'}) # ForecastItem | forecast
+forecast_item = ConnectWise::ForecastItem.new({opportunity: ConnectWise::OpportunityReference.new, status: ConnectWise::OpportunityStatusReference.new, forecast_type: 'Other1'}) # ForecastItem | forecast
 
 begin
   # Put ForecastItem
@@ -361,5 +361,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -1,6 +1,6 @@
 # ConnectWise::MyAccountsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -88,7 +88,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_my_account_by_id
@@ -154,7 +154,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_system_my_account_by_id
@@ -172,7 +172,7 @@ require 'connect_wise'
 api_instance = ConnectWise::MyAccountsApi.new
 id = 56 # Integer | memberId
 client_id = 'client_id_example' # String | 
-my_account = ConnectWise::MyAccount.new({identifier: 'identifier_example', first_name: 'first_name_example', last_name: 'last_name_example', license_class: 'A', default_email: 'Office', default_phone: 'Office', hire_date: Time.now, company_activity_tab_format: 'SummaryList', invoice_time_tab_format: 'SummaryList', invoice_screen_default_tab_format: 'ShowInvoicingTab', invoicing_display_options: 'RemainOnInvoicingScreen', agreement_invoicing_display_options: 'RemainOnInvoicingScreen'}) # MyAccount | myAccount
+my_account = ConnectWise::MyAccount.new({identifier: 'identifier_example', first_name: 'first_name_example', last_name: 'last_name_example', license_class: 'A', time_zone: ConnectWise::TimeZoneSetupReference.new, default_email: 'Office', default_phone: 'Office', default_location: ConnectWise::SystemLocationReference.new, default_department: ConnectWise::SystemDepartmentReference.new, work_role: ConnectWise::WorkRoleReference.new, time_approver: ConnectWise::MemberReference.new, expense_approver: ConnectWise::MemberReference.new, hire_date: Time.now, sales_default_location: ConnectWise::SystemLocationReference.new, company_activity_tab_format: 'SummaryList', invoice_time_tab_format: 'SummaryList', invoice_screen_default_tab_format: 'ShowInvoicingTab', invoicing_display_options: 'RemainOnInvoicingScreen', agreement_invoicing_display_options: 'RemainOnInvoicingScreen'}) # MyAccount | myAccount
 
 begin
   # Put MyAccount
@@ -220,5 +220,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

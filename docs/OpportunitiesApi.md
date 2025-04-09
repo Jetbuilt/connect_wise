@@ -1,12 +1,13 @@
 # ConnectWise::OpportunitiesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**delete_sales_opportunities_by_id**](OpportunitiesApi.md#delete_sales_opportunities_by_id) | **DELETE** /sales/opportunities/{id} | Delete ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
 | [**get_sales_opportunities**](OpportunitiesApi.md#get_sales_opportunities) | **GET** /sales/opportunities | Get List of ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
 | [**get_sales_opportunities_by_id**](OpportunitiesApi.md#get_sales_opportunities_by_id) | **GET** /sales/opportunities/{id} | Get ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
+| [**get_sales_opportunities_conversions_by_id**](OpportunitiesApi.md#get_sales_opportunities_conversions_by_id) | **GET** /sales/opportunities/conversions/{id} | Get Conversion |
 | [**get_sales_opportunities_count**](OpportunitiesApi.md#get_sales_opportunities_count) | **GET** /sales/opportunities/count | Get Count of ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
 | [**get_sales_opportunities_default**](OpportunitiesApi.md#get_sales_opportunities_default) | **GET** /sales/opportunities/default | Get ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
 | [**patch_sales_opportunities_by_id**](OpportunitiesApi.md#patch_sales_opportunities_by_id) | **PATCH** /sales/opportunities/{id} | Patch ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity |
@@ -158,7 +159,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_opportunities_by_id
@@ -240,7 +241,89 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_sales_opportunities_conversions_by_id
+
+> <Array<SalesConversion>> get_sales_opportunities_conversions_by_id(id, client_id, opts)
+
+Get Conversion
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::OpportunitiesApi.new
+id = 56 # Integer | opportunityId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get Conversion
+  result = api_instance.get_sales_opportunities_conversions_by_id(id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling OpportunitiesApi->get_sales_opportunities_conversions_by_id: #{e}"
+end
+```
+
+#### Using the get_sales_opportunities_conversions_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SalesConversion>>, Integer, Hash)> get_sales_opportunities_conversions_by_id_with_http_info(id, client_id, opts)
+
+```ruby
+begin
+  # Get Conversion
+  data, status_code, headers = api_instance.get_sales_opportunities_conversions_by_id_with_http_info(id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SalesConversion>>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling OpportunitiesApi->get_sales_opportunities_conversions_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | opportunityId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SalesConversion&gt;**](SalesConversion.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_opportunities_count
@@ -320,7 +403,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_opportunities_default
@@ -400,7 +483,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_opportunities_by_id
@@ -466,7 +549,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities
@@ -483,7 +566,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::OpportunitiesApi.new
 client_id = 'client_id_example' # String | 
-opportunity = ConnectWise::Opportunity.new({name: 'name_example'}) # Opportunity | opportunity
+opportunity = ConnectWise::Opportunity.new({name: 'name_example', primary_sales_rep: ConnectWise::MemberReference.new, company: ConnectWise::CompanyReference.new, contact: ConnectWise::ContactReference.new}) # Opportunity | opportunity
 
 begin
   # Post ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity
@@ -530,7 +613,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_id_convert_to_agreement
@@ -596,7 +679,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_id_convert_to_project
@@ -662,7 +745,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_id_convert_to_sales_order
@@ -728,7 +811,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_id_convert_to_service_ticket
@@ -794,7 +877,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_opportunities_by_id
@@ -812,7 +895,7 @@ require 'connect_wise'
 api_instance = ConnectWise::OpportunitiesApi.new
 id = 56 # Integer | opportunityId
 client_id = 'client_id_example' # String | 
-opportunity = ConnectWise::Opportunity.new({name: 'name_example'}) # Opportunity | opportunity
+opportunity = ConnectWise::Opportunity.new({name: 'name_example', primary_sales_rep: ConnectWise::MemberReference.new, company: ConnectWise::CompanyReference.new, contact: ConnectWise::ContactReference.new}) # Opportunity | opportunity
 
 begin
   # Put ConnectWise.Apis.v3_0.v2015_3.Sales.Opportunity.Opportunity
@@ -860,5 +943,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

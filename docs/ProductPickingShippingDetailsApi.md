@@ -1,6 +1,6 @@
 # ConnectWise::ProductPickingShippingDetailsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_products_by_parent_id_picking_shipping_details_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_products_by_parent_id_picking_shipping_details_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_products_by_parent_id_picking_shipping_details_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_products_by_parent_id_picking_shipping_details
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ProductPickingShippingDetailsApi.new
 parent_id = 56 # Integer | productId
 client_id = 'client_id_example' # String | 
-product_picking_shipping_detail = ConnectWise::ProductPickingShippingDetail.new # ProductPickingShippingDetail | productPickingShippingDetails
+product_picking_shipping_detail = ConnectWise::ProductPickingShippingDetail.new({warehouse: ConnectWise::WarehouseReference.new, warehouse_bin: ConnectWise::WarehouseBinReference.new}) # ProductPickingShippingDetail | productPickingShippingDetails
 
 begin
   # Post List of ProductPickingShippingDetail
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_products_by_parent_id_picking_shipping_details_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::ProductPickingShippingDetailsApi.new
 id = 56 # Integer | pickingShippingDetailId
 parent_id = 56 # Integer | productId
 client_id = 'client_id_example' # String | 
-product_picking_shipping_detail = ConnectWise::ProductPickingShippingDetail.new # ProductPickingShippingDetail | productPickingShippingDetails
+product_picking_shipping_detail = ConnectWise::ProductPickingShippingDetail.new({warehouse: ConnectWise::WarehouseReference.new, warehouse_bin: ConnectWise::WarehouseBinReference.new}) # ProductPickingShippingDetail | productPickingShippingDetails
 
 begin
   # Put List of ProductPickingShippingDetail
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

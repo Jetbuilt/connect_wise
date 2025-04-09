@@ -4,14 +4,14 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**ExpenseTypeReference**](ExpenseTypeReference.md) |  |  |
 | **amount** | **Float** |  |  |
 | **date** | **Time** |  |  |
 | **id** | **Integer** |  | [optional] |
 | **expense_report** | [**ExpenseReportReference**](ExpenseReportReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **charge_to_id** | **Integer** |  | [optional] |
-| **charge_to_type** | **String** | Company or chargeToType is required | [optional] |
-| **type** | [**ExpenseTypeReference**](ExpenseTypeReference.md) |  | [optional] |
+| **charge_to_type** | **String** | Gets or sets             company or chargeToType is required. | [optional] |
 | **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **payment_method** | [**PaymentMethodReference**](PaymentMethodReference.md) |  | [optional] |
 | **classification** | [**ClassificationReference**](ClassificationReference.md) |  | [optional] |
@@ -42,6 +42,7 @@
 require 'connect_wise'
 
 instance = ConnectWise::ExpenseEntry.new(
+  type: null,
   amount: null,
   date: null,
   id: null,
@@ -49,7 +50,6 @@ instance = ConnectWise::ExpenseEntry.new(
   company: null,
   charge_to_id: null,
   charge_to_type: null,
-  type: null,
   member: null,
   payment_method: null,
   classification: null,

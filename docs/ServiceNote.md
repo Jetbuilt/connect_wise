@@ -19,6 +19,7 @@
 | **created_by** | **String** |  | [optional] |
 | **internal_flag** | **Boolean** |  | [optional] |
 | **external_flag** | **Boolean** |  | [optional] |
+| **sentiment_score** | **Float** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -42,6 +43,7 @@ instance = ConnectWise::ServiceNote.new(
   created_by: null,
   internal_flag: null,
   external_flag: null,
+  sentiment_score: null,
   _info: null
 )
 ```

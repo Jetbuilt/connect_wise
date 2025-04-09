@@ -1,6 +1,6 @@
 # ConnectWise::TaxableExpenseTypeLevelsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -161,7 +161,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_tax_codes_by_grandparent_id_expense_type_exemptions_by_parent_id_taxable_expense_type_levels_by_id
@@ -247,7 +247,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_tax_codes_by_grandparent_id_expense_type_exemptions_by_parent_id_taxable_expense_type_levels_count
@@ -331,7 +331,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_tax_codes_by_grandparent_id_expense_type_exemptions_by_parent_id_taxable_expense_type_levels_by_id
@@ -401,7 +401,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_tax_codes_by_grandparent_id_expense_type_exemptions_by_parent_id_taxable_expense_type_levels
@@ -420,7 +420,7 @@ api_instance = ConnectWise::TaxableExpenseTypeLevelsApi.new
 parent_id = 56 # Integer | expenseTypeExemptionId
 grandparent_id = 56 # Integer | taxCodeId
 client_id = 'client_id_example' # String | 
-taxable_expense_type_level = ConnectWise::TaxableExpenseTypeLevel.new # TaxableExpenseTypeLevel | taxableExpenseTypeLevel
+taxable_expense_type_level = ConnectWise::TaxableExpenseTypeLevel.new({tax_code_level: ConnectWise::TaxCodeLevelReference.new}) # TaxableExpenseTypeLevel | taxableExpenseTypeLevel
 
 begin
   # Post TaxableExpenseTypeLevel
@@ -469,7 +469,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_tax_codes_by_grandparent_id_expense_type_exemptions_by_parent_id_taxable_expense_type_levels_by_id
@@ -489,7 +489,7 @@ id = 56 # Integer | taxableExpenseTypeLevelId
 parent_id = 56 # Integer | expenseTypeExemptionId
 grandparent_id = 56 # Integer | taxCodeId
 client_id = 'client_id_example' # String | 
-taxable_expense_type_level = ConnectWise::TaxableExpenseTypeLevel.new # TaxableExpenseTypeLevel | taxableExpenseTypeLevel
+taxable_expense_type_level = ConnectWise::TaxableExpenseTypeLevel.new({tax_code_level: ConnectWise::TaxCodeLevelReference.new}) # TaxableExpenseTypeLevel | taxableExpenseTypeLevel
 
 begin
   # Put TaxableExpenseTypeLevel
@@ -539,5 +539,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

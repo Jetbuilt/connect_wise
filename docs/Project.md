@@ -5,11 +5,12 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **billing_method** | **String** |  |  |
+| **board** | [**ProjectBoardReference**](ProjectBoardReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **estimated_end** | **Time** |  |  |
 | **estimated_start** | **Time** |  |  |
 | **name** | **String** |  Max length: 100; |  |
 | **id** | **Integer** |  | [optional] |
-| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **actual_end** | **Time** |  | [optional] |
 | **actual_hours** | **Float** |  | [optional] |
 | **actual_start** | **Time** |  | [optional] |
@@ -26,11 +27,9 @@
 | **bill_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **bill_to_site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **bill_unapproved_time_and_expense** | **Boolean** |  | [optional] |
-| **board** | [**ProjectBoardReference**](ProjectBoardReference.md) |  | [optional] |
 | **budget_analysis** | **String** |  Required On Updates; | [optional] |
 | **budget_flag** | **Boolean** |  | [optional] |
 | **budget_hours** | **Float** |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **customer_po** | **String** |  Max length: 50; | [optional] |
 | **description** | **String** |  | [optional] |
@@ -63,11 +62,13 @@
 | **type** | [**ProjectTypeReference**](ProjectTypeReference.md) |  | [optional] |
 | **do_not_display_in_portal_flag** | **Boolean** |  | [optional] |
 | **billing_start_date** | **Time** |  | [optional] |
+| **po_amount** | **Float** |  | [optional] |
 | **estimated_time_cost** | **Float** |  | [optional] |
 | **estimated_expense_cost** | **Float** |  | [optional] |
 | **estimated_product_cost** | **Float** |  | [optional] |
 | **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **company_location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
+| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
 ## Example
@@ -77,11 +78,12 @@ require 'connect_wise'
 
 instance = ConnectWise::Project.new(
   billing_method: null,
+  board: null,
+  company: null,
   estimated_end: null,
   estimated_start: null,
   name: null,
   id: null,
-  _info: null,
   actual_end: null,
   actual_hours: null,
   actual_start: null,
@@ -98,11 +100,9 @@ instance = ConnectWise::Project.new(
   bill_to_contact: null,
   bill_to_site: null,
   bill_unapproved_time_and_expense: null,
-  board: null,
   budget_analysis: null,
   budget_flag: null,
   budget_hours: null,
-  company: null,
   contact: null,
   customer_po: null,
   description: null,
@@ -135,11 +135,13 @@ instance = ConnectWise::Project.new(
   type: null,
   do_not_display_in_portal_flag: null,
   billing_start_date: null,
+  po_amount: null,
   estimated_time_cost: null,
   estimated_expense_cost: null,
   estimated_product_cost: null,
   tax_code: null,
   company_location: null,
+  _info: null,
   custom_fields: null
 )
 ```

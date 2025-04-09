@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **bill_time** | **String** |  | [optional] |
@@ -26,8 +26,8 @@ require 'connect_wise'
 
 instance = ConnectWise::ChargeCode.new(
   name: null,
-  id: null,
   company: null,
+  id: null,
   location: null,
   department: null,
   bill_time: null,

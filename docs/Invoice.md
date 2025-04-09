@@ -5,10 +5,10 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **type** | **String** |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **invoice_number** | **String** |  Max length: 15; Required On Updates; | [optional] |
 | **status** | [**BillingStatusReference**](BillingStatusReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **bill_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **ship_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **account_number** | **String** |  | [optional] |
@@ -33,15 +33,18 @@
 | **billing_terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] |
 | **reference** | **String** |  Max length: 50; | [optional] |
 | **customer_po** | **String** |  Max length: 50; | [optional] |
-| **template_setup_id** | **Integer** | Can be obtained via InvoiceTemplate report | [optional] |
+| **template_setup_id** | **Integer** | Can be obtained via InvoiceTemplate report. | [optional] |
 | **invoice_template** | [**InvoiceTemplateDetailReference**](InvoiceTemplateDetailReference.md) |  | [optional] |
-| **email_template_id** | **Integer** | Can be obtained via InvoiceEmailTemplate report | [optional] |
+| **email_template_id** | **Integer** | Can be obtained via InvoiceEmailTemplate report. | [optional] |
 | **add_to_batch_email_list** | **Boolean** |  | [optional] |
 | **date** | **Time** |  | [optional] |
 | **restrict_downpayment_flag** | **Boolean** |  | [optional] |
 | **location_id** | **Integer** |  Required On Updates; | [optional] |
-| **department_id** | **Integer** | departmentId is only required for special invoices | [optional] |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
+| **department_id** | **Integer** | departmentId is only required for special invoices. | [optional] |
+| **department** | [**BillingUnitReference**](BillingUnitReference.md) |  | [optional] |
 | **territory_id** | **Integer** |  | [optional] |
+| **territory** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **top_comment** | **String** |  | [optional] |
 | **bottom_comment** | **String** |  | [optional] |
 | **taxable_flag** | **Boolean** |  | [optional] |
@@ -64,6 +67,7 @@
 | **sales_tax** | **Float** |  | [optional] |
 | **adjustment_reason** | **String** |  | [optional] |
 | **adjusted_by** | **String** |  | [optional] |
+| **closed_by** | **String** |  | [optional] |
 | **payments** | **Float** |  | [optional] |
 | **credits** | **Float** |  | [optional] |
 | **balance** | **Float** |  | [optional] |
@@ -74,6 +78,8 @@
 | **phase** | [**ProjectPhaseReference**](ProjectPhaseReference.md) |  | [optional] |
 | **sales_order** | [**SalesOrderReference**](SalesOrderReference.md) |  | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
+| **gl_batch** | [**BatchReference**](BatchReference.md) |  | [optional] |
+| **unbatched_batch** | [**BatchReference**](BatchReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
@@ -84,10 +90,10 @@ require 'connect_wise'
 
 instance = ConnectWise::Invoice.new(
   type: null,
+  company: null,
   id: null,
   invoice_number: null,
   status: null,
-  company: null,
   bill_to_company: null,
   ship_to_company: null,
   account_number: null,
@@ -119,8 +125,11 @@ instance = ConnectWise::Invoice.new(
   date: null,
   restrict_downpayment_flag: null,
   location_id: null,
+  location: null,
   department_id: null,
+  department: null,
   territory_id: null,
+  territory: null,
   top_comment: null,
   bottom_comment: null,
   taxable_flag: null,
@@ -143,6 +152,7 @@ instance = ConnectWise::Invoice.new(
   sales_tax: null,
   adjustment_reason: null,
   adjusted_by: null,
+  closed_by: null,
   payments: null,
   credits: null,
   balance: null,
@@ -153,6 +163,8 @@ instance = ConnectWise::Invoice.new(
   phase: null,
   sales_order: null,
   agreement: null,
+  gl_batch: null,
+  unbatched_batch: null,
   _info: null,
   custom_fields: null
 )

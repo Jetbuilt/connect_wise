@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **team_role** | [**TeamRoleReference**](TeamRoleReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
-| **team_role** | [**TeamRoleReference**](TeamRoleReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
@@ -22,9 +22,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::CompanyTeam.new(
+  team_role: null,
   id: null,
   company: null,
-  team_role: null,
   location: null,
   department: null,
   contact: null,

@@ -1,6 +1,6 @@
 # ConnectWise::ProjectTicketsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -106,7 +106,7 @@ require 'time'
 require 'connect_wise'
 
 api_instance = ConnectWise::ProjectTicketsApi.new
-id = 56 # Integer | configurationId
+id = 56 # Integer | ticketId
 parent_id = 56 # Integer | ticketId
 client_id = 'client_id_example' # String | 
 
@@ -140,7 +140,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | configurationId |  |
+| **id** | **Integer** | ticketId |  |
 | **parent_id** | **Integer** | ticketId |  |
 | **client_id** | **String** |  |  |
 
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_id
@@ -317,7 +317,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_activities
@@ -399,7 +399,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_activities_count
@@ -481,7 +481,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_configurations
@@ -563,7 +563,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_configurations_by_id
@@ -579,7 +579,7 @@ require 'time'
 require 'connect_wise'
 
 api_instance = ConnectWise::ProjectTicketsApi.new
-id = 56 # Integer | configurationId
+id = 56 # Integer | ticketId
 parent_id = 56 # Integer | ticketId
 client_id = 'client_id_example' # String | 
 opts = {
@@ -624,7 +624,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | configurationId |  |
+| **id** | **Integer** | ticketId |  |
 | **parent_id** | **Integer** | ticketId |  |
 | **client_id** | **String** |  |  |
 | **conditions** | **String** |  | [optional] |
@@ -647,7 +647,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_configurations_count
@@ -729,7 +729,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_documents
@@ -811,7 +811,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_documents_count
@@ -893,7 +893,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_products
@@ -975,7 +975,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_products_count
@@ -1057,7 +1057,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_scheduleentries
@@ -1139,7 +1139,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_scheduleentries_count
@@ -1221,7 +1221,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_timeentries
@@ -1303,7 +1303,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_timeentries_count
@@ -1385,7 +1385,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_count
@@ -1465,7 +1465,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_project_tickets_by_id
@@ -1531,7 +1531,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_tickets
@@ -1548,7 +1548,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ProjectTicketsApi.new
 client_id = 'client_id_example' # String | 
-project_ticket = ConnectWise::ProjectTicket.new({summary: 'summary_example'}) # ProjectTicket | ticket
+project_ticket = ConnectWise::ProjectTicket.new({summary: 'summary_example', phase: ConnectWise::ProjectPhaseReference.new}) # ProjectTicket | ticket
 
 begin
   # Post ProjectTicket
@@ -1595,7 +1595,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_tickets_by_parent_id_configurations
@@ -1661,7 +1661,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_tickets_by_parent_id_convert
@@ -1727,7 +1727,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_tickets_search
@@ -1791,7 +1791,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_project_tickets_by_id
@@ -1809,7 +1809,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ProjectTicketsApi.new
 id = 56 # Integer | ticketId
 client_id = 'client_id_example' # String | 
-project_ticket = ConnectWise::ProjectTicket.new({summary: 'summary_example'}) # ProjectTicket | ticket
+project_ticket = ConnectWise::ProjectTicket.new({summary: 'summary_example', phase: ConnectWise::ProjectPhaseReference.new}) # ProjectTicket | ticket
 
 begin
   # Put ProjectTicket
@@ -1857,5 +1857,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

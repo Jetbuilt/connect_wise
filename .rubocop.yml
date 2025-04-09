@@ -1,6 +1,6 @@
-require:
-  - rubocop-rake
+plugins:
   - rubocop-performance
+  - rubocop-rake
 
 AllCops:
   Exclude:
@@ -8,7 +8,7 @@ AllCops:
     - '**/vendor/**/*'
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.2
 
 Layout/AssignmentIndentation:
   Enabled: false

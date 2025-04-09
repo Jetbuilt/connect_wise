@@ -11,9 +11,9 @@
 | **closed_flag** | **Boolean** |  | [optional] |
 | **inactive_flag** | **Boolean** |  | [optional] |
 | **default_flag** | **Boolean** |  | [optional] |
-| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **entered_by** | **String** |  | [optional] |
 | **date_entered** | **Time** |  | [optional] |
+| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
 
@@ -28,9 +28,9 @@ instance = ConnectWise::OpportunityStatus.new(
   closed_flag: null,
   inactive_flag: null,
   default_flag: null,
-  _info: null,
   entered_by: null,
-  date_entered: null
+  date_entered: null,
+  _info: null
 )
 ```
 

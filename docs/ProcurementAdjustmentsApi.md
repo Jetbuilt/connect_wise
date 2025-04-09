@@ -1,6 +1,6 @@
 # ConnectWise::ProcurementAdjustmentsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_adjustments_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_adjustments_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_adjustments_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_adjustments
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ProcurementAdjustmentsApi.new
 client_id = 'client_id_example' # String | 
-procurement_adjustment = ConnectWise::ProcurementAdjustment.new({identifier: 'identifier_example'}) # ProcurementAdjustment | adjustment
+procurement_adjustment = ConnectWise::ProcurementAdjustment.new({identifier: 'identifier_example', type: ConnectWise::AdjustmentTypeReference.new}) # ProcurementAdjustment | adjustment
 
 begin
   # Post ProcurementAdjustment
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_adjustments_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ProcurementAdjustmentsApi.new
 id = 56 # Integer | adjustmentId
 client_id = 'client_id_example' # String | 
-procurement_adjustment = ConnectWise::ProcurementAdjustment.new({identifier: 'identifier_example'}) # ProcurementAdjustment | adjustment
+procurement_adjustment = ConnectWise::ProcurementAdjustment.new({identifier: 'identifier_example', type: ConnectWise::AdjustmentTypeReference.new}) # ProcurementAdjustment | adjustment
 
 begin
   # Put ProcurementAdjustment
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

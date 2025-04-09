@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **board** | [**BoardReference**](BoardReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **board** | [**BoardReference**](BoardReference.md) |  | [optional] |
 | **service_type** | [**ServiceTypeReference**](ServiceTypeReference.md) |  | [optional] |
 | **default_flag** | **Boolean** |  | [optional] |
 | **agreement_id** | **Integer** |  | [optional] |
@@ -17,8 +17,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::BoardDefault.new(
-  id: null,
   board: null,
+  id: null,
   service_type: null,
   default_flag: null,
   agreement_id: null,

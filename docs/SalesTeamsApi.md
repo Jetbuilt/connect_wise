@@ -1,6 +1,6 @@
 # ConnectWise::SalesTeamsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_sales_teams_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_sales_teams_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_sales_teams_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_sales_teams
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::SalesTeamsApi.new
 client_id = 'client_id_example' # String | 
-sales_team = ConnectWise::SalesTeam.new({sales_team_identifier: 'sales_team_identifier_example', sales_team_description: 'sales_team_description_example'}) # SalesTeam | salesTeam
+sales_team = ConnectWise::SalesTeam.new({sales_team_identifier: 'sales_team_identifier_example', sales_team_description: 'sales_team_description_example', sales_team_location: ConnectWise::SystemLocationReference.new}) # SalesTeam | salesTeam
 
 begin
   # Post SalesTeam
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_sales_teams_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::SalesTeamsApi.new
 id = 56 # Integer | salesTeamId
 client_id = 'client_id_example' # String | 
-sales_team = ConnectWise::SalesTeam.new({sales_team_identifier: 'sales_team_identifier_example', sales_team_description: 'sales_team_description_example'}) # SalesTeam | salesTeam
+sales_team = ConnectWise::SalesTeam.new({sales_team_identifier: 'sales_team_identifier_example', sales_team_description: 'sales_team_description_example', sales_team_location: ConnectWise::SystemLocationReference.new}) # SalesTeam | salesTeam
 
 begin
   # Put SalesTeam
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

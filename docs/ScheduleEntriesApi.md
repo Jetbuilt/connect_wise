@@ -1,10 +1,11 @@
 # ConnectWise::ScheduleEntriesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**delete_schedule_entries_by_id**](ScheduleEntriesApi.md#delete_schedule_entries_by_id) | **DELETE** /schedule/entries/{id} | Delete ScheduleEntry |
+| [**delete_schedule_entries_by_id_by_notify_resource**](ScheduleEntriesApi.md#delete_schedule_entries_by_id_by_notify_resource) | **DELETE** /schedule/entries/{id}/{notifyResource} | Delete ScheduleEntry |
 | [**get_schedule_entries**](ScheduleEntriesApi.md#get_schedule_entries) | **GET** /schedule/entries | Get List of ScheduleEntry |
 | [**get_schedule_entries_by_id**](ScheduleEntriesApi.md#get_schedule_entries_by_id) | **GET** /schedule/entries/{id} | Get ScheduleEntry |
 | [**get_schedule_entries_count**](ScheduleEntriesApi.md#get_schedule_entries_count) | **GET** /schedule/entries/count | Get Count of ScheduleEntry |
@@ -60,6 +61,71 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | entryId |  |
+| **client_id** | **String** |  |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## delete_schedule_entries_by_id_by_notify_resource
+
+> delete_schedule_entries_by_id_by_notify_resource(id, notify_resource, client_id)
+
+Delete ScheduleEntry
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::ScheduleEntriesApi.new
+id = 56 # Integer | entryId
+notify_resource = 'notify_resource_example' # String | notifyResource
+client_id = 'client_id_example' # String | 
+
+begin
+  # Delete ScheduleEntry
+  api_instance.delete_schedule_entries_by_id_by_notify_resource(id, notify_resource, client_id)
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ScheduleEntriesApi->delete_schedule_entries_by_id_by_notify_resource: #{e}"
+end
+```
+
+#### Using the delete_schedule_entries_by_id_by_notify_resource_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> delete_schedule_entries_by_id_by_notify_resource_with_http_info(id, notify_resource, client_id)
+
+```ruby
+begin
+  # Delete ScheduleEntry
+  data, status_code, headers = api_instance.delete_schedule_entries_by_id_by_notify_resource_with_http_info(id, notify_resource, client_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ScheduleEntriesApi->delete_schedule_entries_by_id_by_notify_resource_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | entryId |  |
+| **notify_resource** | **String** | notifyResource |  |
 | **client_id** | **String** |  |  |
 
 ### Return type
@@ -153,7 +219,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_schedule_entries_by_id
@@ -235,7 +301,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_schedule_entries_count
@@ -315,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_schedule_entries_by_id
@@ -381,7 +447,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_schedule_entries
@@ -398,7 +464,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::ScheduleEntriesApi.new
 client_id = 'client_id_example' # String | 
-schedule_entry = ConnectWise::ScheduleEntry.new # ScheduleEntry | scheduleEntry
+schedule_entry = ConnectWise::ScheduleEntry.new({type: ConnectWise::ScheduleTypeReference.new}) # ScheduleEntry | scheduleEntry
 
 begin
   # Post ScheduleEntry
@@ -445,7 +511,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_schedule_entries_by_id
@@ -463,7 +529,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ScheduleEntriesApi.new
 id = 56 # Integer | entryId
 client_id = 'client_id_example' # String | 
-schedule_entry = ConnectWise::ScheduleEntry.new # ScheduleEntry | scheduleEntry
+schedule_entry = ConnectWise::ScheduleEntry.new({type: ConnectWise::ScheduleTypeReference.new}) # ScheduleEntry | scheduleEntry
 
 begin
   # Put ScheduleEntry
@@ -511,5 +577,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -1,6 +1,6 @@
 # ConnectWise::SalesTeamMembersApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_sales_teams_by_parent_id_members_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_sales_teams_by_parent_id_members_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_sales_teams_by_parent_id_members_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_sales_teams_by_parent_id_members
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::SalesTeamMembersApi.new
 parent_id = 56 # Integer | salesTeamId
 client_id = 'client_id_example' # String | 
-sales_team_member = ConnectWise::SalesTeamMember.new # SalesTeamMember | salesTeamMember
+sales_team_member = ConnectWise::SalesTeamMember.new({member: ConnectWise::MemberReference.new}) # SalesTeamMember | salesTeamMember
 
 begin
   # Post SalesTeamMember
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_sales_teams_by_parent_id_members_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::SalesTeamMembersApi.new
 id = 56 # Integer | memberId
 parent_id = 56 # Integer | salesTeamId
 client_id = 'client_id_example' # String | 
-sales_team_member = ConnectWise::SalesTeamMember.new # SalesTeamMember | salesTeamMember
+sales_team_member = ConnectWise::SalesTeamMember.new({member: ConnectWise::MemberReference.new}) # SalesTeamMember | salesTeamMember
 
 begin
   # Put SalesTeamMember
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

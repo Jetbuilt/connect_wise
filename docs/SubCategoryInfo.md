@@ -8,6 +8,7 @@
 | **name** | **String** |  | [optional] |
 | **category** | [**ProductCategoryReference**](ProductCategoryReference.md) |  | [optional] |
 | **inactive_flag** | **Boolean** |  | [optional] |
+| **default_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -20,6 +21,7 @@ instance = ConnectWise::SubCategoryInfo.new(
   name: null,
   category: null,
   inactive_flag: null,
+  default_flag: null,
   _info: null
 )
 ```

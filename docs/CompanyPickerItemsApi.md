@@ -1,6 +1,6 @@
 # ConnectWise::CompanyPickerItemsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -152,7 +152,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_company_picker_items_by_id
@@ -234,7 +234,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_company_picker_items_count
@@ -314,7 +314,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_company_picker_items
@@ -331,7 +331,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CompanyPickerItemsApi.new
 client_id = 'client_id_example' # String | 
-company_picker_item = ConnectWise::CompanyPickerItem.new # CompanyPickerItem | companyPickerItem
+company_picker_item = ConnectWise::CompanyPickerItem.new({company: ConnectWise::CompanyReference.new}) # CompanyPickerItem | companyPickerItem
 
 begin
   # Post CompanyPickerItem
@@ -378,7 +378,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_company_picker_items_clear
@@ -395,7 +395,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CompanyPickerItemsApi.new
 client_id = 'client_id_example' # String | 
-clear_picker_request = { ... } # ClearPickerRequest | clearPickerRequest
+clear_picker_request = ConnectWise::ClearPickerRequest.new # ClearPickerRequest | clearPickerRequest
 
 begin
   # Post ClearPickerRequest
@@ -442,5 +442,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

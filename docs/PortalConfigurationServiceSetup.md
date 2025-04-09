@@ -5,6 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **display_closed_tickets_option** | **String** |  |  |
+| **time_materials_ticket_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  |  |
+| **fixed_fee_ticket_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **service_type_flag** | **Boolean** |  | [optional] |
 | **service_sub_type_flag** | **Boolean** |  | [optional] |
@@ -24,8 +26,6 @@
 | **open_tasks_flag** | **Boolean** |  | [optional] |
 | **closed_tasks_flag** | **Boolean** |  | [optional] |
 | **enable_chat_assist_flag** | **Boolean** |  | [optional] |
-| **time_materials_ticket_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  | [optional] |
-| **fixed_fee_ticket_template** | [**ServiceSignoffReference**](ServiceSignoffReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -35,6 +35,8 @@ require 'connect_wise'
 
 instance = ConnectWise::PortalConfigurationServiceSetup.new(
   display_closed_tickets_option: null,
+  time_materials_ticket_template: null,
+  fixed_fee_ticket_template: null,
   id: null,
   service_type_flag: null,
   service_sub_type_flag: null,
@@ -54,8 +56,6 @@ instance = ConnectWise::PortalConfigurationServiceSetup.new(
   open_tasks_flag: null,
   closed_tasks_flag: null,
   enable_chat_assist_flag: null,
-  time_materials_ticket_template: null,
-  fixed_fee_ticket_template: null,
   _info: null
 )
 ```

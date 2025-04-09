@@ -1,6 +1,6 @@
 # ConnectWise::AgreementsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -8,13 +8,18 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**delete_finance_agreements_by_parent_id_configurations_by_id**](AgreementsApi.md#delete_finance_agreements_by_parent_id_configurations_by_id) | **DELETE** /finance/agreements/{parentId}/configurations/{id} | Delete ConfigurationReference |
 | [**get_finance_agreements**](AgreementsApi.md#get_finance_agreements) | **GET** /finance/agreements | Get List of Agreement |
 | [**get_finance_agreements_by_id**](AgreementsApi.md#get_finance_agreements_by_id) | **GET** /finance/agreements/{id} | Get Agreement |
+| [**get_finance_agreements_by_id_application_parameters_by_pod_id**](AgreementsApi.md#get_finance_agreements_by_id_application_parameters_by_pod_id) | **GET** /finance/agreements/{id}/applicationParameters/{podId} | Get AgreementApplicationParameters |
+| [**get_finance_agreements_by_id_quick_access_count**](AgreementsApi.md#get_finance_agreements_by_id_quick_access_count) | **GET** /finance/agreements/{id}/quickAccess/count | Get Agreement Tab Count |
+| [**get_finance_agreements_by_id_recurring_parameters_by_pod_id**](AgreementsApi.md#get_finance_agreements_by_id_recurring_parameters_by_pod_id) | **GET** /finance/agreements/{id}/recurringParameters/{podId} | Get AgreementRecurringParameters |
 | [**get_finance_agreements_by_parent_id_configurations**](AgreementsApi.md#get_finance_agreements_by_parent_id_configurations) | **GET** /finance/agreements/{parentId}/configurations | Get List of ConfigurationReference |
 | [**get_finance_agreements_by_parent_id_configurations_by_id**](AgreementsApi.md#get_finance_agreements_by_parent_id_configurations_by_id) | **GET** /finance/agreements/{parentId}/configurations/{id} | Get ConfigurationReference |
 | [**get_finance_agreements_by_parent_id_configurations_count**](AgreementsApi.md#get_finance_agreements_by_parent_id_configurations_count) | **GET** /finance/agreements/{parentId}/configurations/count | Get Count of ConfigurationReference |
 | [**get_finance_agreements_count**](AgreementsApi.md#get_finance_agreements_count) | **GET** /finance/agreements/count | Get Count of Agreement |
 | [**patch_finance_agreements_by_id**](AgreementsApi.md#patch_finance_agreements_by_id) | **PATCH** /finance/agreements/{id} | Patch Agreement |
 | [**post_finance_agreements**](AgreementsApi.md#post_finance_agreements) | **POST** /finance/agreements | Post Agreement |
+| [**post_finance_agreements_by_id_invoice**](AgreementsApi.md#post_finance_agreements_by_id_invoice) | **POST** /finance/agreements/{id}/invoice | Post AgreementInvoice |
 | [**post_finance_agreements_by_parent_id_configurations**](AgreementsApi.md#post_finance_agreements_by_parent_id_configurations) | **POST** /finance/agreements/{parentId}/configurations | Post ConfigurationReference |
+| [**post_finance_agreements_by_parent_id_copy**](AgreementsApi.md#post_finance_agreements_by_parent_id_copy) | **POST** /finance/agreements/{parentId}/copy | Post CopyAgreementAction |
 | [**put_finance_agreements_by_id**](AgreementsApi.md#put_finance_agreements_by_id) | **PUT** /finance/agreements/{id} | Put Agreement |
 
 
@@ -223,7 +228,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_id
@@ -305,7 +310,257 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_finance_agreements_by_id_application_parameters_by_pod_id
+
+> <AgreementApplicationParameters> get_finance_agreements_by_id_application_parameters_by_pod_id(id, pod_id, client_id, opts)
+
+Get AgreementApplicationParameters
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementsApi.new
+id = 56 # Integer | agreementHeaderId
+pod_id = 'pod_id_example' # String | podId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get AgreementApplicationParameters
+  result = api_instance.get_finance_agreements_by_id_application_parameters_by_pod_id(id, pod_id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_application_parameters_by_pod_id: #{e}"
+end
+```
+
+#### Using the get_finance_agreements_by_id_application_parameters_by_pod_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementApplicationParameters>, Integer, Hash)> get_finance_agreements_by_id_application_parameters_by_pod_id_with_http_info(id, pod_id, client_id, opts)
+
+```ruby
+begin
+  # Get AgreementApplicationParameters
+  data, status_code, headers = api_instance.get_finance_agreements_by_id_application_parameters_by_pod_id_with_http_info(id, pod_id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementApplicationParameters>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_application_parameters_by_pod_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | agreementHeaderId |  |
+| **pod_id** | **String** | podId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**AgreementApplicationParameters**](AgreementApplicationParameters.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_finance_agreements_by_id_quick_access_count
+
+> Object get_finance_agreements_by_id_quick_access_count(id, client_id, opts)
+
+Get Agreement Tab Count
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementsApi.new
+id = 56 # Integer | agreementHeaderId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get Agreement Tab Count
+  result = api_instance.get_finance_agreements_by_id_quick_access_count(id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_quick_access_count: #{e}"
+end
+```
+
+#### Using the get_finance_agreements_by_id_quick_access_count_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> get_finance_agreements_by_id_quick_access_count_with_http_info(id, client_id, opts)
+
+```ruby
+begin
+  # Get Agreement Tab Count
+  data, status_code, headers = api_instance.get_finance_agreements_by_id_quick_access_count_with_http_info(id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_quick_access_count_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | agreementHeaderId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## get_finance_agreements_by_id_recurring_parameters_by_pod_id
+
+> <AgreementRecurringParameters> get_finance_agreements_by_id_recurring_parameters_by_pod_id(id, pod_id, client_id, opts)
+
+Get AgreementRecurringParameters
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementsApi.new
+id = 56 # Integer | agreementId
+pod_id = 'pod_id_example' # String | podId
+client_id = 'client_id_example' # String | 
+opts = {
+  conditions: 'conditions_example', # String | 
+  child_conditions: 'child_conditions_example', # String | 
+  custom_field_conditions: 'custom_field_conditions_example', # String | 
+  order_by: 'order_by_example', # String | 
+  fields: 'fields_example', # String | 
+  page: 56, # Integer | 
+  page_size: 56, # Integer | 
+  page_id: 56 # Integer | 
+}
+
+begin
+  # Get AgreementRecurringParameters
+  result = api_instance.get_finance_agreements_by_id_recurring_parameters_by_pod_id(id, pod_id, client_id, opts)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_recurring_parameters_by_pod_id: #{e}"
+end
+```
+
+#### Using the get_finance_agreements_by_id_recurring_parameters_by_pod_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AgreementRecurringParameters>, Integer, Hash)> get_finance_agreements_by_id_recurring_parameters_by_pod_id_with_http_info(id, pod_id, client_id, opts)
+
+```ruby
+begin
+  # Get AgreementRecurringParameters
+  data, status_code, headers = api_instance.get_finance_agreements_by_id_recurring_parameters_by_pod_id_with_http_info(id, pod_id, client_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AgreementRecurringParameters>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->get_finance_agreements_by_id_recurring_parameters_by_pod_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | agreementId |  |
+| **pod_id** | **String** | podId |  |
+| **client_id** | **String** |  |  |
+| **conditions** | **String** |  | [optional] |
+| **child_conditions** | **String** |  | [optional] |
+| **custom_field_conditions** | **String** |  | [optional] |
+| **order_by** | **String** |  | [optional] |
+| **fields** | **String** |  | [optional] |
+| **page** | **Integer** |  | [optional] |
+| **page_size** | **Integer** |  | [optional] |
+| **page_id** | **Integer** |  | [optional] |
+
+### Return type
+
+[**AgreementRecurringParameters**](AgreementRecurringParameters.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_parent_id_configurations
@@ -387,7 +642,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_parent_id_configurations_by_id
@@ -471,7 +726,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_parent_id_configurations_count
@@ -553,7 +808,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_count
@@ -633,7 +888,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_agreements_by_id
@@ -699,7 +954,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_agreements
@@ -716,7 +971,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::AgreementsApi.new
 client_id = 'client_id_example' # String | 
-agreement = ConnectWise::Agreement.new({name: 'name_example'}) # Agreement | agreement
+agreement = ConnectWise::Agreement.new({name: 'name_example', type: ConnectWise::AgreementTypeReference.new, company: ConnectWise::CompanyReference.new, contact: ConnectWise::ContactReference.new}) # Agreement | agreement
 
 begin
   # Post Agreement
@@ -763,7 +1018,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## post_finance_agreements_by_id_invoice
+
+> Integer post_finance_agreements_by_id_invoice(id, client_id)
+
+Post AgreementInvoice
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementsApi.new
+id = 56 # Integer | id
+client_id = 'client_id_example' # String | 
+
+begin
+  # Post AgreementInvoice
+  result = api_instance.post_finance_agreements_by_id_invoice(id, client_id)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->post_finance_agreements_by_id_invoice: #{e}"
+end
+```
+
+#### Using the post_finance_agreements_by_id_invoice_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Integer, Integer, Hash)> post_finance_agreements_by_id_invoice_with_http_info(id, client_id)
+
+```ruby
+begin
+  # Post AgreementInvoice
+  data, status_code, headers = api_instance.post_finance_agreements_by_id_invoice_with_http_info(id, client_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Integer
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->post_finance_agreements_by_id_invoice_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | id |  |
+| **client_id** | **String** |  |  |
+
+### Return type
+
+**Integer**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_agreements_by_parent_id_configurations
@@ -829,7 +1148,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## post_finance_agreements_by_parent_id_copy
+
+> <Agreement> post_finance_agreements_by_parent_id_copy(parent_id, client_id)
+
+Post CopyAgreementAction
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::AgreementsApi.new
+parent_id = 56 # Integer | agreementId
+client_id = 'client_id_example' # String | 
+
+begin
+  # Post CopyAgreementAction
+  result = api_instance.post_finance_agreements_by_parent_id_copy(parent_id, client_id)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->post_finance_agreements_by_parent_id_copy: #{e}"
+end
+```
+
+#### Using the post_finance_agreements_by_parent_id_copy_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Agreement>, Integer, Hash)> post_finance_agreements_by_parent_id_copy_with_http_info(parent_id, client_id)
+
+```ruby
+begin
+  # Post CopyAgreementAction
+  data, status_code, headers = api_instance.post_finance_agreements_by_parent_id_copy_with_http_info(parent_id, client_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Agreement>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling AgreementsApi->post_finance_agreements_by_parent_id_copy_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **parent_id** | **Integer** | agreementId |  |
+| **client_id** | **String** |  |  |
+
+### Return type
+
+[**Agreement**](Agreement.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_agreements_by_id
@@ -847,7 +1230,7 @@ require 'connect_wise'
 api_instance = ConnectWise::AgreementsApi.new
 id = 56 # Integer | agreementId
 client_id = 'client_id_example' # String | 
-agreement = ConnectWise::Agreement.new({name: 'name_example'}) # Agreement | agreement
+agreement = ConnectWise::Agreement.new({name: 'name_example', type: ConnectWise::AgreementTypeReference.new, company: ConnectWise::CompanyReference.new, contact: ConnectWise::ContactReference.new}) # Agreement | agreement
 
 begin
   # Put Agreement
@@ -895,5 +1278,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

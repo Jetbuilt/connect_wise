@@ -6,10 +6,10 @@
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **offset** | **Float** | The hours offset (+/-) | [optional] |
+| **offset** | **Float** | The hours offset (+/-). | [optional] |
 | **start_date** | **String** |  | [optional] |
 | **end_date** | **String** |  | [optional] |
-| **daylight_savings_flag** | **Boolean** | Determined based on system library value for specified timeZone.             Not able to be used in query params at this time | [optional] |
+| **daylight_savings_flag** | **Boolean** | Determined based on system library value for specified timeZone.             Not able to be used in query params at this time. | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example

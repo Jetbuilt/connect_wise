@@ -16,6 +16,11 @@
 | **entry_type_id** | **String** |  | [optional] |
 | **required_flag** | **Boolean** |  | [optional] |
 | **inactive_flag** | **Boolean** |  | [optional] |
+| **connect_wise_id** | **String** |  | [optional] |
+| **parent_id** | **Integer** | WF_NotifyActions_RecID | [optional] |
+| **grand_parent_id** | **Integer** | WF_NotifyEvents_RecID | [optional] |
+| **parent_connect_wise_id** | **String** |  | [optional] |
+| **grand_parent_connect_wise_id** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -36,6 +41,11 @@ instance = ConnectWise::WorkflowActionUserDefinedField.new(
   entry_type_id: null,
   required_flag: null,
   inactive_flag: null,
+  connect_wise_id: null,
+  parent_id: null,
+  grand_parent_id: null,
+  parent_connect_wise_id: null,
+  grand_parent_connect_wise_id: null,
   _info: null
 )
 ```

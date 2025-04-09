@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **department_manager** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **dispatch** | [**MemberReference**](MemberReference.md) |  | [optional] |
@@ -22,8 +22,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::DepartmentLocation.new(
-  id: null,
   location: null,
+  id: null,
   department: null,
   department_manager: null,
   dispatch: null,

@@ -1,6 +1,6 @@
 # ConnectWise::TicketStopwatchesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_time_ticketstopwatches_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_time_ticketstopwatches_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_time_ticketstopwatches_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_time_ticketstopwatches
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::TicketStopwatchesApi.new
 client_id = 'client_id_example' # String | 
-ticket_stopwatch = ConnectWise::TicketStopwatch.new({status: 'Reset'}) # TicketStopwatch | ticketStopwatch
+ticket_stopwatch = ConnectWise::TicketStopwatch.new({member: ConnectWise::MemberReference.new, status: 'Reset', ticket: ConnectWise::TicketReference.new}) # TicketStopwatch | ticketStopwatch
 
 begin
   # Post TicketStopwatch
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_time_ticketstopwatches_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::TicketStopwatchesApi.new
 id = 56 # Integer | ticketstopwatcheId
 client_id = 'client_id_example' # String | 
-ticket_stopwatch = ConnectWise::TicketStopwatch.new({status: 'Reset'}) # TicketStopwatch | ticketStopwatch
+ticket_stopwatch = ConnectWise::TicketStopwatch.new({member: ConnectWise::MemberReference.new, status: 'Reset', ticket: ConnectWise::TicketReference.new}) # TicketStopwatch | ticketStopwatch
 
 begin
   # Put TicketStopwatch
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -1,6 +1,6 @@
 # ConnectWise::PrioritiesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -156,7 +156,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_priorities_by_id
@@ -238,12 +238,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_priorities_by_id_image
 
-> get_service_priorities_by_id_image(id, client_id, use_default_flag, last_modified, opts)
+> get_service_priorities_by_id_image(id, client_id, last_modified, opts)
 
 Get Priority
 
@@ -256,7 +256,6 @@ require 'connect_wise'
 api_instance = ConnectWise::PrioritiesApi.new
 id = 56 # Integer | priorityId
 client_id = 'client_id_example' # String | 
-use_default_flag = true # Boolean | useDefaultFlag
 last_modified = 'last_modified_example' # String | lastModified
 opts = {
   conditions: 'conditions_example', # String | 
@@ -271,7 +270,7 @@ opts = {
 
 begin
   # Get Priority
-  api_instance.get_service_priorities_by_id_image(id, client_id, use_default_flag, last_modified, opts)
+  api_instance.get_service_priorities_by_id_image(id, client_id, last_modified, opts)
 rescue ConnectWise::ApiError => e
   puts "Error when calling PrioritiesApi->get_service_priorities_by_id_image: #{e}"
 end
@@ -281,12 +280,12 @@ end
 
 This returns an Array which contains the response data (`nil` in this case), status code and headers.
 
-> <Array(nil, Integer, Hash)> get_service_priorities_by_id_image_with_http_info(id, client_id, use_default_flag, last_modified, opts)
+> <Array(nil, Integer, Hash)> get_service_priorities_by_id_image_with_http_info(id, client_id, last_modified, opts)
 
 ```ruby
 begin
   # Get Priority
-  data, status_code, headers = api_instance.get_service_priorities_by_id_image_with_http_info(id, client_id, use_default_flag, last_modified, opts)
+  data, status_code, headers = api_instance.get_service_priorities_by_id_image_with_http_info(id, client_id, last_modified, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
@@ -301,7 +300,6 @@ end
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** | priorityId |  |
 | **client_id** | **String** |  |  |
-| **use_default_flag** | **Boolean** | useDefaultFlag |  |
 | **last_modified** | **String** | lastModified |  |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
@@ -405,7 +403,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_priorities_by_id_usages_list
@@ -487,7 +485,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_priorities_count
@@ -567,7 +565,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_service_priorities_by_id
@@ -633,7 +631,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_service_priorities
@@ -697,7 +695,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_service_priorities_by_id
@@ -763,5 +761,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

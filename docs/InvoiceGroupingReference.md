@@ -9,6 +9,7 @@
 | **description** | **String** |  | [optional] |
 | **show_price_flag** | **Boolean** |  | [optional] |
 | **show_sub_items_flag** | **Boolean** |  | [optional] |
+| **group_parent_child_additions_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -22,6 +23,7 @@ instance = ConnectWise::InvoiceGroupingReference.new(
   description: null,
   show_price_flag: null,
   show_sub_items_flag: null,
+  group_parent_child_additions_flag: null,
   _info: null
 )
 ```

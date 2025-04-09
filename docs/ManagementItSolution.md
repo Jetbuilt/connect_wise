@@ -7,23 +7,23 @@
 | **name** | **String** |  Max length: 30; |  |
 | **management_it_solution_type** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **management_solution_name** | **String** | This is only required when managementItSolutionType is Custom Max length: 30; | [optional] |
-| **management_server_url** | **String** | This is only required for Level Platforms Max length: 200; | [optional] |
-| **webservice_override_url** | **String** | This is only required for Level Platforms when overrideWebServiceLocationFlag is true Max length: 200; | [optional] |
-| **portal_override_login_url** | **String** | This is only required for Level Platforms when overrideLoginLocationFlag is true Max length: 200; | [optional] |
+| **management_solution_name** | **String** | Gets or sets             this is only required when managementItSolutionType is Custom. Max length: 30; | [optional] |
+| **management_server_url** | **String** | Gets or sets             this is only required for Level Platforms. Max length: 200; | [optional] |
+| **webservice_override_url** | **String** | Gets or sets             this is only required for Level Platforms when overrideWebServiceLocationFlag is true. Max length: 200; | [optional] |
+| **portal_override_login_url** | **String** | Gets or sets             this is only required for Level Platforms when overrideLoginLocationFlag is true. Max length: 200; | [optional] |
 | **global_login_flag** | **Boolean** |  | [optional] |
-| **global_login_username** | **String** | This is only required when globalLoginFlag &#x3D; true Max length: 50; | [optional] |
-| **global_login_password** | **String** | This is only required when globalLoginFlag &#x3D; true Max length: 50; | [optional] |
+| **global_login_username** | **String** | Gets or sets             this is only required when globalLoginFlag &#x3D; true. Max length: 50; | [optional] |
+| **global_login_password** | **String** | Gets or sets             this is only required when globalLoginFlag &#x3D; true. Max length: 50; | [optional] |
 | **using_ssl_flag** | **Boolean** |  | [optional] |
-| **n_able_username** | **String** | This is only required for N-Able solution Max length: 50; | [optional] |
-| **n_able_password** | **String** | This is only required for N-Able solution Max length: 50; | [optional] |
+| **n_able_username** | **String** | Gets or sets             this is only required for N-Able solution. Max length: 50; | [optional] |
+| **n_able_password** | **String** | Gets or sets             this is only required for N-Able solution. Max length: 50; | [optional] |
 | **override_web_service_location_flag** | **Boolean** |  | [optional] |
 | **override_login_location_flag** | **Boolean** |  | [optional] |
-| **continuum_api_username** | **String** | This is only required for Continuum solution Max length: 100; | [optional] |
-| **continuum_api_password** | **String** | This is only required for Continuum solution Max length: 100; | [optional] |
-| **level_api_username** | **String** | This is only required for Level Platforms solution Max length: 100; | [optional] |
-| **level_api_password** | **String** | This is only required for Level Platforms solution Max length: 100; | [optional] |
-| **level_var_domain** | **String** | This is only required for Level Platforms solution Max length: 100; | [optional] |
+| **continuum_api_username** | **String** | Gets or sets             this is only required for Continuum solution. Max length: 100; | [optional] |
+| **continuum_api_password** | **String** | Gets or sets             this is only required for Continuum solution. Max length: 100; | [optional] |
+| **level_api_username** | **String** | Gets or sets             this is only required for Level Platforms solution. Max length: 100; | [optional] |
+| **level_api_password** | **String** | Gets or sets             this is only required for Level Platforms solution. Max length: 100; | [optional] |
+| **level_var_domain** | **String** | Gets or sets             this is only required for Level Platforms solution. Max length: 100; | [optional] |
 | **no_display_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 

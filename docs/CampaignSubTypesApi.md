@@ -1,6 +1,6 @@
 # ConnectWise::CampaignSubTypesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_sub_types_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_sub_types_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_marketing_campaigns_sub_types_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_marketing_campaigns_sub_types
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CampaignSubTypesApi.new
 client_id = 'client_id_example' # String | 
-campaign_sub_type_campaign_sub_type = ConnectWise::CampaignSubTypeCampaignSubType.new({name: 'name_example'}) # CampaignSubTypeCampaignSubType | campaignSubType
+campaign_sub_type_campaign_sub_type = ConnectWise::CampaignSubTypeCampaignSubType.new({type: ConnectWise::CampaignTypeReference.new, name: 'name_example'}) # CampaignSubTypeCampaignSubType | campaignSubType
 
 begin
   # Post CampaignSubType
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_marketing_campaigns_sub_types_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CampaignSubTypesApi.new
 id = 56 # Integer | subTypeId
 client_id = 'client_id_example' # String | 
-campaign_sub_type_campaign_sub_type = ConnectWise::CampaignSubTypeCampaignSubType.new({name: 'name_example'}) # CampaignSubTypeCampaignSubType | campaignSubType
+campaign_sub_type_campaign_sub_type = ConnectWise::CampaignSubTypeCampaignSubType.new({type: ConnectWise::CampaignTypeReference.new, name: 'name_example'}) # CampaignSubTypeCampaignSubType | campaignSubType
 
 begin
   # Put CampaignSubType
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

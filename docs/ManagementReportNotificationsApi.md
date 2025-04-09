@@ -1,6 +1,6 @@
 # ConnectWise::ManagementReportNotificationsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -229,7 +229,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_companies_by_parent_id_management_report_notifications_by_id
@@ -313,7 +313,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_companies_by_parent_id_management_report_notifications_count
@@ -395,7 +395,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_management_by_parent_id_management_report_notifications
@@ -477,7 +477,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_management_by_parent_id_management_report_notifications_by_id
@@ -561,7 +561,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_management_by_parent_id_management_report_notifications_count
@@ -643,7 +643,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_companies_by_parent_id_management_report_notifications_by_id
@@ -711,7 +711,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_management_by_parent_id_management_report_notifications_by_id
@@ -779,7 +779,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_companies_by_parent_id_management_report_notifications
@@ -797,7 +797,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ManagementReportNotificationsApi.new
 parent_id = 56 # Integer | companyId
 client_id = 'client_id_example' # String | 
-management_report_notification = ConnectWise::ManagementReportNotification.new # ManagementReportNotification | managementReportNotification
+management_report_notification = ConnectWise::ManagementReportNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # ManagementReportNotification | managementReportNotification
 
 begin
   # Post ManagementReportNotification
@@ -845,7 +845,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_management_by_parent_id_management_report_notifications
@@ -863,7 +863,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ManagementReportNotificationsApi.new
 parent_id = 56 # Integer | managementId
 client_id = 'client_id_example' # String | 
-management_report_notification = ConnectWise::ManagementReportNotification.new # ManagementReportNotification | managementReportNotification
+management_report_notification = ConnectWise::ManagementReportNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # ManagementReportNotification | managementReportNotification
 
 begin
   # Post ManagementReportNotification
@@ -911,7 +911,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_companies_by_parent_id_management_report_notifications_by_id
@@ -930,7 +930,7 @@ api_instance = ConnectWise::ManagementReportNotificationsApi.new
 id = 56 # Integer | managementReportNotificationId
 parent_id = 56 # Integer | companyId
 client_id = 'client_id_example' # String | 
-management_report_notification = ConnectWise::ManagementReportNotification.new # ManagementReportNotification | managementReportNotification
+management_report_notification = ConnectWise::ManagementReportNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # ManagementReportNotification | managementReportNotification
 
 begin
   # Put ManagementReportNotification
@@ -979,7 +979,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_management_by_parent_id_management_report_notifications_by_id
@@ -998,7 +998,7 @@ api_instance = ConnectWise::ManagementReportNotificationsApi.new
 id = 56 # Integer | managementReportNotificationId
 parent_id = 56 # Integer | managementId
 client_id = 'client_id_example' # String | 
-management_report_notification = ConnectWise::ManagementReportNotification.new # ManagementReportNotification | managementReportNotification
+management_report_notification = ConnectWise::ManagementReportNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # ManagementReportNotification | managementReportNotification
 
 begin
   # Put ManagementReportNotification
@@ -1047,5 +1047,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

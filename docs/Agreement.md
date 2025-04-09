@@ -5,10 +5,10 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 100; |  |
+| **type** | [**AgreementTypeReference**](AgreementTypeReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
+| **contact** | [**ContactReference**](ContactReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**AgreementTypeReference**](AgreementTypeReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
-| **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **sub_contract_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **sub_contract_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
@@ -61,6 +61,7 @@
 | **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **restrict_down_payment** | **Boolean** |  | [optional] |
 | **prorate_flag** | **Boolean** |  | [optional] |
+| **invoice_prorated_additions_flag** | **Boolean** |  | [optional] |
 | **invoice_description** | **String** |  | [optional] |
 | **top_comment** | **Boolean** |  | [optional] |
 | **bottom_comment** | **Boolean** |  | [optional] |
@@ -79,6 +80,9 @@
 | **auto_invoice_flag** | **Boolean** |  | [optional] |
 | **next_invoice_date** | **String** |  | [optional] |
 | **company_location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
+| **ship_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
+| **ship_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
+| **ship_to_site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **agreement_status** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
@@ -90,10 +94,10 @@ require 'connect_wise'
 
 instance = ConnectWise::Agreement.new(
   name: null,
-  id: null,
   type: null,
   company: null,
   contact: null,
+  id: null,
   site: null,
   sub_contract_company: null,
   sub_contract_contact: null,
@@ -146,6 +150,7 @@ instance = ConnectWise::Agreement.new(
   tax_code: null,
   restrict_down_payment: null,
   prorate_flag: null,
+  invoice_prorated_additions_flag: null,
   invoice_description: null,
   top_comment: null,
   bottom_comment: null,
@@ -164,6 +169,9 @@ instance = ConnectWise::Agreement.new(
   auto_invoice_flag: null,
   next_invoice_date: null,
   company_location: null,
+  ship_to_company: null,
+  ship_to_contact: null,
+  ship_to_site: null,
   agreement_status: null,
   _info: null,
   custom_fields: null

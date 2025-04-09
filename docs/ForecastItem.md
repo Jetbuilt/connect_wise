@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  |  |
+| **status** | [**OpportunityStatusReference**](OpportunityStatusReference.md) |  |  |
 | **forecast_type** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
 | **forecast_description** | **String** |  Max length: 50; | [optional] |
-| **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] |
 | **quantity** | **Float** |  | [optional] |
-| **status** | [**OpportunityStatusReference**](OpportunityStatusReference.md) |  | [optional] |
 | **catalog_item** | [**IvItemReference**](IvItemReference.md) |  | [optional] |
 | **product_description** | **String** |  | [optional] |
 | **product_class** | **String** |  | [optional] |
@@ -41,12 +41,12 @@
 require 'connect_wise'
 
 instance = ConnectWise::ForecastItem.new(
+  opportunity: null,
+  status: null,
   forecast_type: null,
   id: null,
   forecast_description: null,
-  opportunity: null,
   quantity: null,
-  status: null,
   catalog_item: null,
   product_description: null,
   product_class: null,

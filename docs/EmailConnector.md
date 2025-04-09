@@ -4,14 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **service_board** | [**BoardReference**](BoardReference.md) |  |  |
+| **default_company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **email_errors_to** | **String** |  Max length: 50; |  |
 | **id** | **Integer** |  | [optional] |
 | **email_server_type** | **String** |  | [optional] |
 | **imap_setup** | [**ImapSetupReference**](ImapSetupReference.md) |  | [optional] |
 | **office365_email_setup** | [**Office365EmailSetupReference**](Office365EmailSetupReference.md) |  | [optional] |
+| **asio365_email_setup** | [**Office365EmailSetupReference**](Office365EmailSetupReference.md) |  | [optional] |
 | **google_email_setup** | [**GoogleEmailSetupReference**](GoogleEmailSetupReference.md) |  | [optional] |
-| **service_board** | [**BoardReference**](BoardReference.md) |  | [optional] |
-| **default_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **default_member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
@@ -32,6 +33,8 @@
 | **item_override** | [**ServiceItemReference**](ServiceItemReference.md) |  | [optional] |
 | **status_override** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] |
 | **add_cc_flag** | **Boolean** |  | [optional] |
+| **inbound_ticket_mailbox_id** | **String** |  | [optional] |
+| **use_email_message_id_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -40,14 +43,15 @@
 require 'connect_wise'
 
 instance = ConnectWise::EmailConnector.new(
+  service_board: null,
+  default_company: null,
   email_errors_to: null,
   id: null,
   email_server_type: null,
   imap_setup: null,
   office365_email_setup: null,
+  asio365_email_setup: null,
   google_email_setup: null,
-  service_board: null,
-  default_company: null,
   default_member: null,
   location: null,
   department: null,
@@ -68,6 +72,8 @@ instance = ConnectWise::EmailConnector.new(
   item_override: null,
   status_override: null,
   add_cc_flag: null,
+  inbound_ticket_mailbox_id: null,
+  use_email_message_id_flag: null,
   _info: null
 )
 ```

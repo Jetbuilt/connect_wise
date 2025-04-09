@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **member** | [**MemberReference**](MemberReference.md) |  |  |
 | **schedule_id** | **Integer** |  |  |
 | **status** | **String** |  |  |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -15,7 +16,6 @@
 | **id** | **Integer** |  | [optional] |
 | **internal_notes** | **String** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
-| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **mobile_guid** | **String** |  | [optional] |
 | **notes** | **String** |  Max length: 4000; | [optional] |
 | **schedule_mobile_guid** | **String** |  | [optional] |
@@ -30,6 +30,7 @@
 require 'connect_wise'
 
 instance = ConnectWise::ScheduleStopwatch.new(
+  member: null,
   schedule_id: null,
   status: null,
   _info: null,
@@ -41,7 +42,6 @@ instance = ConnectWise::ScheduleStopwatch.new(
   id: null,
   internal_notes: null,
   location_id: null,
-  member: null,
   mobile_guid: null,
   notes: null,
   schedule_mobile_guid: null,

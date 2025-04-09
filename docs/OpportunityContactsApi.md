@@ -1,6 +1,6 @@
 # ConnectWise::OpportunityContactsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_opportunities_by_parent_id_contacts_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_opportunities_by_parent_id_contacts_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_opportunities_by_parent_id_contacts_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_opportunities_by_parent_id_contacts
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::OpportunityContactsApi.new
 parent_id = 56 # Integer | opportunityId
 client_id = 'client_id_example' # String | 
-opportunity_contact = ConnectWise::OpportunityContact.new # OpportunityContact | opportunityContact
+opportunity_contact = ConnectWise::OpportunityContact.new({contact: ConnectWise::ContactReference.new}) # OpportunityContact | opportunityContact
 
 begin
   # Post OpportunityContact
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_opportunities_by_parent_id_contacts_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::OpportunityContactsApi.new
 id = 56 # Integer | contactId
 parent_id = 56 # Integer | opportunityId
 client_id = 'client_id_example' # String | 
-opportunity_contact = ConnectWise::OpportunityContact.new # OpportunityContact | opportunityContact
+opportunity_contact = ConnectWise::OpportunityContact.new({contact: ConnectWise::ContactReference.new}) # OpportunityContact | opportunityContact
 
 begin
   # Put OpportunityContact
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

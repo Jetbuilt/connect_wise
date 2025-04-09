@@ -10,8 +10,8 @@
 | **default_billing_level** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
 | **portal_url** | **String** |  Max length: 200; | [optional] |
-| **global_login_username** | **String** | This is only required when globalLoginFlag &#x3D; true Max length: 50; | [optional] |
-| **global_login_password** | **String** | This is only required when globalLoginFlag &#x3D; true Max length: 50; | [optional] |
+| **global_login_username** | **String** | Gets or sets             this is only required when globalLoginFlag &#x3D; true. Max length: 50; | [optional] |
+| **global_login_password** | **String** | Gets or sets             this is only required when globalLoginFlag &#x3D; true. Max length: 50; | [optional] |
 | **management_it_setup_type** | **String** |  | [optional] |
 | **default_location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **default_department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |

@@ -1,6 +1,6 @@
 # ConnectWise::WorkRoleLocationsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_time_work_roles_by_parent_id_locations_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_time_work_roles_by_parent_id_locations_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_time_work_roles_by_parent_id_locations_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_time_work_roles_by_parent_id_locations
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::WorkRoleLocationsApi.new
 parent_id = 56 # Integer | workRoleId
 client_id = 'client_id_example' # String | 
-work_role_location = ConnectWise::WorkRoleLocation.new # WorkRoleLocation | workRoleLocation
+work_role_location = ConnectWise::WorkRoleLocation.new({location: ConnectWise::SystemLocationReference.new}) # WorkRoleLocation | workRoleLocation
 
 begin
   # Post WorkRoleLocation
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_time_work_roles_by_parent_id_locations_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::WorkRoleLocationsApi.new
 id = 56 # Integer | locationId
 parent_id = 56 # Integer | workRoleId
 client_id = 'client_id_example' # String | 
-work_role_location = ConnectWise::WorkRoleLocation.new # WorkRoleLocation | workRoleLocation
+work_role_location = ConnectWise::WorkRoleLocation.new({location: ConnectWise::SystemLocationReference.new}) # WorkRoleLocation | workRoleLocation
 
 begin
   # Put WorkRoleLocation
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -12,6 +12,7 @@
 | **zip_caption** | **String** |  | [optional] |
 | **dialing_prefix** | **String** |  | [optional] |
 | **localization_caption_one** | **String** |  | [optional] |
+| **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -28,6 +29,7 @@ instance = ConnectWise::CountryInfo.new(
   zip_caption: null,
   dialing_prefix: null,
   localization_caption_one: null,
+  currency: null,
   _info: null
 )
 ```

@@ -5,9 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **quantity** | **Float** |  |  |
+| **catalog_item** | [**CatalogItemReference**](CatalogItemReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **sequence_number** | **Integer** |  Required On Updates; | [optional] |
-| **catalog_item** | [**CatalogItemReference**](CatalogItemReference.md) |  | [optional] |
 | **hide_price_flag** | **Boolean** |  | [optional] |
 | **hide_item_identifier_flag** | **Boolean** |  | [optional] |
 | **hide_description_flag** | **Boolean** |  | [optional] |
@@ -27,9 +27,9 @@ require 'connect_wise'
 
 instance = ConnectWise::ProductComponent.new(
   quantity: null,
+  catalog_item: null,
   id: null,
   sequence_number: null,
-  catalog_item: null,
   hide_price_flag: null,
   hide_item_identifier_flag: null,
   hide_description_flag: null,

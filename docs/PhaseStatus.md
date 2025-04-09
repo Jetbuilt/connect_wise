@@ -12,7 +12,7 @@
 | **closed_flag** | **Boolean** |  | [optional] |
 | **board_association_ids** | **Array&lt;Integer&gt;** |  | [optional] |
 | **status_indicator** | [**StatusIndicatorReference**](StatusIndicatorReference.md) |  | [optional] |
-| **custom_status_indicator_name** | **String** | Required when statusIndicator is Custom Max length: 30; | [optional] |
+| **custom_status_indicator_name** | **String** | Required when statusIndicator is Custom. Max length: 30; | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example

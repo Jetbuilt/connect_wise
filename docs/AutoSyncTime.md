@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **sync_time** | **String** |  |  |
+| **time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -16,8 +16,8 @@ require 'connect_wise'
 
 instance = ConnectWise::AutoSyncTime.new(
   sync_time: null,
-  id: null,
   time_zone: null,
+  id: null,
   _info: null
 )
 ```
