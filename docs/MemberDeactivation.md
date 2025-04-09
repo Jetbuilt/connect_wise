@@ -4,29 +4,29 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **activity** | [**MemberDeactivationSalesActivity**](MemberDeactivationSalesActivity.md) |  | [optional] |
-| **service_team** | [**MemberDeactivationServiceTeam**](MemberDeactivationServiceTeam.md) |  | [optional] |
+| **activity** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **service_team** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
 | **company_team** | [**Array&lt;MemberDeactivationCompanyTeam&gt;**](MemberDeactivationCompanyTeam.md) | A list of customers for which the member holds a team role | [optional] |
-| **workflow_email** | [**MemberDeactivationWorkflow**](MemberDeactivationWorkflow.md) |  | [optional] |
+| **workflow_email** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
 | **service_status_workflow** | [**Array&lt;MemberDeactivationStatusWorkflow&gt;**](MemberDeactivationStatusWorkflow.md) |  | [optional] |
-| **ticket_template** | [**MemberDeactivationServiceTemplate**](MemberDeactivationServiceTemplate.md) |  | [optional] |
-| **opportunity** | [**MemberDeactivationOpportunity**](MemberDeactivationOpportunity.md) |  | [optional] |
-| **sales_team** | [**MemberDeactivationSalesTeam**](MemberDeactivationSalesTeam.md) |  | [optional] |
-| **project_manager** | [**MemberDeactivationProjectManager**](MemberDeactivationProjectManager.md) |  | [optional] |
-| **project_time_approver** | [**MemberDeactivationProjectManager**](MemberDeactivationProjectManager.md) |  | [optional] |
-| **project_expense_approver** | [**MemberDeactivationProjectManager**](MemberDeactivationProjectManager.md) |  | [optional] |
-| **knowledge_base_article** | [**MemberDeactivationKnowledgebaseArticle**](MemberDeactivationKnowledgebaseArticle.md) |  | [optional] |
-| **my_company_president** | [**MemberDeactivationMyCompanyPresidentRole**](MemberDeactivationMyCompanyPresidentRole.md) |  | [optional] |
-| **my_company_coo** | [**MemberDeactivationMyCompanyCOORole**](MemberDeactivationMyCompanyCOORole.md) |  | [optional] |
-| **my_company_controller** | [**MemberDeactivationMyCompanyControllerRole**](MemberDeactivationMyCompanyControllerRole.md) |  | [optional] |
-| **my_company_dispatch** | [**MemberDeactivationMyCompanyDispatchRole**](MemberDeactivationMyCompanyDispatchRole.md) |  | [optional] |
-| **my_company_service_manager** | [**MemberDeactivationMyCompanyServiceManagerRole**](MemberDeactivationMyCompanyServiceManagerRole.md) |  | [optional] |
-| **my_company_duty_manager_role** | [**MemberDeactivationMyCompanyDutyManagerRole**](MemberDeactivationMyCompanyDutyManagerRole.md) |  | [optional] |
-| **department_manager** | [**MemberDeactivationDepartmentMananager**](MemberDeactivationDepartmentMananager.md) |  | [optional] |
-| **dispatch_member** | [**MemberDeactivationDispatchMember**](MemberDeactivationDispatchMember.md) |  | [optional] |
-| **service_manager** | [**MemberDeactivationServiceManger**](MemberDeactivationServiceManger.md) |  | [optional] |
-| **duty_manager** | [**MemberDeactivationDutyManager**](MemberDeactivationDutyManager.md) |  | [optional] |
-| **send_from_email_notify** | [**MemberDeactivationSendFromEmailNotify**](MemberDeactivationSendFromEmailNotify.md) |  | [optional] |
+| **ticket_template** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **opportunity** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **sales_team** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **project_manager** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **project_time_approver** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **project_expense_approver** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **knowledge_base_article** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_president** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_coo** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_controller** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_dispatch** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_service_manager** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **my_company_duty_manager_role** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **department_manager** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **dispatch_member** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **service_manager** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **duty_manager** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
+| **send_from_email_notify** | [**MemberDeactivationItem**](MemberDeactivationItem.md) |  | [optional] |
 | **delete_open_time_sheets_flag** | **Boolean** | By default, this is set to false             If there is any open timesheets, system will return error message             that there is open timesheets still attached to this member             If user would like to delete member with open timesheets, they can set this boolean to TRUE             System will delete member and any associated open timesheets | [optional] |
 
 ## Example

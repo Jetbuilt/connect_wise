@@ -21,7 +21,7 @@
 | **acceptance_email_from_last_name** | **String** |  | [optional] |
 | **acceptance_email_subject** | **String** |  | [optional] |
 | **acceptance_email_body** | **String** |  | [optional] |
-| **acceptance_from_email** | **String** | Required when acceptanceSendEmailFlag is true | [optional] |
+| **acceptance_from_email** | **String** | Gets or sets             required when acceptanceSendEmailFlag is true. | [optional] |
 | **acceptance_email_activity_type** | [**ActivityTypeReference**](ActivityTypeReference.md) |  | [optional] |
 | **acceptance_email_assigned_by_member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **rejection_change_status_flag** | **Boolean** |  | [optional] |
@@ -30,7 +30,7 @@
 | **rejection_send_email_flag** | **Boolean** |  | [optional] |
 | **rejection_email_from_first_name** | **String** |  | [optional] |
 | **rejection_email_from_last_name** | **String** |  | [optional] |
-| **rejection_from_email** | **String** | Required when rejectionSendEmailFlag is true | [optional] |
+| **rejection_from_email** | **String** | Gets or sets             required when rejectionSendEmailFlag is true. | [optional] |
 | **rejection_email_subject** | **String** |  | [optional] |
 | **rejection_email_body** | **String** |  | [optional] |
 | **rejection_email_activity_type** | [**ActivityTypeReference**](ActivityTypeReference.md) |  | [optional] |
@@ -39,7 +39,7 @@
 | **confirmation_email_use_default_company_email_address_flag** | **Boolean** |  | [optional] |
 | **confirmation_email_from_first_name** | **String** |  | [optional] |
 | **confirmation_email_from_last_name** | **String** |  | [optional] |
-| **confirmation_from_email** | **String** | Required when confirmationSendEmailFlag is true | [optional] |
+| **confirmation_from_email** | **String** | Gets or sets             required when confirmationSendEmailFlag is true. | [optional] |
 | **confirmation_email_subject** | **String** |  | [optional] |
 | **confirmation_email_body** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |

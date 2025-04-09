@@ -1,6 +1,6 @@
 # ConnectWise::WarehouseBinsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_warehouse_bins_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_warehouse_bins_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_warehouse_bins_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_warehouse_bins
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::WarehouseBinsApi.new
 client_id = 'client_id_example' # String | 
-warehouse_bin = ConnectWise::WarehouseBin.new({name: 'name_example'}) # WarehouseBin | warehouseBin
+warehouse_bin = ConnectWise::WarehouseBin.new({name: 'name_example', warehouse: ConnectWise::WarehouseReference.new}) # WarehouseBin | warehouseBin
 
 begin
   # Post WarehouseBin
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_warehouse_bins_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::WarehouseBinsApi.new
 id = 56 # Integer | warehouseBinId
 client_id = 'client_id_example' # String | 
-warehouse_bin = ConnectWise::WarehouseBin.new({name: 'name_example'}) # WarehouseBin | warehouseBin
+warehouse_bin = ConnectWise::WarehouseBin.new({name: 'name_example', warehouse: ConnectWise::WarehouseReference.new}) # WarehouseBin | warehouseBin
 
 begin
   # Put WarehouseBin
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -67,6 +67,7 @@
 | **prorate_flag** | **Boolean** |  | [optional] |
 | **email_template** | [**EmailTemplateReference**](EmailTemplateReference.md) |  | [optional] |
 | **auto_invoice_flag** | **Boolean** |  | [optional] |
+| **invoice_prorated_additions_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -138,6 +139,7 @@ instance = ConnectWise::AgreementType.new(
   prorate_flag: null,
   email_template: null,
   auto_invoice_flag: null,
+  invoice_prorated_additions_flag: null,
   _info: null
 )
 ```

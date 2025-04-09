@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  | [optional] |
 | **agreement_id** | **Integer** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
@@ -15,8 +15,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::AgreementWorkRoleExclusion.new(
-  id: null,
   work_role: null,
+  id: null,
   agreement_id: null,
   _info: null
 )

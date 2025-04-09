@@ -1,6 +1,6 @@
 # ConnectWise::SalesQuotasApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_quotas_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_sales_quotas_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_sales_quotas_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_sales_quotas
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::SalesQuotasApi.new
 client_id = 'client_id_example' # String | 
-sales_quota = ConnectWise::SalesQuota.new # SalesQuota | salesQuota
+sales_quota = ConnectWise::SalesQuota.new({member: ConnectWise::MemberReference.new, location: ConnectWise::SystemLocationReference.new}) # SalesQuota | salesQuota
 
 begin
   # Post SalesQuota
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_sales_quotas_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::SalesQuotasApi.new
 id = 56 # Integer | quotaId
 client_id = 'client_id_example' # String | 
-sales_quota = ConnectWise::SalesQuota.new # SalesQuota | salesQuota
+sales_quota = ConnectWise::SalesQuota.new({member: ConnectWise::MemberReference.new, location: ConnectWise::SystemLocationReference.new}) # SalesQuota | salesQuota
 
 begin
   # Put SalesQuota
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

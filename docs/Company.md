@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **identifier** | **String** |  Max length: 25; |  |
+| **identifier** | **String** |  Max length: 30; |  |
 | **name** | **String** |  Max length: 50; |  |
 | **id** | **Integer** |  | [optional] |
 | **status** | [**CompanyStatusReference**](CompanyStatusReference.md) |  | [optional] |
-| **address_line1** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country Max length: 50; | [optional] |
-| **address_line2** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country Max length: 50; | [optional] |
-| **city** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country Max length: 50; | [optional] |
-| **state** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country Max length: 50; | [optional] |
-| **zip** | **String** | At least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country Max length: 12; | [optional] |
+| **address_line1** | **String** | Gets or sets at least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country. Max length: 50; | [optional] |
+| **address_line2** | **String** | Gets or sets at least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country. Max length: 50; | [optional] |
+| **city** | **String** | Gets or sets at least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country. Max length: 50; | [optional] |
+| **state** | **String** | Gets or sets at least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country. Max length: 50; | [optional] |
+| **zip** | **String** | Gets or sets at least one address field is required -- addressLine1, addressLine2, city, state, zip and/or country. Max length: 12; | [optional] |
 | **country** | [**CountryReference**](CountryReference.md) |  | [optional] |
 | **phone_number** | **String** |  Max length: 30; | [optional] |
 | **fax_number** | **String** |  Max length: 30; | [optional] |
@@ -68,7 +68,7 @@
 | **territory_manager** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **reseller_identifier** | **String** |  | [optional] |
 | **is_vendor_flag** | **Boolean** |  | [optional] |
-| **types** | [**Array&lt;CompanyTypeReference&gt;**](CompanyTypeReference.md) | Integrer array of Company_Type_Recids to be assigned to company that can be passed in only during new company creation (post)             To update existing companies type, use the /company/companyTypeAssociations or /company/companies/{ID}/typeAssociations endpoints | [optional] |
+| **types** | [**Array&lt;CompanyTypeReference&gt;**](CompanyTypeReference.md) | Gets or sets integrer array of Company_Type_Recids to be assigned to company that can be passed in only during new company creation (post)             To update existing companies type, use the /company/companyTypeAssociations or /company/companies/{ID}/typeAssociations endpoints. | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **integrator_tags** | **Array&lt;String&gt;** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **member** | [**MemberReference**](MemberReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **allow_access_flag** | **Boolean** |  | [optional] |
@@ -17,8 +17,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::SalesTeamMember.new(
-  id: null,
   member: null,
+  id: null,
   location: null,
   department: null,
   allow_access_flag: null,

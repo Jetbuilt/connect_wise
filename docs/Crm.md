@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **account_manager_role** | [**TeamRoleReference**](TeamRoleReference.md) |  |  |
+| **technical_contact_role** | [**TeamRoleReference**](TeamRoleReference.md) |  |  |
+| **sales_rep_role** | [**TeamRoleReference**](TeamRoleReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **company_list_count** | **Integer** |  | [optional] |
 | **lock_probability_flag** | **Boolean** |  | [optional] |
-| **account_manager_role** | [**TeamRoleReference**](TeamRoleReference.md) |  | [optional] |
-| **technical_contact_role** | [**TeamRoleReference**](TeamRoleReference.md) |  | [optional] |
-| **sales_rep_role** | [**TeamRoleReference**](TeamRoleReference.md) |  | [optional] |
 | **company_id_generation_flag** | **Boolean** |  | [optional] |
 | **exclude_spaces_flag** | **Boolean** |  | [optional] |
 | **field1_caption** | **String** |  Max length: 25; | [optional] |
@@ -35,12 +35,12 @@
 require 'connect_wise'
 
 instance = ConnectWise::Crm.new(
-  id: null,
-  company_list_count: null,
-  lock_probability_flag: null,
   account_manager_role: null,
   technical_contact_role: null,
   sales_rep_role: null,
+  id: null,
+  company_list_count: null,
+  lock_probability_flag: null,
   company_id_generation_flag: null,
   exclude_spaces_flag: null,
   field1_caption: null,

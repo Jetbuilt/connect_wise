@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **internal_company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **tier1_approval_flag** | **Boolean** |  | [optional] |
 | **tier2_approval_flag** | **Boolean** |  | [optional] |
@@ -13,7 +14,6 @@
 | **rounding_factor** | **Float** |  | [optional] |
 | **invoice_start** | **Integer** |  | [optional] |
 | **default_special_invoice_type** | **String** |  | [optional] |
-| **internal_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -22,6 +22,7 @@
 require 'connect_wise'
 
 instance = ConnectWise::TimeExpense.new(
+  internal_company: null,
   id: null,
   tier1_approval_flag: null,
   tier2_approval_flag: null,
@@ -31,7 +32,6 @@ instance = ConnectWise::TimeExpense.new(
   rounding_factor: null,
   invoice_start: null,
   default_special_invoice_type: null,
-  internal_company: null,
   _info: null
 )
 ```

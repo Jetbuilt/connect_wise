@@ -1,17 +1,17 @@
 # ConnectWise::SLAInfosApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**get_service_slainfo_by_id_info**](SLAInfosApi.md#get_service_slainfo_by_id_info) | **GET** /service/slainfo/{id}/info | Get SLAInfos |
-| [**get_service_slainfo_info**](SLAInfosApi.md#get_service_slainfo_info) | **GET** /service/slainfo/info | Get List of SLAInfos |
+| [**get_service_slas_by_id_info**](SLAInfosApi.md#get_service_slas_by_id_info) | **GET** /service/slas/{id}/info | Get SLAInfos |
+| [**get_service_slas_info**](SLAInfosApi.md#get_service_slas_info) | **GET** /service/slas/info | Get List of SLAInfos |
 | [**get_service_slas_info_count**](SLAInfosApi.md#get_service_slas_info_count) | **GET** /service/SLAs/info/count | Get Count of SLAInfos |
 
 
-## get_service_slainfo_by_id_info
+## get_service_slas_by_id_info
 
-> <SLAInfo> get_service_slainfo_by_id_info(id, client_id, opts)
+> <SLAInfo> get_service_slas_by_id_info(id, client_id, opts)
 
 Get SLAInfos
 
@@ -37,28 +37,28 @@ opts = {
 
 begin
   # Get SLAInfos
-  result = api_instance.get_service_slainfo_by_id_info(id, client_id, opts)
+  result = api_instance.get_service_slas_by_id_info(id, client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
-  puts "Error when calling SLAInfosApi->get_service_slainfo_by_id_info: #{e}"
+  puts "Error when calling SLAInfosApi->get_service_slas_by_id_info: #{e}"
 end
 ```
 
-#### Using the get_service_slainfo_by_id_info_with_http_info variant
+#### Using the get_service_slas_by_id_info_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SLAInfo>, Integer, Hash)> get_service_slainfo_by_id_info_with_http_info(id, client_id, opts)
+> <Array(<SLAInfo>, Integer, Hash)> get_service_slas_by_id_info_with_http_info(id, client_id, opts)
 
 ```ruby
 begin
   # Get SLAInfos
-  data, status_code, headers = api_instance.get_service_slainfo_by_id_info_with_http_info(id, client_id, opts)
+  data, status_code, headers = api_instance.get_service_slas_by_id_info_with_http_info(id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SLAInfo>
 rescue ConnectWise::ApiError => e
-  puts "Error when calling SLAInfosApi->get_service_slainfo_by_id_info_with_http_info: #{e}"
+  puts "Error when calling SLAInfosApi->get_service_slas_by_id_info_with_http_info: #{e}"
 end
 ```
 
@@ -88,12 +88,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
-## get_service_slainfo_info
+## get_service_slas_info
 
-> <Array<SLAInfo>> get_service_slainfo_info(client_id, opts)
+> <Array<SLAInfo>> get_service_slas_info(client_id, opts)
 
 Get List of SLAInfos
 
@@ -118,28 +118,28 @@ opts = {
 
 begin
   # Get List of SLAInfos
-  result = api_instance.get_service_slainfo_info(client_id, opts)
+  result = api_instance.get_service_slas_info(client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
-  puts "Error when calling SLAInfosApi->get_service_slainfo_info: #{e}"
+  puts "Error when calling SLAInfosApi->get_service_slas_info: #{e}"
 end
 ```
 
-#### Using the get_service_slainfo_info_with_http_info variant
+#### Using the get_service_slas_info_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SLAInfo>>, Integer, Hash)> get_service_slainfo_info_with_http_info(client_id, opts)
+> <Array(<Array<SLAInfo>>, Integer, Hash)> get_service_slas_info_with_http_info(client_id, opts)
 
 ```ruby
 begin
   # Get List of SLAInfos
-  data, status_code, headers = api_instance.get_service_slainfo_info_with_http_info(client_id, opts)
+  data, status_code, headers = api_instance.get_service_slas_info_with_http_info(client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SLAInfo>>
 rescue ConnectWise::ApiError => e
-  puts "Error when calling SLAInfosApi->get_service_slainfo_info_with_http_info: #{e}"
+  puts "Error when calling SLAInfosApi->get_service_slas_info_with_http_info: #{e}"
 end
 ```
 
@@ -168,7 +168,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_slas_info_count
@@ -248,5 +248,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

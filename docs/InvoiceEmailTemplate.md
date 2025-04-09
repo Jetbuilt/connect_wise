@@ -9,9 +9,9 @@
 | **id** | **Integer** |  | [optional] |
 | **service_survey** | [**ServiceSurveyReference**](ServiceSurveyReference.md) |  | [optional] |
 | **use_sender_flag** | **Boolean** |  | [optional] |
-| **first_name** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false Max length: 100; | [optional] |
-| **last_name** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false Max length: 100; | [optional] |
-| **email_address** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false Max length: 100; | [optional] |
+| **first_name** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false. Max length: 100; | [optional] |
+| **last_name** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false. Max length: 100; | [optional] |
+| **email_address** | **String** | From fields (first name, last name, email address) are required if useSenderFlag is false. Max length: 100; | [optional] |
 | **body** | **String** |  | [optional] |
 | **copy_sender_flag** | **Boolean** |  | [optional] |
 | **invoice_status** | [**BillingStatusReference**](BillingStatusReference.md) |  | [optional] |

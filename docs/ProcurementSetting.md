@@ -23,6 +23,8 @@
 | **default_product_taxable_flag** | **Boolean** |  | [optional] |
 | **eori_number** | **String** |  Max length: 50; | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **notification_for_changes_in_shipping_info_flag** | **Boolean** |  | [optional] |
+| **shipping_info_notification_email** | **String** |  Max length: 250; | [optional] |
 
 ## Example
 
@@ -48,7 +50,9 @@ instance = ConnectWise::ProcurementSetting.new(
   disable_auto_pick_flag: null,
   default_product_taxable_flag: null,
   eori_number: null,
-  _info: null
+  _info: null,
+  notification_for_changes_in_shipping_info_flag: null,
+  shipping_info_notification_email: null
 )
 ```
 

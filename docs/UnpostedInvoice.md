@@ -7,7 +7,9 @@
 | **id** | **Integer** |  | [optional] |
 | **billing_log_id** | **Integer** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
+| **location** | [**OwnerLevelReference**](OwnerLevelReference.md) |  | [optional] |
 | **department_id** | **Integer** |  | [optional] |
+| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **account_number** | **String** |  | [optional] |
 | **bill_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
@@ -24,6 +26,9 @@
 | **currency** | [**CurrencyReference**](CurrencyReference.md) |  | [optional] |
 | **sub_total** | **Float** |  | [optional] |
 | **total** | **Float** |  | [optional] |
+| **has_time** | **Boolean** |  | [optional] |
+| **has_expenses** | **Boolean** |  | [optional] |
+| **has_products** | **Boolean** |  | [optional] |
 | **invoice_taxable_flag** | **Boolean** |  | [optional] |
 | **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **avalara_tax_flag** | **Boolean** | Used to determine if Avalara tax is enabled. | [optional] |
@@ -60,7 +65,9 @@ instance = ConnectWise::UnpostedInvoice.new(
   id: null,
   billing_log_id: null,
   location_id: null,
+  location: null,
   department_id: null,
+  department: null,
   company: null,
   account_number: null,
   bill_to_company: null,
@@ -77,6 +84,9 @@ instance = ConnectWise::UnpostedInvoice.new(
   currency: null,
   sub_total: null,
   total: null,
+  has_time: null,
+  has_expenses: null,
+  has_products: null,
   invoice_taxable_flag: null,
   tax_code: null,
   avalara_tax_flag: null,

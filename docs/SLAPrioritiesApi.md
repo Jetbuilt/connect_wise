@@ -1,6 +1,6 @@
 # ConnectWise::SLAPrioritiesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_slas_by_parent_id_priorities_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_slas_by_parent_id_priorities_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_service_slas_by_parent_id_priorities_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_service_slas_by_parent_id_priorities
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::SLAPrioritiesApi.new
 parent_id = 56 # Integer | SLAId
 client_id = 'client_id_example' # String | 
-sla_priority = ConnectWise::SLAPriority.new # SLAPriority | sLAPriority
+sla_priority = ConnectWise::SLAPriority.new({priority: ConnectWise::PriorityReference.new}) # SLAPriority | sLAPriority
 
 begin
   # Post SLAPriority
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_service_slas_by_parent_id_priorities_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::SLAPrioritiesApi.new
 id = 56 # Integer | priorityId
 parent_id = 56 # Integer | SLAId
 client_id = 'client_id_example' # String | 
-sla_priority = ConnectWise::SLAPriority.new # SLAPriority | sLAPriority
+sla_priority = ConnectWise::SLAPriority.new({priority: ConnectWise::PriorityReference.new}) # SLAPriority | sLAPriority
 
 begin
   # Put SLAPriority
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

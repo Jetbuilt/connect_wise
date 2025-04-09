@@ -1,6 +1,6 @@
 # ConnectWise::CampaignsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_by_id
@@ -239,7 +239,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_by_id_activities
@@ -321,7 +321,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_by_id_activities_count
@@ -403,7 +403,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_by_id_opportunities
@@ -485,7 +485,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_by_id_opportunities_count
@@ -567,7 +567,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_marketing_campaigns_count
@@ -647,7 +647,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_marketing_campaigns_by_id
@@ -713,7 +713,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_marketing_campaigns
@@ -730,7 +730,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CampaignsApi.new
 client_id = 'client_id_example' # String | 
-campaign = ConnectWise::Campaign.new({name: 'name_example', start_date: Time.now}) # Campaign | campaign
+campaign = ConnectWise::Campaign.new({name: 'name_example', type: ConnectWise::CampaignTypeReference.new, sub_type: ConnectWise::CampaignSubTypeReference.new, start_date: Time.now}) # Campaign | campaign
 
 begin
   # Post Campaign
@@ -777,7 +777,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_marketing_campaigns_by_id
@@ -795,7 +795,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CampaignsApi.new
 id = 56 # Integer | campaignId
 client_id = 'client_id_example' # String | 
-campaign = ConnectWise::Campaign.new({name: 'name_example', start_date: Time.now}) # Campaign | campaign
+campaign = ConnectWise::Campaign.new({name: 'name_example', type: ConnectWise::CampaignTypeReference.new, sub_type: ConnectWise::CampaignSubTypeReference.new, start_date: Time.now}) # Campaign | campaign
 
 begin
   # Put Campaign
@@ -843,5 +843,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

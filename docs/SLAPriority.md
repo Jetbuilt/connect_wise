@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **priority** | [**PriorityReference**](PriorityReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **priority** | [**PriorityReference**](PriorityReference.md) |  | [optional] |
 | **respond_hours** | **Float** |  | [optional] |
 | **respond_percent** | **Integer** |  | [optional] |
 | **plan_within** | **Float** |  | [optional] |
@@ -21,8 +21,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::SLAPriority.new(
-  id: null,
   priority: null,
+  id: null,
   respond_hours: null,
   respond_percent: null,
   plan_within: null,

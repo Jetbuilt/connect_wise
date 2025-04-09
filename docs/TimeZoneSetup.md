@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **time_zone** | [**TimeZoneReference**](TimeZoneReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **time_zone** | [**TimeZoneReference**](TimeZoneReference.md) |  | [optional] |
 | **offset** | **Float** | The hours offset from UTC (+/-) | [optional] |
 | **default_flag** | **Boolean** | Identifies the default system time zone setup | [optional] |
 | **daylight_savings_flag** | **Boolean** | Determined based on system library value for specified timeZone.             Not able to be used in query params at this time | [optional] |
@@ -19,8 +19,8 @@ require 'connect_wise'
 
 instance = ConnectWise::TimeZoneSetup.new(
   name: null,
-  id: null,
   time_zone: null,
+  id: null,
   offset: null,
   default_flag: null,
   daylight_savings_flag: null,

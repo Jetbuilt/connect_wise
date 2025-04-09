@@ -6,8 +6,8 @@
 | ---- | ---- | ----------- | ----- |
 | **username** | **String** |  Max length: 50; |  |
 | **id** | **Integer** |  | [optional] |
-| **password** | **String** | The password will never be returned in response Max length: 50; | [optional] |
-| **can_access_all_records_flag** | **Boolean** | This flag controls whether the integrator can access only the db records it created, or all system records | [optional] |
+| **password** | **String** | The password will never be returned in response. Max length: 50; | [optional] |
+| **can_access_all_records_flag** | **Boolean** | This flag controls whether the integrator can access only the db records it created, or all system records. | [optional] |
 | **can_access_all_apis_flag** | **Boolean** | Setting this flag to true will create an integrator that can access all of the available apis in the system.             If this field is set to true, both the member and board fields are required. | [optional] |
 | **inactive_flag** | **Boolean** |  | [optional] |
 | **date_inactivated** | **Time** |  | [optional] |
@@ -22,7 +22,7 @@
 | **time_entry_legacy_callback_flag** | **Boolean** |  | [optional] |
 | **managed_services_api_flag** | **Boolean** |  | [optional] |
 | **managed_services_auto_child_flag** | **Boolean** |  | [optional] |
-| **managed_services_childing_flag** | **Boolean** | True if integrator is allowed to child configurations | [optional] |
+| **managed_services_childing_flag** | **Boolean** | True if integrator is allowed to child configurations. | [optional] |
 | **contact_api_flag** | **Boolean** |  | [optional] |
 | **contact_callback_url** | **String** |  Max length: 1000; | [optional] |
 | **contact_legacy_callback_flag** | **Boolean** |  | [optional] |
@@ -39,7 +39,7 @@
 | **opportunity_api_flag** | **Boolean** |  | [optional] |
 | **opportunity_callback_url** | **String** |  Max length: 1000; | [optional] |
 | **opportunity_legacy_callback_flag** | **Boolean** |  | [optional] |
-| **opportunity_conversion_api_flag** | **Boolean** | True if the member has access to the Opportunity Conversion Api | [optional] |
+| **opportunity_conversion_api_flag** | **Boolean** | True if the member has access to the Opportunity Conversion Api. | [optional] |
 | **member_api_flag** | **Boolean** |  | [optional] |
 | **marketing_api_flag** | **Boolean** |  | [optional] |
 | **purchasing_api_flag** | **Boolean** |  | [optional] |
@@ -52,7 +52,7 @@
 | **project_legacy_callback_flag** | **Boolean** |  | [optional] |
 | **configuration_api_flag** | **Boolean** |  | [optional] |
 | **configuration_auto_child_flag** | **Boolean** |  | [optional] |
-| **configuration_childling_flag** | **Boolean** | True if integrator is allowed to child configurations | [optional] |
+| **configuration_childling_flag** | **Boolean** | True if integrator is allowed to child configurations. | [optional] |
 | **configuration_callback_url** | **String** |  Max length: 1000; | [optional] |
 | **configuration_legacy_callback_flag** | **Boolean** |  | [optional] |
 | **schedule_api_flag** | **Boolean** |  | [optional] |

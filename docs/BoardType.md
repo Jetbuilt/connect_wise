@@ -11,6 +11,8 @@
 | **inactive_flag** | **Boolean** |  | [optional] |
 | **request_for_change_flag** | **Boolean** |  | [optional] |
 | **integration_xref** | **String** |  Max length: 50; | [optional] |
+| **skill_category** | [**SkillCategoryReference**](SkillCategoryReference.md) |  | [optional] |
+| **skill** | [**SkillReference**](SkillReference.md) |  | [optional] |
 | **board** | [**BoardReference**](BoardReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
@@ -29,6 +31,8 @@ instance = ConnectWise::BoardType.new(
   inactive_flag: null,
   request_for_change_flag: null,
   integration_xref: null,
+  skill_category: null,
+  skill: null,
   board: null,
   location: null,
   department: null,

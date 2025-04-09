@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**ContactTypeReference**](ContactTypeReference.md) |  |  |
+| **contact** | [**ContactReference**](ContactReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**ContactTypeReference**](ContactTypeReference.md) |  | [optional] |
-| **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -15,9 +15,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::CompanyContactTypeAssociation.new(
-  id: null,
   type: null,
   contact: null,
+  id: null,
   _info: null
 )
 ```

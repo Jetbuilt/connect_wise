@@ -1,6 +1,6 @@
 # ConnectWise::CountriesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_countries_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_countries_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_countries_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_countries
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CountriesApi.new
 client_id = 'client_id_example' # String | 
-country = ConnectWise::Country.new({name: 'name_example'}) # Country | country
+country = ConnectWise::Country.new({name: 'name_example', currency: ConnectWise::CurrencyReference.new}) # Country | country
 
 begin
   # Post Count of
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_countries_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CountriesApi.new
 id = 56 # Integer | countryId
 client_id = 'client_id_example' # String | 
-country = ConnectWise::Country.new({name: 'name_example'}) # Country | country
+country = ConnectWise::Country.new({name: 'name_example', currency: ConnectWise::CurrencyReference.new}) # Country | country
 
 begin
   # Put Count of
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

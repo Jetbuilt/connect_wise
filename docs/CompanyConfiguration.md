@@ -5,14 +5,16 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 100; |  |
+| **type** | [**ConfigurationTypeReference**](ConfigurationTypeReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**ConfigurationTypeReference**](ConfigurationTypeReference.md) |  | [optional] |
 | **status** | [**ConfigurationStatusReference**](ConfigurationStatusReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **business_unit_id** | **Integer** |  | [optional] |
+| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **device_identifier** | **String** |  Max length: 100; | [optional] |
 | **serial_number** | **String** |  Max length: 250; | [optional] |
 | **model_number** | **String** |  Max length: 50; | [optional] |
@@ -52,13 +54,13 @@
 | **remote_link** | **String** |  Max length: 1000; | [optional] |
 | **sla** | [**SLAReference**](SLAReference.md) |  | [optional] |
 | **mobile_guid** | **String** |  | [optional] |
-| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **display_vendor_flag** | **Boolean** |  | [optional] |
 | **company_location_id** | **Integer** |  | [optional] |
 | **show_remote_flag** | **Boolean** |  | [optional] |
 | **show_automate_flag** | **Boolean** |  | [optional] |
 | **needs_renewal_flag** | **Boolean** |  | [optional] |
 | **manufacturer_part_number** | **String** |  Max length: 50; | [optional] |
+| **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
 ## Example
@@ -68,14 +70,16 @@ require 'connect_wise'
 
 instance = ConnectWise::CompanyConfiguration.new(
   name: null,
-  id: null,
   type: null,
-  status: null,
   company: null,
+  id: null,
+  status: null,
   contact: null,
   site: null,
   location_id: null,
+  location: null,
   business_unit_id: null,
+  department: null,
   device_identifier: null,
   serial_number: null,
   model_number: null,
@@ -115,13 +119,13 @@ instance = ConnectWise::CompanyConfiguration.new(
   remote_link: null,
   sla: null,
   mobile_guid: null,
-  _info: null,
   display_vendor_flag: null,
   company_location_id: null,
   show_remote_flag: null,
   show_automate_flag: null,
   needs_renewal_flag: null,
   manufacturer_part_number: null,
+  _info: null,
   custom_fields: null
 )
 ```

@@ -44,13 +44,13 @@ gemName: connect_wise
 moduleName: ConnectWise
 
 # Description: gem version.
-gemVersion: 0.0.1
+gemVersion: 0.2.0
 
 # Description: gem license.
 gemLicense: MIT
 
 # Description: gem required Ruby version.
-gemRequiredRubyVersion: '>= 2.7'
+gemRequiredRubyVersion: '>= 3.2'
 
 # Description: gem homepage.
 gemHomepage: https://github.com/Jetbuilt/connect_wise

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **agreement_id** | **Integer** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -17,8 +17,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::AgreementSite.new(
-  id: null,
   company: null,
+  id: null,
   site: null,
   agreement_id: null,
   _info: null,

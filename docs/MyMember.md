@@ -107,6 +107,7 @@
 | **corelytics_password** | **String** |  | [optional] |
 | **authentication_service_type** | **String** |  | [optional] |
 | **timebased_one_time_password_activated** | **Boolean** |  | [optional] |
+| **directional_sync** | [**DirectionalSyncReference**](DirectionalSyncReference.md) |  | [optional] |
 | **sso_session_flag** | **Boolean** |  | [optional] |
 | **sso_client_id** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -220,6 +221,7 @@ instance = ConnectWise::MyMember.new(
   corelytics_password: null,
   authentication_service_type: null,
   timebased_one_time_password_activated: null,
+  directional_sync: null,
   sso_session_flag: null,
   sso_client_id: null,
   _info: null

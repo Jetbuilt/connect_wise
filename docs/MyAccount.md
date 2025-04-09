@@ -8,9 +8,16 @@
 | **first_name** | **String** |  Max length: 30; |  |
 | **last_name** | **String** |  Max length: 30; |  |
 | **license_class** | **String** | F &#x3D; Full Member, A &#x3D; API Member, C &#x3D; StreamlineIT Member, X &#x3D; Subcontractor Member |  |
+| **time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  |  |
 | **default_email** | **String** |  |  |
 | **default_phone** | **String** |  |  |
+| **default_location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
+| **default_department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  |  |
+| **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  |  |
+| **time_approver** | [**MemberReference**](MemberReference.md) |  |  |
+| **expense_approver** | [**MemberReference**](MemberReference.md) |  |  |
 | **hire_date** | **Time** |  |  |
+| **sales_default_location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
 | **company_activity_tab_format** | **String** |  |  |
 | **invoice_time_tab_format** | **String** |  |  |
 | **invoice_screen_default_tab_format** | **String** |  |  |
@@ -27,7 +34,6 @@
 | **employee_identifer** | **String** |  Max length: 10; | [optional] |
 | **vendor_number** | **String** |  | [optional] |
 | **notes** | **String** |  | [optional] |
-| **time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  | [optional] |
 | **country** | [**CountryReference**](CountryReference.md) |  | [optional] |
 | **service_board_team_ids** | **Array&lt;Integer&gt;** |  | [optional] |
 | **enable_mobile_gps_flag** | **Boolean** |  | [optional] |
@@ -52,13 +58,8 @@
 | **home_phone** | **String** |  Max length: 15; | [optional] |
 | **home_extension** | **String** |  Max length: 10; | [optional] |
 | **primary_email** | **String** |  Max length: 250; | [optional] |
-| **default_location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
-| **default_department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **reports_to** | [**MemberReference**](MemberReference.md) |  | [optional] |
-| **work_role** | [**WorkRoleReference**](WorkRoleReference.md) |  | [optional] |
 | **work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  | [optional] |
-| **time_approver** | [**MemberReference**](MemberReference.md) |  | [optional] |
-| **expense_approver** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **billable_forecast** | **Float** |  | [optional] |
 | **daily_capacity** | **Float** |  | [optional] |
 | **include_in_utilization_reporting_flag** | **Boolean** |  | [optional] |
@@ -84,13 +85,13 @@
 | **service_location** | [**ServiceLocationReference**](ServiceLocationReference.md) |  | [optional] |
 | **hide_member_in_dispatch_portal_flag** | **Boolean** |  | [optional] |
 | **calendar** | [**CalendarReference**](CalendarReference.md) |  | [optional] |
-| **sales_default_location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] |
 | **warehouse_bin** | [**WarehouseBinReference**](WarehouseBinReference.md) |  | [optional] |
 | **mapi_name** | **String** |  | [optional] |
 | **calendar_sync_integration_flag** | **Boolean** |  | [optional] |
 | **authentication_service_type** | **String** |  | [optional] |
 | **timebased_one_time_password_activated** | **Boolean** |  | [optional] |
+| **directional_sync** | [**DirectionalSyncReference**](DirectionalSyncReference.md) |  | [optional] |
 | **auto_start_stopwatch** | **Boolean** |  | [optional] |
 | **auto_popup_quick_notes_with_stopwatch** | **Boolean** |  | [optional] |
 | **signature** | **String** |  | [optional] |
@@ -116,9 +117,16 @@ instance = ConnectWise::MyAccount.new(
   first_name: null,
   last_name: null,
   license_class: null,
+  time_zone: null,
   default_email: null,
   default_phone: null,
+  default_location: null,
+  default_department: null,
+  work_role: null,
+  time_approver: null,
+  expense_approver: null,
   hire_date: null,
+  sales_default_location: null,
   company_activity_tab_format: null,
   invoice_time_tab_format: null,
   invoice_screen_default_tab_format: null,
@@ -135,7 +143,6 @@ instance = ConnectWise::MyAccount.new(
   employee_identifer: null,
   vendor_number: null,
   notes: null,
-  time_zone: null,
   country: null,
   service_board_team_ids: null,
   enable_mobile_gps_flag: null,
@@ -160,13 +167,8 @@ instance = ConnectWise::MyAccount.new(
   home_phone: null,
   home_extension: null,
   primary_email: null,
-  default_location: null,
-  default_department: null,
   reports_to: null,
-  work_role: null,
   work_type: null,
-  time_approver: null,
-  expense_approver: null,
   billable_forecast: null,
   daily_capacity: null,
   include_in_utilization_reporting_flag: null,
@@ -192,13 +194,13 @@ instance = ConnectWise::MyAccount.new(
   service_location: null,
   hide_member_in_dispatch_portal_flag: null,
   calendar: null,
-  sales_default_location: null,
   warehouse: null,
   warehouse_bin: null,
   mapi_name: null,
   calendar_sync_integration_flag: null,
   authentication_service_type: null,
   timebased_one_time_password_activated: null,
+  directional_sync: null,
   auto_start_stopwatch: null,
   auto_popup_quick_notes_with_stopwatch: null,
   signature: null,

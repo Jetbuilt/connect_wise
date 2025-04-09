@@ -18,6 +18,7 @@
 | **merged_flag** | **Boolean** |  | [optional] |
 | **issue_flag** | **Boolean** |  | [optional] |
 | **original_author** | **String** |  | [optional] |
+| **created_by_parent_flag** | **Boolean** |  | [optional] |
 | **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -42,6 +43,7 @@ instance = ConnectWise::ServiceTicketNote.new(
   merged_flag: null,
   issue_flag: null,
   original_author: null,
+  created_by_parent_flag: null,
   member: null,
   contact: null,
   _info: null

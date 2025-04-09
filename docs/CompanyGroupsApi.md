@@ -1,6 +1,6 @@
 # ConnectWise::CompanyGroupsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_companies_by_parent_id_groups_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_companies_by_parent_id_groups_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_companies_by_parent_id_groups_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_companies_by_parent_id_groups
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CompanyGroupsApi.new
 parent_id = 56 # Integer | companyId
 client_id = 'client_id_example' # String | 
-company_group = ConnectWise::CompanyGroup.new # CompanyGroup | companyGroup
+company_group = ConnectWise::CompanyGroup.new({group: ConnectWise::GroupReference.new}) # CompanyGroup | companyGroup
 
 begin
   # Post CompanyGroup
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_companies_by_parent_id_groups_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::CompanyGroupsApi.new
 id = 56 # Integer | groupId
 parent_id = 56 # Integer | companyId
 client_id = 'client_id_example' # String | 
-company_group = ConnectWise::CompanyGroup.new # CompanyGroup | companyGroup
+company_group = ConnectWise::CompanyGroup.new({group: ConnectWise::GroupReference.new}) # CompanyGroup | companyGroup
 
 begin
   # Put CompanyGroup
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

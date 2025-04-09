@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 150; |  |
-| **id** | **Integer** | An existing Portal Configuration id is required when copying a Portal Configuration. | [optional] |
+| **id** | **Integer** | Gets or sets and Sets             An existing Portal Configuration id is required when copying a Portal Configuration. | [optional] |
 | **default_flag** | **Boolean** |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **login_background_color** | **String** |  Max length: 7; | [optional] |

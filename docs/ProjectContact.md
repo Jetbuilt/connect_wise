@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **contact** | [**ContactReference**](ContactReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **project_id** | **Integer** |  | [optional] |
-| **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -15,9 +15,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::ProjectContact.new(
+  contact: null,
   id: null,
   project_id: null,
-  contact: null,
   _info: null
 )
 ```

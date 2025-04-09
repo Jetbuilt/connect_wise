@@ -1,6 +1,6 @@
 # ConnectWise::PortalConfigurationServiceSetupsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -90,7 +90,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_portal_configurations_by_parent_id_service_setups_by_id
@@ -174,7 +174,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_portal_configurations_by_parent_id_service_setups_count
@@ -256,7 +256,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_portal_configurations_by_parent_id_service_setups_by_id
@@ -324,7 +324,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_portal_configurations_by_parent_id_service_setups_by_id
@@ -343,7 +343,7 @@ api_instance = ConnectWise::PortalConfigurationServiceSetupsApi.new
 id = 56 # Integer | serviceSetupId
 parent_id = 56 # Integer | portalConfigurationId
 client_id = 'client_id_example' # String | 
-portal_configuration_service_setup = ConnectWise::PortalConfigurationServiceSetup.new({display_closed_tickets_option: 'DoNotDisplay'}) # PortalConfigurationServiceSetup | portalConfigurationServiceSetup
+portal_configuration_service_setup = ConnectWise::PortalConfigurationServiceSetup.new({display_closed_tickets_option: 'DoNotDisplay', time_materials_ticket_template: ConnectWise::ServiceSignoffReference.new, fixed_fee_ticket_template: ConnectWise::ServiceSignoffReference.new}) # PortalConfigurationServiceSetup | portalConfigurationServiceSetup
 
 begin
   # Put PortalConfigurationServiceSetup
@@ -392,5 +392,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

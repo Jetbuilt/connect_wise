@@ -4,24 +4,25 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **product** | [**IvItemReference**](IvItemReference.md) |  |  |
 | **product_description** | **String** |  Max length: 200; |  |
+| **status** | [**RmaStatusReference**](RmaStatusReference.md) |  |  |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
+| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  |  |
+| **returned_company** | [**CompanyReference**](CompanyReference.md) |  |  |
+| **rma_disposition** | [**RmaDispositionReference**](RmaDispositionReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **service_ticket** | [**TicketReference**](TicketReference.md) |  | [optional] |
 | **sales_order** | [**SalesOrderReference**](SalesOrderReference.md) |  | [optional] |
 | **invoice** | [**InvoiceReference**](InvoiceReference.md) |  | [optional] |
 | **project** | [**ProjectReference**](ProjectReference.md) |  | [optional] |
 | **summary** | **String** |  Max length: 150; | [optional] |
-| **product** | [**IvItemReference**](IvItemReference.md) |  | [optional] |
 | **iv_description** | **String** |  | [optional] |
 | **serial_number** | **String** |  | [optional] |
 | **mfg_item_id** | **String** |  Max length: 100; | [optional] |
-| **status** | [**RmaStatusReference**](RmaStatusReference.md) |  | [optional] |
 | **list_price** | **Float** |  | [optional] |
 | **unit_price** | **Float** |  | [optional] |
-| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
-| **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **problem_description** | **String** |  Max length: 1000; | [optional] |
-| **returned_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **returned_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **returned_contact_type** | **String** |  | [optional] |
 | **returned_contact_phone** | **String** |  | [optional] |
@@ -33,7 +34,6 @@
 | **returned_contact_state** | **String** |  Max length: 50; | [optional] |
 | **returned_contact_zip** | **String** |  Max length: 12; | [optional] |
 | **returned_contact_country** | [**CountryReference**](CountryReference.md) |  | [optional] |
-| **rma_disposition** | [**RmaDispositionReference**](RmaDispositionReference.md) |  | [optional] |
 | **returned_site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **purchased_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **purchased_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
@@ -103,24 +103,25 @@
 require 'connect_wise'
 
 instance = ConnectWise::RmaTag.new(
+  product: null,
   product_description: null,
+  status: null,
+  location: null,
+  department: null,
+  returned_company: null,
+  rma_disposition: null,
   id: null,
   service_ticket: null,
   sales_order: null,
   invoice: null,
   project: null,
   summary: null,
-  product: null,
   iv_description: null,
   serial_number: null,
   mfg_item_id: null,
-  status: null,
   list_price: null,
   unit_price: null,
-  location: null,
-  department: null,
   problem_description: null,
-  returned_company: null,
   returned_contact: null,
   returned_contact_type: null,
   returned_contact_phone: null,
@@ -132,7 +133,6 @@ instance = ConnectWise::RmaTag.new(
   returned_contact_state: null,
   returned_contact_zip: null,
   returned_contact_country: null,
-  rma_disposition: null,
   returned_site: null,
   purchased_company: null,
   purchased_contact: null,

@@ -1,6 +1,6 @@
 # ConnectWise::RmaStatusNotificationsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_rma_statuses_by_parent_id_notifications_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_rma_statuses_by_parent_id_notifications_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_rma_statuses_by_parent_id_notifications_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_rma_statuses_by_parent_id_notifications
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::RmaStatusNotificationsApi.new
 parent_id = 56 # Integer | rmaStatusId
 client_id = 'client_id_example' # String | 
-rma_status_notification = ConnectWise::RmaStatusNotification.new # RmaStatusNotification | rmaStatusNotification
+rma_status_notification = ConnectWise::RmaStatusNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # RmaStatusNotification | rmaStatusNotification
 
 begin
   # Post RmaStatusNotification
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_rma_statuses_by_parent_id_notifications_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::RmaStatusNotificationsApi.new
 id = 56 # Integer | notificationId
 parent_id = 56 # Integer | rmaStatusId
 client_id = 'client_id_example' # String | 
-rma_status_notification = ConnectWise::RmaStatusNotification.new # RmaStatusNotification | rmaStatusNotification
+rma_status_notification = ConnectWise::RmaStatusNotification.new({notify_who: ConnectWise::NotificationRecipientReference.new}) # RmaStatusNotification | rmaStatusNotification
 
 begin
   # Put RmaStatusNotification
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  | [optional] |
 | **agreement_id** | **Integer** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
@@ -15,8 +15,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::AgreementWorkTypeExclusion.new(
-  id: null,
   work_type: null,
+  id: null,
   agreement_id: null,
   _info: null
 )

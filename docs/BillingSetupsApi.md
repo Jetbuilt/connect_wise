@@ -1,6 +1,6 @@
 # ConnectWise::BillingSetupsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_setups_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_setups_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_billing_setups_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_billing_setups
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::BillingSetupsApi.new
 client_id = 'client_id_example' # String | 
-billing_setup = ConnectWise::BillingSetup.new({remit_name: 'remit_name_example', location: ConnectWise::SystemLocationReference.new, invoice_title: 'invoice_title_example', payable_name: 'payable_name_example', email_template: ConnectWise::EmailTemplateReference.new}) # BillingSetup | billingSetup
+billing_setup = ConnectWise::BillingSetup.new({remit_name: 'remit_name_example', location: ConnectWise::SystemLocationReference.new, invoice_title: 'invoice_title_example', payable_name: 'payable_name_example', overall_invoice_default: ConnectWise::InvoiceTemplateReference.new, email_template: ConnectWise::EmailTemplateReference.new}) # BillingSetup | billingSetup
 
 begin
   # Post BillingSetup
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_billing_setups_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::BillingSetupsApi.new
 id = 56 # Integer | billingSetupId
 client_id = 'client_id_example' # String | 
-billing_setup = ConnectWise::BillingSetup.new({remit_name: 'remit_name_example', location: ConnectWise::SystemLocationReference.new, invoice_title: 'invoice_title_example', payable_name: 'payable_name_example', email_template: ConnectWise::EmailTemplateReference.new}) # BillingSetup | billingSetup
+billing_setup = ConnectWise::BillingSetup.new({remit_name: 'remit_name_example', location: ConnectWise::SystemLocationReference.new, invoice_title: 'invoice_title_example', payable_name: 'payable_name_example', overall_invoice_default: ConnectWise::InvoiceTemplateReference.new, email_template: ConnectWise::EmailTemplateReference.new}) # BillingSetup | billingSetup
 
 begin
   # Put BillingSetup
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

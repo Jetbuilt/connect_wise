@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 50; |  |
+| **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **min_quantity** | **Float** |  | [optional] |
@@ -31,8 +31,8 @@ require 'connect_wise'
 
 instance = ConnectWise::WarehouseBin.new(
   name: null,
-  id: null,
   warehouse: null,
+  id: null,
   location: null,
   department: null,
   min_quantity: null,

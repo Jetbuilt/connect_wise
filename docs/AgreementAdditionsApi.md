@@ -1,6 +1,6 @@
 # ConnectWise::AgreementAdditionsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_parent_id_additions_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_agreements_by_parent_id_additions_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_agreements_by_parent_id_additions_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_agreements_by_parent_id_additions
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::AgreementAdditionsApi.new
 parent_id = 56 # Integer | agreementId
 client_id = 'client_id_example' # String | 
-addition = ConnectWise::Addition.new({bill_customer: 'Billable'}) # Addition | addition
+addition = ConnectWise::Addition.new({product: ConnectWise::IvItemReference.new, bill_customer: 'Billable'}) # Addition | addition
 
 begin
   # Post Addition
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_agreements_by_parent_id_additions_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::AgreementAdditionsApi.new
 id = 56 # Integer | additionId
 parent_id = 56 # Integer | agreementId
 client_id = 'client_id_example' # String | 
-addition = ConnectWise::Addition.new({bill_customer: 'Billable'}) # Addition | addition
+addition = ConnectWise::Addition.new({product: ConnectWise::IvItemReference.new, bill_customer: 'Billable'}) # Addition | addition
 
 begin
   # Put Addition
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

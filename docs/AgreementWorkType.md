@@ -8,6 +8,7 @@
 | **bill_time** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
 | **work_type** | [**WorkTypeReference**](WorkTypeReference.md) |  | [optional] |
+| **location** | [**OwnerLevelReference**](OwnerLevelReference.md) |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
 | **rate** | **Float** |  | [optional] |
 | **hours_max** | **Float** |  | [optional] |
@@ -19,6 +20,7 @@
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **effective_date** | **Time** |  | [optional] |
 | **ending_date** | **Time** |  | [optional] |
+| **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
 | **agreement_id** | **Integer** |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -33,6 +35,7 @@ instance = ConnectWise::AgreementWorkType.new(
   bill_time: null,
   id: null,
   work_type: null,
+  location: null,
   location_id: null,
   rate: null,
   hours_max: null,
@@ -44,6 +47,7 @@ instance = ConnectWise::AgreementWorkType.new(
   site: null,
   effective_date: null,
   ending_date: null,
+  agreement: null,
   agreement_id: null,
   company: null,
   _info: null

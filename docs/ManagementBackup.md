@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**AgreementTypeReference**](AgreementTypeReference.md) |  |  |
+| **item** | [**CatalogItemReference**](CatalogItemReference.md) |  |  |
 | **billing_level** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**AgreementTypeReference**](AgreementTypeReference.md) |  | [optional] |
-| **item** | [**CatalogItemReference**](CatalogItemReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -16,10 +16,10 @@
 require 'connect_wise'
 
 instance = ConnectWise::ManagementBackup.new(
-  billing_level: null,
-  id: null,
   type: null,
   item: null,
+  billing_level: null,
+  id: null,
   _info: null
 )
 ```

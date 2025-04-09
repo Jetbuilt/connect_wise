@@ -1,6 +1,6 @@
 # ConnectWise::AuditTrailApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -10,7 +10,7 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 
 ## get_system_audittrail
 
-> <Array<AuditTrailEntry>> get_system_audittrail(client_id, get_request, opts)
+> <Array<AuditTrailEntry>> get_system_audittrail(client_id, opts)
 
 Get List of AuditTrailEntry
 
@@ -22,8 +22,11 @@ require 'connect_wise'
 
 api_instance = ConnectWise::AuditTrailApi.new
 client_id = 'client_id_example' # String | 
-get_request = { ... } # AuditTrailEntryGetRequest | getRequest
 opts = {
+  type: 'None', # String | type
+  id: 56, # Integer | id
+  device_identifier: 'device_identifier_example', # String | deviceIdentifier
+  xref_rec_id: 56, # Integer | xrefRecId
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
   custom_field_conditions: 'custom_field_conditions_example', # String | 
@@ -36,7 +39,7 @@ opts = {
 
 begin
   # Get List of AuditTrailEntry
-  result = api_instance.get_system_audittrail(client_id, get_request, opts)
+  result = api_instance.get_system_audittrail(client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling AuditTrailApi->get_system_audittrail: #{e}"
@@ -47,12 +50,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AuditTrailEntry>>, Integer, Hash)> get_system_audittrail_with_http_info(client_id, get_request, opts)
+> <Array(<Array<AuditTrailEntry>>, Integer, Hash)> get_system_audittrail_with_http_info(client_id, opts)
 
 ```ruby
 begin
   # Get List of AuditTrailEntry
-  data, status_code, headers = api_instance.get_system_audittrail_with_http_info(client_id, get_request, opts)
+  data, status_code, headers = api_instance.get_system_audittrail_with_http_info(client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<AuditTrailEntry>>
@@ -66,7 +69,10 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **get_request** | [**AuditTrailEntryGetRequest**](.md) | getRequest |  |
+| **type** | **String** | type | [optional] |
+| **id** | **Integer** | id | [optional] |
+| **device_identifier** | **String** | deviceIdentifier | [optional] |
+| **xref_rec_id** | **Integer** | xrefRecId | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -87,12 +93,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_audittrail_count
 
-> <Count> get_system_audittrail_count(client_id, get_request, opts)
+> <Count> get_system_audittrail_count(client_id, opts)
 
 Get Count of AuditTrailEntry
 
@@ -104,8 +110,11 @@ require 'connect_wise'
 
 api_instance = ConnectWise::AuditTrailApi.new
 client_id = 'client_id_example' # String | 
-get_request = { ... } # AuditTrailEntryGetRequest | getRequest
 opts = {
+  type: 'None', # String | type
+  id: 56, # Integer | id
+  device_identifier: 'device_identifier_example', # String | deviceIdentifier
+  xref_rec_id: 56, # Integer | xrefRecId
   conditions: 'conditions_example', # String | 
   child_conditions: 'child_conditions_example', # String | 
   custom_field_conditions: 'custom_field_conditions_example', # String | 
@@ -118,7 +127,7 @@ opts = {
 
 begin
   # Get Count of AuditTrailEntry
-  result = api_instance.get_system_audittrail_count(client_id, get_request, opts)
+  result = api_instance.get_system_audittrail_count(client_id, opts)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling AuditTrailApi->get_system_audittrail_count: #{e}"
@@ -129,12 +138,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Count>, Integer, Hash)> get_system_audittrail_count_with_http_info(client_id, get_request, opts)
+> <Array(<Count>, Integer, Hash)> get_system_audittrail_count_with_http_info(client_id, opts)
 
 ```ruby
 begin
   # Get Count of AuditTrailEntry
-  data, status_code, headers = api_instance.get_system_audittrail_count_with_http_info(client_id, get_request, opts)
+  data, status_code, headers = api_instance.get_system_audittrail_count_with_http_info(client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Count>
@@ -148,7 +157,10 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **client_id** | **String** |  |  |
-| **get_request** | [**AuditTrailEntryGetRequest**](.md) | getRequest |  |
+| **type** | **String** | type | [optional] |
+| **id** | **Integer** | id | [optional] |
+| **device_identifier** | **String** | deviceIdentifier | [optional] |
+| **xref_rec_id** | **Integer** | xrefRecId | [optional] |
 | **conditions** | **String** |  | [optional] |
 | **child_conditions** | **String** |  | [optional] |
 | **custom_field_conditions** | **String** |  | [optional] |
@@ -169,5 +181,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

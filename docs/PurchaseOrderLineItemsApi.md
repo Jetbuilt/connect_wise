@@ -1,11 +1,11 @@
 # ConnectWise::PurchaseOrderLineItemsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**delete_procurement_purchaseorders_by_parent_id_lineitems**](PurchaseOrderLineItemsApi.md#delete_procurement_purchaseorders_by_parent_id_lineitems) | **DELETE** /procurement/purchaseorders/{parentId}/lineitems | Delete PurchaseOrderLineItem |
 | [**delete_procurement_purchaseorders_by_parent_id_lineitems_bulk**](PurchaseOrderLineItemsApi.md#delete_procurement_purchaseorders_by_parent_id_lineitems_bulk) | **DELETE** /procurement/purchaseorders/{parentId}/lineitems/bulk | Delete BulkResult |
-| [**delete_procurement_purchaseorders_by_parent_id_lineitems_by_id**](PurchaseOrderLineItemsApi.md#delete_procurement_purchaseorders_by_parent_id_lineitems_by_id) | **DELETE** /procurement/purchaseorders/{parentId}/lineitems/{id} | Delete PurchaseOrderLineItem |
 | [**get_procurement_purchaseorders_by_parent_id_lineitems**](PurchaseOrderLineItemsApi.md#get_procurement_purchaseorders_by_parent_id_lineitems) | **GET** /procurement/purchaseorders/{parentId}/lineitems | Get List of PurchaseOrderLineItem |
 | [**get_procurement_purchaseorders_by_parent_id_lineitems_by_id**](PurchaseOrderLineItemsApi.md#get_procurement_purchaseorders_by_parent_id_lineitems_by_id) | **GET** /procurement/purchaseorders/{parentId}/lineitems/{id} | Get PurchaseOrderLineItem |
 | [**get_procurement_purchaseorders_by_parent_id_lineitems_count**](PurchaseOrderLineItemsApi.md#get_procurement_purchaseorders_by_parent_id_lineitems_count) | **GET** /procurement/purchaseorders/{parentId}/lineitems/count | Get Count of PurchaseOrderLineItem |
@@ -14,6 +14,71 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**post_procurement_purchaseorders_by_parent_id_lineitems_bulk**](PurchaseOrderLineItemsApi.md#post_procurement_purchaseorders_by_parent_id_lineitems_bulk) | **POST** /procurement/purchaseorders/{parentId}/lineitems/bulk | Post BulkResult |
 | [**put_procurement_purchaseorders_by_parent_id_lineitems_bulk**](PurchaseOrderLineItemsApi.md#put_procurement_purchaseorders_by_parent_id_lineitems_bulk) | **PUT** /procurement/purchaseorders/{parentId}/lineitems/bulk | Put BulkResult |
 | [**put_procurement_purchaseorders_by_parent_id_lineitems_by_id**](PurchaseOrderLineItemsApi.md#put_procurement_purchaseorders_by_parent_id_lineitems_by_id) | **PUT** /procurement/purchaseorders/{parentId}/lineitems/{id} | Put PurchaseOrderLineItem |
+
+
+## delete_procurement_purchaseorders_by_parent_id_lineitems
+
+> delete_procurement_purchaseorders_by_parent_id_lineitems(parent_id, client_id, id)
+
+Delete PurchaseOrderLineItem
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
+parent_id = 56 # Integer | purchaseorderId
+client_id = 'client_id_example' # String | 
+id = 56 # Integer | lineitemId
+
+begin
+  # Delete PurchaseOrderLineItem
+  api_instance.delete_procurement_purchaseorders_by_parent_id_lineitems(parent_id, client_id, id)
+rescue ConnectWise::ApiError => e
+  puts "Error when calling PurchaseOrderLineItemsApi->delete_procurement_purchaseorders_by_parent_id_lineitems: #{e}"
+end
+```
+
+#### Using the delete_procurement_purchaseorders_by_parent_id_lineitems_with_http_info variant
+
+This returns an Array which contains the response data (`nil` in this case), status code and headers.
+
+> <Array(nil, Integer, Hash)> delete_procurement_purchaseorders_by_parent_id_lineitems_with_http_info(parent_id, client_id, id)
+
+```ruby
+begin
+  # Delete PurchaseOrderLineItem
+  data, status_code, headers = api_instance.delete_procurement_purchaseorders_by_parent_id_lineitems_with_http_info(parent_id, client_id, id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => nil
+rescue ConnectWise::ApiError => e
+  puts "Error when calling PurchaseOrderLineItemsApi->delete_procurement_purchaseorders_by_parent_id_lineitems_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **parent_id** | **Integer** | purchaseorderId |  |
+| **client_id** | **String** |  |  |
+| **id** | **Integer** | lineitemId |  |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## delete_procurement_purchaseorders_by_parent_id_lineitems_bulk
@@ -79,72 +144,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
-
-
-## delete_procurement_purchaseorders_by_parent_id_lineitems_by_id
-
-> delete_procurement_purchaseorders_by_parent_id_lineitems_by_id(id, parent_id, client_id)
-
-Delete PurchaseOrderLineItem
-
-### Examples
-
-```ruby
-require 'time'
-require 'connect_wise'
-
-api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
-id = 56 # Integer | lineitemId
-parent_id = 56 # Integer | purchaseorderId
-client_id = 'client_id_example' # String | 
-
-begin
-  # Delete PurchaseOrderLineItem
-  api_instance.delete_procurement_purchaseorders_by_parent_id_lineitems_by_id(id, parent_id, client_id)
-rescue ConnectWise::ApiError => e
-  puts "Error when calling PurchaseOrderLineItemsApi->delete_procurement_purchaseorders_by_parent_id_lineitems_by_id: #{e}"
-end
-```
-
-#### Using the delete_procurement_purchaseorders_by_parent_id_lineitems_by_id_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> delete_procurement_purchaseorders_by_parent_id_lineitems_by_id_with_http_info(id, parent_id, client_id)
-
-```ruby
-begin
-  # Delete PurchaseOrderLineItem
-  data, status_code, headers = api_instance.delete_procurement_purchaseorders_by_parent_id_lineitems_by_id_with_http_info(id, parent_id, client_id)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue ConnectWise::ApiError => e
-  puts "Error when calling PurchaseOrderLineItemsApi->delete_procurement_purchaseorders_by_parent_id_lineitems_by_id_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **Integer** | lineitemId |  |
-| **parent_id** | **Integer** | purchaseorderId |  |
-| **client_id** | **String** |  |  |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_purchaseorders_by_parent_id_lineitems
@@ -226,7 +226,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_purchaseorders_by_parent_id_lineitems_by_id
@@ -310,7 +310,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_purchaseorders_by_parent_id_lineitems_count
@@ -392,7 +392,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_purchaseorders_by_parent_id_lineitems_by_id
@@ -460,7 +460,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_purchaseorders_by_parent_id_lineitems
@@ -478,7 +478,7 @@ require 'connect_wise'
 api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
 parent_id = 56 # Integer | purchaseorderId
 client_id = 'client_id_example' # String | 
-purchase_order_line_item = ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, quantity: 3.56}) # PurchaseOrderLineItem | purchaseOrderLineItem
+purchase_order_line_item = ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, product: ConnectWise::IvItemReference.new, quantity: 3.56, unit_of_measure: ConnectWise::UnitOfMeasureReference.new}) # PurchaseOrderLineItem | purchaseOrderLineItem
 
 begin
   # Post PurchaseOrderLineItem
@@ -526,7 +526,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_purchaseorders_by_parent_id_lineitems_bulk
@@ -544,7 +544,7 @@ require 'connect_wise'
 api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
 parent_id = 56 # Integer | purchaseorderId
 client_id = 'client_id_example' # String | 
-purchase_order_line_item = [ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, quantity: 3.56})] # Array<PurchaseOrderLineItem> | List of PurchaseOrderLineItem
+purchase_order_line_item = [ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, product: ConnectWise::IvItemReference.new, quantity: 3.56, unit_of_measure: ConnectWise::UnitOfMeasureReference.new})] # Array<PurchaseOrderLineItem> | List of PurchaseOrderLineItem
 
 begin
   # Post BulkResult
@@ -592,7 +592,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_purchaseorders_by_parent_id_lineitems_bulk
@@ -610,7 +610,7 @@ require 'connect_wise'
 api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
 parent_id = 56 # Integer | purchaseorderId
 client_id = 'client_id_example' # String | 
-purchase_order_line_item = [ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, quantity: 3.56})] # Array<PurchaseOrderLineItem> | List of PurchaseOrderLineItem
+purchase_order_line_item = [ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, product: ConnectWise::IvItemReference.new, quantity: 3.56, unit_of_measure: ConnectWise::UnitOfMeasureReference.new})] # Array<PurchaseOrderLineItem> | List of PurchaseOrderLineItem
 
 begin
   # Put BulkResult
@@ -658,7 +658,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_purchaseorders_by_parent_id_lineitems_by_id
@@ -677,7 +677,7 @@ api_instance = ConnectWise::PurchaseOrderLineItemsApi.new
 id = 56 # Integer | lineitemId
 parent_id = 56 # Integer | purchaseorderId
 client_id = 'client_id_example' # String | 
-purchase_order_line_item = ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, quantity: 3.56}) # PurchaseOrderLineItem | purchaseOrderLineItem
+purchase_order_line_item = ConnectWise::PurchaseOrderLineItem.new({description: 'description_example', line_number: 37, product: ConnectWise::IvItemReference.new, quantity: 3.56, unit_of_measure: ConnectWise::UnitOfMeasureReference.new}) # PurchaseOrderLineItem | purchaseOrderLineItem
 
 begin
   # Put PurchaseOrderLineItem
@@ -726,5 +726,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

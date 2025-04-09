@@ -11,7 +11,9 @@
 | **priority** | **Integer** |  | [optional] |
 | **schedule** | [**ScheduleEntryReference**](ScheduleEntryReference.md) |  | [optional] |
 | **code** | [**ServiceCodeReference**](ServiceCodeReference.md) |  | [optional] |
+| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **resolution** | **String** |  | [optional] |
+| **summary** | **String** |  | [optional] |
 | **child_schedule_action** | **String** |  | [optional] |
 | **child_ticket_id** | **Integer** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
@@ -29,7 +31,9 @@ instance = ConnectWise::TicketTask.new(
   priority: null,
   schedule: null,
   code: null,
+  member: null,
   resolution: null,
+  summary: null,
   child_schedule_action: null,
   child_ticket_id: null,
   _info: null

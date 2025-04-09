@@ -1,6 +1,6 @@
 # ConnectWise::MenuEntriesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -155,7 +155,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_menuentries_by_id
@@ -237,7 +237,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_menuentries_by_id_image
@@ -402,7 +402,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_menuentries_by_id
@@ -468,7 +468,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_menuentries
@@ -485,7 +485,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::MenuEntriesApi.new
 client_id = 'client_id_example' # String | 
-menu_entry = ConnectWise::MenuEntry.new({caption: 'caption_example', link: 'link_example', new_window_flag: false}) # MenuEntry | menuEntry
+menu_entry = ConnectWise::MenuEntry.new({menu_location: ConnectWise::MenuLocationReference.new, caption: 'caption_example', link: 'link_example', new_window_flag: false}) # MenuEntry | menuEntry
 
 begin
   # Post MenuEntry
@@ -532,7 +532,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_menuentries_by_id_image
@@ -613,7 +613,7 @@ require 'connect_wise'
 api_instance = ConnectWise::MenuEntriesApi.new
 id = 56 # Integer | menuentryId
 client_id = 'client_id_example' # String | 
-menu_entry = ConnectWise::MenuEntry.new({caption: 'caption_example', link: 'link_example', new_window_flag: false}) # MenuEntry | menuEntry
+menu_entry = ConnectWise::MenuEntry.new({menu_location: ConnectWise::MenuLocationReference.new, caption: 'caption_example', link: 'link_example', new_window_flag: false}) # MenuEntry | menuEntry
 
 begin
   # Put MenuEntry
@@ -661,5 +661,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

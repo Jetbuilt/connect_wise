@@ -7,7 +7,7 @@
 | **group_identifier** | **String** |  Max length: 100; |  |
 | **id** | **Integer** |  | [optional] |
 | **management_solution** | [**ManagementSolutionReference**](ManagementSolutionReference.md) |  | [optional] |
-| **device_type** | **String** | deviceType is required if the managementSolution is Legacy | [optional] |
+| **device_type** | **String** | Gets or sets deviceType is required if the managementSolution is Legacy. | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
 | **snmp_machines** | **Integer** |  | [optional] |
 | **total_workstations** | **Integer** |  | [optional] |

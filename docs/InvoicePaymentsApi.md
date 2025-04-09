@@ -1,6 +1,6 @@
 # ConnectWise::InvoicePaymentsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -79,7 +79,7 @@ No authorization required
 
 ## get_finance_invoices_by_parent_id_payments
 
-> <Array<Payment>> get_finance_invoices_by_parent_id_payments(parent_id, client_id, opts)
+> <Array<InvoicePayment>> get_finance_invoices_by_parent_id_payments(parent_id, client_id, opts)
 
 Get List of Payment
 
@@ -116,7 +116,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Payment>>, Integer, Hash)> get_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, opts)
+> <Array(<Array<InvoicePayment>>, Integer, Hash)> get_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, opts)
 
 ```ruby
 begin
@@ -124,7 +124,7 @@ begin
   data, status_code, headers = api_instance.get_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Payment>>
+  p data # => <Array<InvoicePayment>>
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->get_finance_invoices_by_parent_id_payments_with_http_info: #{e}"
 end
@@ -147,7 +147,7 @@ end
 
 ### Return type
 
-[**Array&lt;Payment&gt;**](Payment.md)
+[**Array&lt;InvoicePayment&gt;**](InvoicePayment.md)
 
 ### Authorization
 
@@ -156,12 +156,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_invoices_by_parent_id_payments_by_id
 
-> <Payment> get_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, opts)
+> <InvoicePayment> get_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, opts)
 
 Get Payment
 
@@ -199,7 +199,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Payment>, Integer, Hash)> get_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, opts)
+> <Array(<InvoicePayment>, Integer, Hash)> get_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, opts)
 
 ```ruby
 begin
@@ -207,7 +207,7 @@ begin
   data, status_code, headers = api_instance.get_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Payment>
+  p data # => <InvoicePayment>
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->get_finance_invoices_by_parent_id_payments_by_id_with_http_info: #{e}"
 end
@@ -231,7 +231,7 @@ end
 
 ### Return type
 
-[**Payment**](Payment.md)
+[**InvoicePayment**](InvoicePayment.md)
 
 ### Authorization
 
@@ -240,12 +240,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_invoices_by_parent_id_payments_by_id
 
-> <Payment> patch_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, patch_operation)
+> <InvoicePayment> patch_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, patch_operation)
 
 Patch Payment
 
@@ -274,7 +274,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Payment>, Integer, Hash)> patch_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+> <Array(<InvoicePayment>, Integer, Hash)> patch_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, patch_operation)
 
 ```ruby
 begin
@@ -282,7 +282,7 @@ begin
   data, status_code, headers = api_instance.patch_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, patch_operation)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Payment>
+  p data # => <InvoicePayment>
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->patch_finance_invoices_by_parent_id_payments_by_id_with_http_info: #{e}"
 end
@@ -299,7 +299,7 @@ end
 
 ### Return type
 
-[**Payment**](Payment.md)
+[**InvoicePayment**](InvoicePayment.md)
 
 ### Authorization
 
@@ -308,12 +308,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_invoices_by_parent_id_payments
 
-> <Payment> post_finance_invoices_by_parent_id_payments(parent_id, client_id, payment)
+> <InvoicePayment> post_finance_invoices_by_parent_id_payments(parent_id, client_id, invoice_payment)
 
 Post Payment
 
@@ -326,11 +326,11 @@ require 'connect_wise'
 api_instance = ConnectWise::InvoicePaymentsApi.new
 parent_id = 56 # Integer | invoiceId
 client_id = 'client_id_example' # String | 
-payment = ConnectWise::Payment.new # Payment | payment
+invoice_payment = ConnectWise::InvoicePayment.new # InvoicePayment | payment
 
 begin
   # Post Payment
-  result = api_instance.post_finance_invoices_by_parent_id_payments(parent_id, client_id, payment)
+  result = api_instance.post_finance_invoices_by_parent_id_payments(parent_id, client_id, invoice_payment)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->post_finance_invoices_by_parent_id_payments: #{e}"
@@ -341,15 +341,15 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Payment>, Integer, Hash)> post_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, payment)
+> <Array(<InvoicePayment>, Integer, Hash)> post_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, invoice_payment)
 
 ```ruby
 begin
   # Post Payment
-  data, status_code, headers = api_instance.post_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, payment)
+  data, status_code, headers = api_instance.post_finance_invoices_by_parent_id_payments_with_http_info(parent_id, client_id, invoice_payment)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Payment>
+  p data # => <InvoicePayment>
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->post_finance_invoices_by_parent_id_payments_with_http_info: #{e}"
 end
@@ -361,11 +361,11 @@ end
 | ---- | ---- | ----------- | ----- |
 | **parent_id** | **Integer** | invoiceId |  |
 | **client_id** | **String** |  |  |
-| **payment** | [**Payment**](Payment.md) | payment |  |
+| **invoice_payment** | [**InvoicePayment**](InvoicePayment.md) | payment |  |
 
 ### Return type
 
-[**Payment**](Payment.md)
+[**InvoicePayment**](InvoicePayment.md)
 
 ### Authorization
 
@@ -374,12 +374,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_invoices_by_parent_id_payments_by_id
 
-> <Payment> put_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, payment)
+> <InvoicePayment> put_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, invoice_payment)
 
 Put Payment
 
@@ -393,11 +393,11 @@ api_instance = ConnectWise::InvoicePaymentsApi.new
 id = 56 # Integer | paymentId
 parent_id = 56 # Integer | invoiceId
 client_id = 'client_id_example' # String | 
-payment = ConnectWise::Payment.new # Payment | payment
+invoice_payment = ConnectWise::InvoicePayment.new # InvoicePayment | payment
 
 begin
   # Put Payment
-  result = api_instance.put_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, payment)
+  result = api_instance.put_finance_invoices_by_parent_id_payments_by_id(id, parent_id, client_id, invoice_payment)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->put_finance_invoices_by_parent_id_payments_by_id: #{e}"
@@ -408,15 +408,15 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Payment>, Integer, Hash)> put_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, payment)
+> <Array(<InvoicePayment>, Integer, Hash)> put_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, invoice_payment)
 
 ```ruby
 begin
   # Put Payment
-  data, status_code, headers = api_instance.put_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, payment)
+  data, status_code, headers = api_instance.put_finance_invoices_by_parent_id_payments_by_id_with_http_info(id, parent_id, client_id, invoice_payment)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Payment>
+  p data # => <InvoicePayment>
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicePaymentsApi->put_finance_invoices_by_parent_id_payments_by_id_with_http_info: #{e}"
 end
@@ -429,11 +429,11 @@ end
 | **id** | **Integer** | paymentId |  |
 | **parent_id** | **Integer** | invoiceId |  |
 | **client_id** | **String** |  |  |
-| **payment** | [**Payment**](Payment.md) | payment |  |
+| **invoice_payment** | [**InvoicePayment**](InvoicePayment.md) | payment |  |
 
 ### Return type
 
-[**Payment**](Payment.md)
+[**InvoicePayment**](InvoicePayment.md)
 
 ### Authorization
 
@@ -442,5 +442,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

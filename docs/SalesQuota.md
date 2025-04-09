@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **member** | [**MemberReference**](MemberReference.md) |  |  |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **forecast_year** | **Integer** |  | [optional] |
-| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
 | **category** | [**ProductCategoryReference**](ProductCategoryReference.md) |  | [optional] |
 | **sub_category** | [**ProductSubCategoryReference**](ProductSubCategoryReference.md) |  | [optional] |
@@ -44,10 +44,10 @@
 require 'connect_wise'
 
 instance = ConnectWise::SalesQuota.new(
-  id: null,
   member: null,
-  forecast_year: null,
   location: null,
+  id: null,
+  forecast_year: null,
   department: null,
   category: null,
   sub_category: null,

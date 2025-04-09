@@ -1,6 +1,6 @@
 # ConnectWise::ConfigurationTypesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -12,6 +12,7 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**get_company_configurations_types_count**](ConfigurationTypesApi.md#get_company_configurations_types_count) | **GET** /company/configurations/types/count | Get Count of ConfigurationType |
 | [**patch_company_configurations_types_by_id**](ConfigurationTypesApi.md#patch_company_configurations_types_by_id) | **PATCH** /company/configurations/types/{id} | Patch ConfigurationType |
 | [**post_company_configurations_types**](ConfigurationTypesApi.md#post_company_configurations_types) | **POST** /company/configurations/types | Post ConfigurationType |
+| [**post_company_configurations_types_copy**](ConfigurationTypesApi.md#post_company_configurations_types_copy) | **POST** /company/configurations/types/copy | Post Board |
 | [**put_company_configurations_types_by_id**](ConfigurationTypesApi.md#put_company_configurations_types_by_id) | **PUT** /company/configurations/types/{id} | Put ConfigurationType |
 
 
@@ -155,7 +156,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_configurations_types_by_id
@@ -237,7 +238,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_configurations_types_by_id_usages
@@ -319,7 +320,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_configurations_types_by_id_usages_list
@@ -401,7 +402,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_configurations_types_count
@@ -481,7 +482,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_configurations_types_by_id
@@ -547,7 +548,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_company_configurations_types
@@ -611,7 +612,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## post_company_configurations_types_copy
+
+> <ConfigurationType> post_company_configurations_types_copy(client_id, configuration_type_copy)
+
+Post Board
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::ConfigurationTypesApi.new
+client_id = 'client_id_example' # String | 
+configuration_type_copy = ConnectWise::ConfigurationTypeCopy.new({id: 37, name: 'name_example'}) # ConfigurationTypeCopy | copy
+
+begin
+  # Post Board
+  result = api_instance.post_company_configurations_types_copy(client_id, configuration_type_copy)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ConfigurationTypesApi->post_company_configurations_types_copy: #{e}"
+end
+```
+
+#### Using the post_company_configurations_types_copy_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ConfigurationType>, Integer, Hash)> post_company_configurations_types_copy_with_http_info(client_id, configuration_type_copy)
+
+```ruby
+begin
+  # Post Board
+  data, status_code, headers = api_instance.post_company_configurations_types_copy_with_http_info(client_id, configuration_type_copy)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ConfigurationType>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ConfigurationTypesApi->post_company_configurations_types_copy_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **client_id** | **String** |  |  |
+| **configuration_type_copy** | [**ConfigurationTypeCopy**](ConfigurationTypeCopy.md) | copy |  |
+
+### Return type
+
+[**ConfigurationType**](ConfigurationType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_configurations_types_by_id
@@ -677,5 +742,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

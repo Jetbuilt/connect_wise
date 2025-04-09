@@ -65,7 +65,7 @@
 | **photo** | [**DocumentReference**](DocumentReference.md) |  | [optional] |
 | **ignore_duplicates** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
-| **type_ids** | **Array&lt;Integer&gt;** | Integrer array of Contact_Type_Recids to be assigned to contact that can be passed in only during new contact creation (post)             To update existing contacts type, use the /company/contactTypeAssociations or /company/contacts/{ID}/typeAssociations endpoints | [optional] |
+| **type_ids** | **Array&lt;Integer&gt;** | Gets or sets integrer array of Contact_Type_Recids to be assigned to contact that can be passed in only during new contact creation (post)             To update existing contacts type, use the /company/contactTypeAssociations or /company/contacts/{ID}/typeAssociations endpoints. | [optional] |
 
 ## Example
 

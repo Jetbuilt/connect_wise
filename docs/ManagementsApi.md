@@ -1,6 +1,6 @@
 # ConnectWise::ManagementsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -88,7 +88,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_management_by_id
@@ -170,7 +170,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_company_management_count
@@ -250,7 +250,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_company_management_by_id
@@ -316,7 +316,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_company_management_by_id
@@ -334,7 +334,7 @@ require 'connect_wise'
 api_instance = ConnectWise::ManagementsApi.new
 id = 56 # Integer | managementId
 client_id = 'client_id_example' # String | 
-management = ConnectWise::Management.new({schedule_executive_summary_report_flag: false}) # Management | management
+management = ConnectWise::Management.new({added_configuration_status: ConnectWise::ConfigurationStatusReference.new, deleted_configuration_status: ConnectWise::ConfigurationStatusReference.new, integrator_login: ConnectWise::IntegratorLoginReference.new, schedule_executive_summary_report_flag: false}) # Management | management
 
 begin
   # Put Management
@@ -382,5 +382,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

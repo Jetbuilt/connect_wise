@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **notify_who** | [**NotificationRecipientReference**](NotificationRecipientReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **notify_who** | [**NotificationRecipientReference**](NotificationRecipientReference.md) |  | [optional] |
 | **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **email** | **String** |  Max length: 50; | [optional] |
 | **global_flag** | **Boolean** |  | [optional] |
@@ -18,8 +18,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::ManagementReportNotification.new(
-  id: null,
   notify_who: null,
+  id: null,
   member: null,
   email: null,
   global_flag: null,

@@ -1,6 +1,6 @@
 # ConnectWise::CompanyFinancesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -8,7 +8,7 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**get_finance_company_finance_by_id**](CompanyFinancesApi.md#get_finance_company_finance_by_id) | **GET** /finance/companyFinance/{id} | Get CompanyFinances |
 | [**get_finance_company_finance_count**](CompanyFinancesApi.md#get_finance_company_finance_count) | **GET** /finance/companyFinance/count | Get Count of CompanyFinances |
 | [**patch_finance_company_finance_by_id**](CompanyFinancesApi.md#patch_finance_company_finance_by_id) | **PATCH** /finance/companyFinance/{id} | Patch CompanyFinances |
-| [**put_company_company_finance_by_id**](CompanyFinancesApi.md#put_company_company_finance_by_id) | **PUT** /company/companyFinance/{id} | Put CompanyFinance |
+| [**put_finance_company_finance_by_id**](CompanyFinancesApi.md#put_finance_company_finance_by_id) | **PUT** /finance/companyFinance/{id} | Put CompanyFinance |
 
 
 ## get_finance_company_finance
@@ -88,7 +88,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_company_finance_by_id
@@ -170,7 +170,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_company_finance_count
@@ -250,7 +250,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_company_finance_by_id
@@ -316,12 +316,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
-## put_company_company_finance_by_id
+## put_finance_company_finance_by_id
 
-> <CompanyFinance> put_company_company_finance_by_id(id, client_id, company_finance)
+> <CompanyFinance> put_finance_company_finance_by_id(id, client_id, company_finance)
 
 Put CompanyFinance
 
@@ -338,28 +338,28 @@ company_finance = ConnectWise::CompanyFinance.new # CompanyFinance | CompanyFina
 
 begin
   # Put CompanyFinance
-  result = api_instance.put_company_company_finance_by_id(id, client_id, company_finance)
+  result = api_instance.put_finance_company_finance_by_id(id, client_id, company_finance)
   p result
 rescue ConnectWise::ApiError => e
-  puts "Error when calling CompanyFinancesApi->put_company_company_finance_by_id: #{e}"
+  puts "Error when calling CompanyFinancesApi->put_finance_company_finance_by_id: #{e}"
 end
 ```
 
-#### Using the put_company_company_finance_by_id_with_http_info variant
+#### Using the put_finance_company_finance_by_id_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CompanyFinance>, Integer, Hash)> put_company_company_finance_by_id_with_http_info(id, client_id, company_finance)
+> <Array(<CompanyFinance>, Integer, Hash)> put_finance_company_finance_by_id_with_http_info(id, client_id, company_finance)
 
 ```ruby
 begin
   # Put CompanyFinance
-  data, status_code, headers = api_instance.put_company_company_finance_by_id_with_http_info(id, client_id, company_finance)
+  data, status_code, headers = api_instance.put_finance_company_finance_by_id_with_http_info(id, client_id, company_finance)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CompanyFinance>
 rescue ConnectWise::ApiError => e
-  puts "Error when calling CompanyFinancesApi->put_company_company_finance_by_id_with_http_info: #{e}"
+  puts "Error when calling CompanyFinancesApi->put_finance_company_finance_by_id_with_http_info: #{e}"
 end
 ```
 
@@ -382,5 +382,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

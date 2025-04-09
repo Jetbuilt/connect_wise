@@ -1,6 +1,6 @@
 # ConnectWise::AdjustmentDetailsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -155,7 +155,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_adjustments_by_parent_id_details_by_id
@@ -239,7 +239,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_adjustments_by_parent_id_details_count
@@ -321,7 +321,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_adjustments_by_parent_id_details
@@ -339,7 +339,7 @@ require 'connect_wise'
 api_instance = ConnectWise::AdjustmentDetailsApi.new
 parent_id = 56 # Integer | adjustmentId
 client_id = 'client_id_example' # String | 
-adjustment_detail = ConnectWise::AdjustmentDetail.new({quantity_adjusted: 37}) # AdjustmentDetail | adjustmentDetail
+adjustment_detail = ConnectWise::AdjustmentDetail.new({catalog_item: ConnectWise::CatalogItemReference.new, warehouse: ConnectWise::WarehouseReference.new, warehouse_bin: ConnectWise::WarehouseBinReference.new, quantity_adjusted: 37}) # AdjustmentDetail | adjustmentDetail
 
 begin
   # Post AdjustmentDetail
@@ -387,5 +387,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

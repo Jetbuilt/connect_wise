@@ -1,6 +1,6 @@
 # ConnectWise::TicketTasksApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -229,7 +229,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_tasks_by_id
@@ -313,7 +313,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_project_tickets_by_parent_id_tasks_count
@@ -395,12 +395,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_tickets_by_parent_id_tasks
 
-> <Array<Task>> get_service_tickets_by_parent_id_tasks(parent_id, client_id, opts)
+> <Array<ServiceTask>> get_service_tickets_by_parent_id_tasks(parent_id, client_id, opts)
 
 Get List of Task
 
@@ -437,7 +437,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Task>>, Integer, Hash)> get_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, opts)
+> <Array(<Array<ServiceTask>>, Integer, Hash)> get_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, opts)
 
 ```ruby
 begin
@@ -445,7 +445,7 @@ begin
   data, status_code, headers = api_instance.get_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Task>>
+  p data # => <Array<ServiceTask>>
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->get_service_tickets_by_parent_id_tasks_with_http_info: #{e}"
 end
@@ -468,7 +468,7 @@ end
 
 ### Return type
 
-[**Array&lt;Task&gt;**](Task.md)
+[**Array&lt;ServiceTask&gt;**](ServiceTask.md)
 
 ### Authorization
 
@@ -477,12 +477,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_tickets_by_parent_id_tasks_by_id
 
-> <Task> get_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, opts)
+> <ServiceTask> get_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, opts)
 
 Get Task
 
@@ -520,7 +520,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Task>, Integer, Hash)> get_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, opts)
+> <Array(<ServiceTask>, Integer, Hash)> get_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, opts)
 
 ```ruby
 begin
@@ -528,7 +528,7 @@ begin
   data, status_code, headers = api_instance.get_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Task>
+  p data # => <ServiceTask>
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->get_service_tickets_by_parent_id_tasks_by_id_with_http_info: #{e}"
 end
@@ -552,7 +552,7 @@ end
 
 ### Return type
 
-[**Task**](Task.md)
+[**ServiceTask**](ServiceTask.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_service_tickets_by_parent_id_tasks_count
@@ -643,7 +643,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_project_tickets_by_parent_id_tasks_by_id
@@ -711,12 +711,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_service_tickets_by_parent_id_tasks_by_id
 
-> <Task> patch_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, patch_operation)
+> <ServiceTask> patch_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, patch_operation)
 
 Patch Task
 
@@ -745,7 +745,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Task>, Integer, Hash)> patch_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+> <Array(<ServiceTask>, Integer, Hash)> patch_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, patch_operation)
 
 ```ruby
 begin
@@ -753,7 +753,7 @@ begin
   data, status_code, headers = api_instance.patch_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, patch_operation)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Task>
+  p data # => <ServiceTask>
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->patch_service_tickets_by_parent_id_tasks_by_id_with_http_info: #{e}"
 end
@@ -770,7 +770,7 @@ end
 
 ### Return type
 
-[**Task**](Task.md)
+[**ServiceTask**](ServiceTask.md)
 
 ### Authorization
 
@@ -779,7 +779,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_project_tickets_by_parent_id_tasks
@@ -845,12 +845,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_service_tickets_by_parent_id_tasks
 
-> <Task> post_service_tickets_by_parent_id_tasks(parent_id, client_id, task)
+> <ServiceTask> post_service_tickets_by_parent_id_tasks(parent_id, client_id, service_task)
 
 Post Task
 
@@ -863,11 +863,11 @@ require 'connect_wise'
 api_instance = ConnectWise::TicketTasksApi.new
 parent_id = 56 # Integer | ticketId
 client_id = 'client_id_example' # String | 
-task = ConnectWise::Task.new # Task | task
+service_task = ConnectWise::ServiceTask.new # ServiceTask | task
 
 begin
   # Post Task
-  result = api_instance.post_service_tickets_by_parent_id_tasks(parent_id, client_id, task)
+  result = api_instance.post_service_tickets_by_parent_id_tasks(parent_id, client_id, service_task)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->post_service_tickets_by_parent_id_tasks: #{e}"
@@ -878,15 +878,15 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Task>, Integer, Hash)> post_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, task)
+> <Array(<ServiceTask>, Integer, Hash)> post_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, service_task)
 
 ```ruby
 begin
   # Post Task
-  data, status_code, headers = api_instance.post_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, task)
+  data, status_code, headers = api_instance.post_service_tickets_by_parent_id_tasks_with_http_info(parent_id, client_id, service_task)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Task>
+  p data # => <ServiceTask>
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->post_service_tickets_by_parent_id_tasks_with_http_info: #{e}"
 end
@@ -898,11 +898,11 @@ end
 | ---- | ---- | ----------- | ----- |
 | **parent_id** | **Integer** | ticketId |  |
 | **client_id** | **String** |  |  |
-| **task** | [**Task**](Task.md) | task |  |
+| **service_task** | [**ServiceTask**](ServiceTask.md) | task |  |
 
 ### Return type
 
-[**Task**](Task.md)
+[**ServiceTask**](ServiceTask.md)
 
 ### Authorization
 
@@ -911,7 +911,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_project_tickets_by_parent_id_tasks_by_id
@@ -979,12 +979,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_service_tickets_by_parent_id_tasks_by_id
 
-> <Task> put_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, task)
+> <ServiceTask> put_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, service_task)
 
 Put Task
 
@@ -998,11 +998,11 @@ api_instance = ConnectWise::TicketTasksApi.new
 id = 56 # Integer | taskId
 parent_id = 56 # Integer | ticketId
 client_id = 'client_id_example' # String | 
-task = ConnectWise::Task.new # Task | task
+service_task = ConnectWise::ServiceTask.new # ServiceTask | task
 
 begin
   # Put Task
-  result = api_instance.put_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, task)
+  result = api_instance.put_service_tickets_by_parent_id_tasks_by_id(id, parent_id, client_id, service_task)
   p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->put_service_tickets_by_parent_id_tasks_by_id: #{e}"
@@ -1013,15 +1013,15 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Task>, Integer, Hash)> put_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, task)
+> <Array(<ServiceTask>, Integer, Hash)> put_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, service_task)
 
 ```ruby
 begin
   # Put Task
-  data, status_code, headers = api_instance.put_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, task)
+  data, status_code, headers = api_instance.put_service_tickets_by_parent_id_tasks_by_id_with_http_info(id, parent_id, client_id, service_task)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Task>
+  p data # => <ServiceTask>
 rescue ConnectWise::ApiError => e
   puts "Error when calling TicketTasksApi->put_service_tickets_by_parent_id_tasks_by_id_with_http_info: #{e}"
 end
@@ -1034,11 +1034,11 @@ end
 | **id** | **Integer** | taskId |  |
 | **parent_id** | **Integer** | ticketId |  |
 | **client_id** | **String** |  |  |
-| **task** | [**Task**](Task.md) | task |  |
+| **service_task** | [**ServiceTask**](ServiceTask.md) | task |  |
 
 ### Return type
 
-[**Task**](Task.md)
+[**ServiceTask**](ServiceTask.md)
 
 ### Authorization
 
@@ -1047,5 +1047,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

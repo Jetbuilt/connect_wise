@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**CommunicationTypeReference**](CommunicationTypeReference.md) |  |  |
 | **value** | **String** |  Max length: 250; |  |
 | **id** | **Integer** |  | [optional] |
 | **contact_id** | **Integer** |  | [optional] |
-| **type** | [**CommunicationTypeReference**](CommunicationTypeReference.md) |  | [optional] |
 | **extension** | **String** |  Max length: 15; | [optional] |
 | **default_flag** | **Boolean** |  | [optional] |
 | **mobile_guid** | **String** |  | [optional] |
@@ -21,10 +21,10 @@
 require 'connect_wise'
 
 instance = ConnectWise::ContactCommunication.new(
+  type: null,
   value: null,
   id: null,
   contact_id: null,
-  type: null,
   extension: null,
   default_flag: null,
   mobile_guid: null,

@@ -1,6 +1,6 @@
 # ConnectWise::CallbackEntriesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -153,7 +153,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_callbacks_by_id
@@ -235,7 +235,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_system_callbacks_count
@@ -315,7 +315,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_system_callbacks_by_id
@@ -381,7 +381,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_system_callbacks
@@ -398,7 +398,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::CallbackEntriesApi.new
 client_id = 'client_id_example' # String | 
-callback_entry = ConnectWise::CallbackEntry.new # CallbackEntry | callbackEntry
+callback_entry = ConnectWise::CallbackEntry.new({url: 'url_example', object_id: 37, type: 'type_example', level: 'level_example'}) # CallbackEntry | callbackEntry
 
 begin
   # Post CallbackEntry
@@ -445,7 +445,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_system_callbacks_by_id
@@ -463,7 +463,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CallbackEntriesApi.new
 id = 56 # Integer | callbackId
 client_id = 'client_id_example' # String | 
-callback_entry = ConnectWise::CallbackEntry.new # CallbackEntry | callbackEntry
+callback_entry = ConnectWise::CallbackEntry.new({url: 'url_example', object_id: 37, type: 'type_example', level: 'level_example'}) # CallbackEntry | callbackEntry
 
 begin
   # Put CallbackEntry
@@ -511,5 +511,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

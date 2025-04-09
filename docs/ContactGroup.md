@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **group** | [**GroupReference**](GroupReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **group** | [**GroupReference**](GroupReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **description** | **String** |  Max length: 50; | [optional] |
 | **unsubscribe_flag** | **Boolean** |  | [optional] |
@@ -21,8 +21,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::ContactGroup.new(
-  id: null,
   group: null,
+  id: null,
   contact: null,
   description: null,
   unsubscribe_flag: null,

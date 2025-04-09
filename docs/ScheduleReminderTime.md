@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **Integer** |  | [optional] |
-| **time** | **Integer** | Time is calculated in minutes | [optional] |
+| **time** | **Integer** | Time is calculated in minutes. | [optional] |
 | **name** | **String** |  Max length: 10; | [optional] |
 | **default_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |

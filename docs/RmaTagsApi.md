@@ -1,6 +1,6 @@
 # ConnectWise::RmaTagsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -154,7 +154,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_rma_tags_by_id
@@ -236,7 +236,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_rma_tags_count
@@ -316,7 +316,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_rma_tags_default
@@ -408,7 +408,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_rma_tags_by_id
@@ -474,7 +474,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_rma_tags
@@ -491,7 +491,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::RmaTagsApi.new
 client_id = 'client_id_example' # String | 
-rma_tag = ConnectWise::RmaTag.new({product_description: 'product_description_example'}) # RmaTag | rmaTag
+rma_tag = ConnectWise::RmaTag.new({product: ConnectWise::IvItemReference.new, product_description: 'product_description_example', status: ConnectWise::RmaStatusReference.new, location: ConnectWise::SystemLocationReference.new, department: ConnectWise::SystemDepartmentReference.new, returned_company: ConnectWise::CompanyReference.new, rma_disposition: ConnectWise::RmaDispositionReference.new}) # RmaTag | rmaTag
 
 begin
   # Post RmaTag
@@ -538,7 +538,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_rma_tags_by_id
@@ -556,7 +556,7 @@ require 'connect_wise'
 api_instance = ConnectWise::RmaTagsApi.new
 id = 56 # Integer | rmaTagId
 client_id = 'client_id_example' # String | 
-rma_tag = ConnectWise::RmaTag.new({product_description: 'product_description_example'}) # RmaTag | rmaTag
+rma_tag = ConnectWise::RmaTag.new({product: ConnectWise::IvItemReference.new, product_description: 'product_description_example', status: ConnectWise::RmaStatusReference.new, location: ConnectWise::SystemLocationReference.new, department: ConnectWise::SystemDepartmentReference.new, returned_company: ConnectWise::CompanyReference.new, rma_disposition: ConnectWise::RmaDispositionReference.new}) # RmaTag | rmaTag
 
 begin
   # Put RmaTag
@@ -604,5 +604,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

@@ -1,12 +1,14 @@
 # ConnectWise::ExpenseReportsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**get_expense_reports**](ExpenseReportsApi.md#get_expense_reports) | **GET** /expense/reports | Get List of ExpenseReport |
 | [**get_expense_reports_by_id**](ExpenseReportsApi.md#get_expense_reports_by_id) | **GET** /expense/reports/{id} | Get ExpenseReport |
 | [**get_expense_reports_count**](ExpenseReportsApi.md#get_expense_reports_count) | **GET** /expense/reports/count | Get Count of ExpenseReport |
+| [**post_expense_reports_by_id_approve**](ExpenseReportsApi.md#post_expense_reports_by_id_approve) | **POST** /expense/reports/{id}/approve | Post SuccessResponse |
+| [**post_expense_reports_by_id_reject**](ExpenseReportsApi.md#post_expense_reports_by_id_reject) | **POST** /expense/reports/{id}/reject | Post SuccessResponse |
 | [**post_expense_reports_by_id_reverse**](ExpenseReportsApi.md#post_expense_reports_by_id_reverse) | **POST** /expense/reports/{id}/reverse | Post SuccessResponse |
 | [**post_expense_reports_by_id_submit**](ExpenseReportsApi.md#post_expense_reports_by_id_submit) | **POST** /expense/reports/{id}/submit | Post SuccessResponse |
 
@@ -88,7 +90,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_expense_reports_by_id
@@ -170,7 +172,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_expense_reports_count
@@ -250,7 +252,137 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## post_expense_reports_by_id_approve
+
+> <SuccessResponse> post_expense_reports_by_id_approve(id, client_id, expense_report_tier_update)
+
+Post SuccessResponse
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::ExpenseReportsApi.new
+id = 56 # Integer | reportId
+client_id = 'client_id_example' # String | 
+expense_report_tier_update = ConnectWise::ExpenseReportTierUpdate.new # ExpenseReportTierUpdate | reportId
+
+begin
+  # Post SuccessResponse
+  result = api_instance.post_expense_reports_by_id_approve(id, client_id, expense_report_tier_update)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ExpenseReportsApi->post_expense_reports_by_id_approve: #{e}"
+end
+```
+
+#### Using the post_expense_reports_by_id_approve_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<SuccessResponse>, Integer, Hash)> post_expense_reports_by_id_approve_with_http_info(id, client_id, expense_report_tier_update)
+
+```ruby
+begin
+  # Post SuccessResponse
+  data, status_code, headers = api_instance.post_expense_reports_by_id_approve_with_http_info(id, client_id, expense_report_tier_update)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <SuccessResponse>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ExpenseReportsApi->post_expense_reports_by_id_approve_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | reportId |  |
+| **client_id** | **String** |  |  |
+| **expense_report_tier_update** | [**ExpenseReportTierUpdate**](ExpenseReportTierUpdate.md) | reportId |  |
+
+### Return type
+
+[**SuccessResponse**](SuccessResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## post_expense_reports_by_id_reject
+
+> <SuccessResponse> post_expense_reports_by_id_reject(id, client_id)
+
+Post SuccessResponse
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::ExpenseReportsApi.new
+id = 56 # Integer | reportId
+client_id = 'client_id_example' # String | 
+
+begin
+  # Post SuccessResponse
+  result = api_instance.post_expense_reports_by_id_reject(id, client_id)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ExpenseReportsApi->post_expense_reports_by_id_reject: #{e}"
+end
+```
+
+#### Using the post_expense_reports_by_id_reject_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<SuccessResponse>, Integer, Hash)> post_expense_reports_by_id_reject_with_http_info(id, client_id)
+
+```ruby
+begin
+  # Post SuccessResponse
+  data, status_code, headers = api_instance.post_expense_reports_by_id_reject_with_http_info(id, client_id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <SuccessResponse>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling ExpenseReportsApi->post_expense_reports_by_id_reject_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | reportId |  |
+| **client_id** | **String** |  |  |
+
+### Return type
+
+[**SuccessResponse**](SuccessResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_expense_reports_by_id_reverse
@@ -314,7 +446,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_expense_reports_by_id_submit
@@ -378,5 +510,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

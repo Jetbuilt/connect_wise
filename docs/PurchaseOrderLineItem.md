@@ -6,7 +6,9 @@
 | ---- | ---- | ----------- | ----- |
 | **description** | **String** |  Max length: 6000; |  |
 | **line_number** | **Integer** |  |  |
+| **product** | [**IvItemReference**](IvItemReference.md) |  |  |
 | **quantity** | **Float** |  |  |
+| **unit_of_measure** | [**UnitOfMeasureReference**](UnitOfMeasureReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **backordered_flag** | **Boolean** |  | [optional] |
 | **canceled_by** | **String** |  | [optional] |
@@ -19,8 +21,8 @@
 | **expected_ship_date** | **Time** |  | [optional] |
 | **internal_notes** | **String** |  Max length: 1000; | [optional] |
 | **packing_slip** | **String** |  Max length: 50; | [optional] |
-| **product** | [**IvItemReference**](IvItemReference.md) |  | [optional] |
 | **purchase_order_id** | **Integer** |  | [optional] |
+| **purchase_order_number** | **String** |  Max length: 50; | [optional] |
 | **received_quantity** | **Integer** |  | [optional] |
 | **serial_numbers** | **String** |  | [optional] |
 | **ship_date** | **Time** |  | [optional] |
@@ -28,7 +30,6 @@
 | **tax** | **Float** |  | [optional] |
 | **tracking_number** | **String** |  Max length: 50; | [optional] |
 | **unit_cost** | **Float** |  | [optional] |
-| **unit_of_measure** | [**UnitOfMeasureReference**](UnitOfMeasureReference.md) |  | [optional] |
 | **vendor_order_number** | **String** |  Max length: 50; | [optional] |
 | **vendor_sku** | **String** |  Max length: 50; | [optional] |
 | **warehouse** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] |
@@ -37,6 +38,12 @@
 | **date_received** | **Time** |  | [optional] |
 | **received_status** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **ext_cost** | **Float** |  | [optional] |
+| **expected_arrival_date** | **Time** |  | [optional] |
+| **is_detach_available** | **Boolean** |  | [optional] |
+| **batched_flag** | **Boolean** |  | [optional] |
+| **unbatched_rec_id** | **Integer** |  | [optional] |
+| **sales_order** | [**Array&lt;SalesOrderReference&gt;**](SalesOrderReference.md) |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
 ## Example
@@ -47,7 +54,9 @@ require 'connect_wise'
 instance = ConnectWise::PurchaseOrderLineItem.new(
   description: null,
   line_number: null,
+  product: null,
   quantity: null,
+  unit_of_measure: null,
   id: null,
   backordered_flag: null,
   canceled_by: null,
@@ -60,8 +69,8 @@ instance = ConnectWise::PurchaseOrderLineItem.new(
   expected_ship_date: null,
   internal_notes: null,
   packing_slip: null,
-  product: null,
   purchase_order_id: null,
+  purchase_order_number: null,
   received_quantity: null,
   serial_numbers: null,
   ship_date: null,
@@ -69,7 +78,6 @@ instance = ConnectWise::PurchaseOrderLineItem.new(
   tax: null,
   tracking_number: null,
   unit_cost: null,
-  unit_of_measure: null,
   vendor_order_number: null,
   vendor_sku: null,
   warehouse: null,
@@ -78,6 +86,12 @@ instance = ConnectWise::PurchaseOrderLineItem.new(
   date_received: null,
   received_status: null,
   _info: null,
+  ext_cost: null,
+  expected_arrival_date: null,
+  is_detach_available: null,
+  batched_flag: null,
+  unbatched_rec_id: null,
+  sales_order: null,
   custom_fields: null
 )
 ```

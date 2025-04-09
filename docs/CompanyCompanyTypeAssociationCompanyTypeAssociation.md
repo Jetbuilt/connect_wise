@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **type** | [**CompanyTypeReference**](CompanyTypeReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **type** | [**CompanyTypeReference**](CompanyTypeReference.md) |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -15,9 +15,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::CompanyCompanyTypeAssociationCompanyTypeAssociation.new(
-  id: null,
   type: null,
   company: null,
+  id: null,
   _info: null
 )
 ```

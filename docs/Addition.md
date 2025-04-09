@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **product** | [**IvItemReference**](IvItemReference.md) |  |  |
 | **bill_customer** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **product** | [**IvItemReference**](IvItemReference.md) |  | [optional] |
 | **quantity** | **Float** |  | [optional] |
 | **less_included** | **Float** |  | [optional] |
 | **unit_price** | **Float** |  | [optional] |
@@ -43,9 +43,9 @@
 require 'connect_wise'
 
 instance = ConnectWise::Addition.new(
+  product: null,
   bill_customer: null,
   id: null,
-  product: null,
   quantity: null,
   less_included: null,
   unit_price: null,

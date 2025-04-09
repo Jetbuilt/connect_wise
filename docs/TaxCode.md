@@ -86,13 +86,13 @@
 | **level_six_apply_single_unit_flag** | **Boolean** |  | [optional] |
 | **level_six_apply_single_unit_min** | **Float** |  | [optional] |
 | **level_six_apply_single_unit_max** | **Float** |  | [optional] |
-| **work_role_ids** | **Array&lt;Integer&gt;** | Array of work role exemptions for the tax code | [optional] |
+| **work_role_ids** | **Array&lt;Integer&gt;** | Array of work role exemptions for the tax code. | [optional] |
 | **add_all_work_roles** | **Boolean** |  | [optional] |
 | **remove_all_work_roles** | **Boolean** |  | [optional] |
-| **expense_type_ids** | **Array&lt;Integer&gt;** | Array of expense type exemptions for the tax code | [optional] |
+| **expense_type_ids** | **Array&lt;Integer&gt;** | Array of expense type exemptions for the tax code. | [optional] |
 | **add_all_expense_types** | **Boolean** |  | [optional] |
 | **remove_all_expense_types** | **Boolean** |  | [optional] |
-| **product_type_ids** | **Array&lt;Integer&gt;** | Array of product type exemptions for the tax code | [optional] |
+| **product_type_ids** | **Array&lt;Integer&gt;** | Array of product type exemptions for the tax code. | [optional] |
 | **add_all_product_types** | **Boolean** |  | [optional] |
 | **remove_all_product_types** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |

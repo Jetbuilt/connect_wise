@@ -5,6 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 100; |  |
+| **assign_to** | [**MemberReference**](MemberReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **type** | [**ActivityTypeReference**](ActivityTypeReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
@@ -20,7 +21,6 @@
 | **date_start** | **Time** |  | [optional] |
 | **date_end** | **Time** |  | [optional] |
 | **assigned_by** | [**MemberReference**](MemberReference.md) |  | [optional] |
-| **assign_to** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **schedule_status** | [**ScheduleStatusReference**](ScheduleStatusReference.md) |  | [optional] |
 | **reminder** | [**ReminderReference**](ReminderReference.md) |  | [optional] |
 | **where** | [**ServiceLocationReference**](ServiceLocationReference.md) |  | [optional] |
@@ -37,6 +37,7 @@ require 'connect_wise'
 
 instance = ConnectWise::Activity.new(
   name: null,
+  assign_to: null,
   id: null,
   type: null,
   company: null,
@@ -52,7 +53,6 @@ instance = ConnectWise::Activity.new(
   date_start: null,
   date_end: null,
   assigned_by: null,
-  assign_to: null,
   schedule_status: null,
   reminder: null,
   where: null,

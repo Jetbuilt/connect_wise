@@ -4,20 +4,26 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **catalog_item** | [**CatalogItemReference**](CatalogItemReference.md) |  |  |
 | **billable_option** | **String** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **catalog_item** | [**CatalogItemReference**](CatalogItemReference.md) |  | [optional] |
 | **description** | **String** |  Max length: 2000; | [optional] |
 | **sequence_number** | **Float** |  | [optional] |
 | **quantity** | **Float** |  | [optional] |
+| **unit_of_measure** | [**UnitOfMeasureReference**](UnitOfMeasureReference.md) |  | [optional] |
 | **price** | **Float** |  | [optional] |
 | **cost** | **Float** |  | [optional] |
+| **ext_price** | **Float** |  | [optional] |
+| **ext_cost** | **Float** |  | [optional] |
 | **discount** | **Float** |  | [optional] |
+| **margin** | **Float** |  | [optional] |
 | **agreement_amount** | **Float** |  | [optional] |
 | **price_method** | **String** |  | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
 | **location_id** | **Integer** |  Required On Updates; | [optional] |
+| **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **business_unit_id** | **Integer** |  Required On Updates; | [optional] |
+| **business_unit** | [**BillingUnitReference**](BillingUnitReference.md) |  | [optional] |
 | **vendor** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **vendor_sku** | **String** |  Max length: 50; | [optional] |
 | **taxable_flag** | **Boolean** |  | [optional] |
@@ -42,7 +48,9 @@
 | **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] |
 | **invoice** | [**InvoiceReference**](InvoiceReference.md) |  | [optional] |
 | **warehouse_id** | **Integer** |  | [optional] |
+| **warehouse_id_object** | [**WarehouseReference**](WarehouseReference.md) |  | [optional] |
 | **warehouse_bin_id** | **Integer** |  | [optional] |
+| **warehouse_bin_id_object** | [**WarehouseBinReference**](WarehouseBinReference.md) |  | [optional] |
 | **calculated_price_flag** | **Boolean** |  | [optional] |
 | **calculated_cost_flag** | **Boolean** |  | [optional] |
 | **forecast_detail_id** | **Integer** |  | [optional] |
@@ -51,9 +59,11 @@
 | **warehouse** | **String** |  | [optional] |
 | **warehouse_bin** | **String** |  | [optional] |
 | **purchase_date** | **Time** |  | [optional] |
+| **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **integration_x_ref** | **String** |  | [optional] |
 | **list_price** | **Float** |  | [optional] |
 | **serial_number_ids** | **Array&lt;Integer&gt;** |  | [optional] |
+| **serial_numbers** | **Array&lt;String&gt;** |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **forecast_status** | [**OpportunityStatusReference**](OpportunityStatusReference.md) |  | [optional] |
 | **product_class** | **String** |  | [optional] |
@@ -65,8 +75,10 @@
 | **calculated_cost** | **Float** |  | [optional] |
 | **invoice_grouping** | [**InvoiceGroupingReference**](InvoiceGroupingReference.md) |  | [optional] |
 | **po_approved_flag** | **Boolean** |  | [optional] |
+| **uom** | **String** |  | [optional] |
 | **add_components_flag** | **Boolean** |  | [optional] |
 | **ignore_pricing_schedules_flag** | **Boolean** |  | [optional] |
+| **asio_subscriptions_id** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **bypass_forecast_update** | **Boolean** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
@@ -77,20 +89,26 @@
 require 'connect_wise'
 
 instance = ConnectWise::ProductItem.new(
+  catalog_item: null,
   billable_option: null,
   id: null,
-  catalog_item: null,
   description: null,
   sequence_number: null,
   quantity: null,
+  unit_of_measure: null,
   price: null,
   cost: null,
+  ext_price: null,
+  ext_cost: null,
   discount: null,
+  margin: null,
   agreement_amount: null,
   price_method: null,
   agreement: null,
   location_id: null,
+  location: null,
   business_unit_id: null,
+  business_unit: null,
   vendor: null,
   vendor_sku: null,
   taxable_flag: null,
@@ -115,7 +133,9 @@ instance = ConnectWise::ProductItem.new(
   opportunity: null,
   invoice: null,
   warehouse_id: null,
+  warehouse_id_object: null,
   warehouse_bin_id: null,
+  warehouse_bin_id_object: null,
   calculated_price_flag: null,
   calculated_cost_flag: null,
   forecast_detail_id: null,
@@ -124,9 +144,11 @@ instance = ConnectWise::ProductItem.new(
   warehouse: null,
   warehouse_bin: null,
   purchase_date: null,
+  tax_code: null,
   integration_x_ref: null,
   list_price: null,
   serial_number_ids: null,
+  serial_numbers: null,
   company: null,
   forecast_status: null,
   product_class: null,
@@ -138,8 +160,10 @@ instance = ConnectWise::ProductItem.new(
   calculated_cost: null,
   invoice_grouping: null,
   po_approved_flag: null,
+  uom: null,
   add_components_flag: null,
   ignore_pricing_schedules_flag: null,
+  asio_subscriptions_id: null,
   _info: null,
   bypass_forecast_update: null,
   custom_fields: null

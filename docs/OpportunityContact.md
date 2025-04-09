@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **contact** | [**ContactReference**](ContactReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **role** | [**OpportunitySalesRoleReference**](OpportunitySalesRoleReference.md) |  | [optional] |
 | **notes** | **String** |  | [optional] |
@@ -21,8 +21,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::OpportunityContact.new(
-  id: null,
   contact: null,
+  id: null,
   company: null,
   role: null,
   notes: null,

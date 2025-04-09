@@ -14,6 +14,7 @@
 | **country** | [**CountryReference**](CountryReference.md) |  | [optional] |
 | **address_format** | **String** |  | [optional] |
 | **phone_number** | **String** |  Max length: 30; | [optional] |
+| **phone_number_ext** | **String** |  Max length: 30; | [optional] |
 | **fax_number** | **String** |  Max length: 30; | [optional] |
 | **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **entity_type** | [**EntityTypeReference**](EntityTypeReference.md) |  | [optional] |
@@ -29,6 +30,7 @@
 | **time_zone** | [**TimeZoneSetupReference**](TimeZoneSetupReference.md) |  | [optional] |
 | **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
+| **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
 ## Example
 
@@ -46,6 +48,7 @@ instance = ConnectWise::CompanySite.new(
   country: null,
   address_format: null,
   phone_number: null,
+  phone_number_ext: null,
   fax_number: null,
   tax_code: null,
   entity_type: null,
@@ -60,7 +63,8 @@ instance = ConnectWise::CompanySite.new(
   calendar: null,
   time_zone: null,
   company: null,
-  _info: null
+  _info: null,
+  custom_fields: null
 )
 ```
 

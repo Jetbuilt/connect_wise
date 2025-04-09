@@ -5,10 +5,10 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **priority** | **Integer** |  |  |
+| **parsing_variable** | [**EmailConnectorParsingVariableReference**](EmailConnectorParsingVariableReference.md) |  |  |
 | **search_term** | **String** |  Max length: 250; |  |
 | **id** | **Integer** |  | [optional] |
 | **parsing_style** | [**EmailConnectorParsingStyleReference**](EmailConnectorParsingStyleReference.md) |  | [optional] |
-| **parsing_variable** | [**EmailConnectorParsingVariableReference**](EmailConnectorParsingVariableReference.md) |  | [optional] |
 | **service_priority** | [**PriorityReference**](PriorityReference.md) |  | [optional] |
 | **service_status** | [**ServiceStatusReference**](ServiceStatusReference.md) |  | [optional] |
 | **service_type** | [**ServiceTypeReference**](ServiceTypeReference.md) |  | [optional] |
@@ -24,10 +24,10 @@ require 'connect_wise'
 
 instance = ConnectWise::EmailConnectorParsingRule.new(
   priority: null,
+  parsing_variable: null,
   search_term: null,
   id: null,
   parsing_style: null,
-  parsing_variable: null,
   service_priority: null,
   service_status: null,
   service_type: null,

@@ -11,6 +11,9 @@
 | **has_operator_flag** | **Boolean** |  | [optional] |
 | **custom_field** | [**UserDefinedFieldReference**](UserDefinedFieldReference.md) |  | [optional] |
 | **expected_type** | **String** |  | [optional] |
+| **connect_wise_id** | **String** |  | [optional] |
+| **parent_id** | **Integer** |  | [optional] |
+| **parent_connect_wise_id** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -26,6 +29,9 @@ instance = ConnectWise::WorkflowTrigger.new(
   has_operator_flag: null,
   custom_field: null,
   expected_type: null,
+  connect_wise_id: null,
+  parent_id: null,
+  parent_connect_wise_id: null,
   _info: null
 )
 ```

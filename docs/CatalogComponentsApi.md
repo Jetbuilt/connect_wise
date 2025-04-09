@@ -1,6 +1,6 @@
 # ConnectWise::CatalogComponentsApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -157,7 +157,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_catalog_by_parent_id_components_by_id
@@ -241,7 +241,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_procurement_catalog_by_parent_id_components_count
@@ -323,7 +323,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_procurement_catalog_by_parent_id_components_by_id
@@ -391,7 +391,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_procurement_catalog_by_parent_id_components
@@ -409,7 +409,7 @@ require 'connect_wise'
 api_instance = ConnectWise::CatalogComponentsApi.new
 parent_id = 56 # Integer | catalogId
 client_id = 'client_id_example' # String | 
-catalog_component = ConnectWise::CatalogComponent.new({quantity: 3.56}) # CatalogComponent | catalogComponent
+catalog_component = ConnectWise::CatalogComponent.new({quantity: 3.56, catalog_item: ConnectWise::CatalogItemReference.new}) # CatalogComponent | catalogComponent
 
 begin
   # Post CatalogComponent
@@ -457,7 +457,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_procurement_catalog_by_parent_id_components_by_id
@@ -476,7 +476,7 @@ api_instance = ConnectWise::CatalogComponentsApi.new
 id = 56 # Integer | componentId
 parent_id = 56 # Integer | catalogId
 client_id = 'client_id_example' # String | 
-catalog_component = ConnectWise::CatalogComponent.new({quantity: 3.56}) # CatalogComponent | catalogComponent
+catalog_component = ConnectWise::CatalogComponent.new({quantity: 3.56, catalog_item: ConnectWise::CatalogItemReference.new}) # CatalogComponent | catalogComponent
 
 begin
   # Put CatalogComponent
@@ -525,5 +525,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

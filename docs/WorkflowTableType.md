@@ -7,6 +7,7 @@
 | **id** | **Integer** |  | [optional] |
 | **identifier** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
+| **connect_wise_id** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -18,6 +19,7 @@ instance = ConnectWise::WorkflowTableType.new(
   id: null,
   identifier: null,
   name: null,
+  connect_wise_id: null,
   _info: null
 )
 ```

@@ -7,6 +7,7 @@
 | **id** | **Integer** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
+| **charge_firm_flag** | **Boolean** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -18,6 +19,7 @@ instance = ConnectWise::AgreementReference.new(
   id: null,
   name: null,
   type: null,
+  charge_firm_flag: null,
   _info: null
 )
 ```

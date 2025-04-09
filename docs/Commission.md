@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **member** | [**MemberReference**](MemberReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **member** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **commission_percent** | **Float** |  | [optional] |
 | **date_start** | **Time** |  | [optional] |
 | **date_end** | **Time** |  | [optional] |
@@ -41,8 +41,8 @@
 require 'connect_wise'
 
 instance = ConnectWise::Commission.new(
-  id: null,
   member: null,
+  id: null,
   commission_percent: null,
   date_start: null,
   date_end: null,

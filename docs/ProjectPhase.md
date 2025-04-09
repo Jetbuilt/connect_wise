@@ -11,6 +11,7 @@
 | **status** | [**PhaseStatusReference**](PhaseStatusReference.md) |  | [optional] |
 | **agreement** | [**AgreementReference**](AgreementReference.md) |  | [optional] |
 | **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] |
+| **department** | [**BillingUnitReference**](BillingUnitReference.md) |  | [optional] |
 | **parent_phase** | [**ProjectPhaseReference**](ProjectPhaseReference.md) |  | [optional] |
 | **wbs_code** | **String** |  Max length: 50; | [optional] |
 | **bill_time** | **String** |  Required On Updates; | [optional] |
@@ -20,7 +21,7 @@
 | **notes** | **String** |  | [optional] |
 | **deadline_date** | **Time** |  | [optional] |
 | **bill_separately_flag** | **Boolean** |  | [optional] |
-| **billing_method** | **String** | billingMethod is required if the phase billSeparatelyFlag is true | [optional] |
+| **billing_method** | **String** | billingMethod is required if the phase billSeparatelyFlag is true. | [optional] |
 | **scheduled_hours** | **Float** |  | [optional] |
 | **scheduled_start** | **String** |  | [optional] |
 | **scheduled_end** | **String** |  | [optional] |
@@ -28,12 +29,14 @@
 | **actual_start** | **String** |  | [optional] |
 | **actual_end** | **String** |  | [optional] |
 | **budget_hours** | **Float** |  | [optional] |
+| **start_date** | **String** |  | [optional] |
+| **end_date** | **String** |  | [optional] |
 | **location_id** | **Integer** |  | [optional] |
 | **business_unit_id** | **Integer** |  | [optional] |
 | **hourly_rate** | **Float** |  | [optional] |
 | **billing_start_date** | **Time** |  | [optional] |
-| **bill_phase_closed_flag** | **Boolean** | This phase can only be billed after it has been closed | [optional] |
-| **bill_project_closed_flag** | **Boolean** | This phase can only be billed after the project has been closed | [optional] |
+| **bill_phase_closed_flag** | **Boolean** | This phase can only be billed after it has been closed. | [optional] |
+| **bill_project_closed_flag** | **Boolean** | This phase can only be billed after the project has been closed. | [optional] |
 | **downpayment** | **Float** |  | [optional] |
 | **po_number** | **String** |  Max length: 25; | [optional] |
 | **po_amount** | **Float** |  | [optional] |
@@ -50,6 +53,8 @@
 | **ship_to_company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **ship_to_contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **ship_to_site** | [**SiteReference**](SiteReference.md) |  | [optional] |
+| **billing_terms** | [**BillingTermsReference**](BillingTermsReference.md) |  | [optional] |
+| **tax_code** | [**TaxCodeReference**](TaxCodeReference.md) |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 | **custom_fields** | [**Array&lt;CustomFieldValue&gt;**](CustomFieldValue.md) |  | [optional] |
 
@@ -66,6 +71,7 @@ instance = ConnectWise::ProjectPhase.new(
   status: null,
   agreement: null,
   opportunity: null,
+  department: null,
   parent_phase: null,
   wbs_code: null,
   bill_time: null,
@@ -83,6 +89,8 @@ instance = ConnectWise::ProjectPhase.new(
   actual_start: null,
   actual_end: null,
   budget_hours: null,
+  start_date: null,
+  end_date: null,
   location_id: null,
   business_unit_id: null,
   hourly_rate: null,
@@ -105,6 +113,8 @@ instance = ConnectWise::ProjectPhase.new(
   ship_to_company: null,
   ship_to_contact: null,
   ship_to_site: null,
+  billing_terms: null,
+  tax_code: null,
   _info: null,
   custom_fields: null
 )

@@ -5,6 +5,9 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  Max length: 100; |  |
+| **primary_sales_rep** | [**MemberReference**](MemberReference.md) |  |  |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
+| **contact** | [**ContactReference**](ContactReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
 | **expected_close_date** | **Time** |  Required On Updates; | [optional] |
 | **type** | [**OpportunityTypeReference**](OpportunityTypeReference.md) |  | [optional] |
@@ -16,12 +19,9 @@
 | **source** | **String** |  Max length: 50; | [optional] |
 | **rating** | [**OpportunityRatingReference**](OpportunityRatingReference.md) |  | [optional] |
 | **campaign** | [**CampaignReference**](CampaignReference.md) |  | [optional] |
-| **primary_sales_rep** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **secondary_sales_rep** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **location_id** | **Integer** |  Required On Updates; | [optional] |
 | **business_unit_id** | **Integer** |  Required On Updates; | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
-| **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
 | **customer_po** | **String** |  Max length: 25; | [optional] |
 | **pipeline_change_date** | **Time** |  | [optional] |
@@ -50,6 +50,9 @@ require 'connect_wise'
 
 instance = ConnectWise::Opportunity.new(
   name: null,
+  primary_sales_rep: null,
+  company: null,
+  contact: null,
   id: null,
   expected_close_date: null,
   type: null,
@@ -61,12 +64,9 @@ instance = ConnectWise::Opportunity.new(
   source: null,
   rating: null,
   campaign: null,
-  primary_sales_rep: null,
   secondary_sales_rep: null,
   location_id: null,
   business_unit_id: null,
-  company: null,
-  contact: null,
   site: null,
   customer_po: null,
   pipeline_change_date: null,

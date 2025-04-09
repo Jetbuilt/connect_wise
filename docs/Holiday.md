@@ -7,7 +7,7 @@
 | **name** | **String** |  Max length: 50; |  |
 | **date** | **Date** |  |  |
 | **id** | **Integer** |  | [optional] |
-| **all_day_flag** | **Boolean** | Can be set to false to set a holiday for specific hours (Defaults to True) | [optional] |
+| **all_day_flag** | **Boolean** | Can be set to false to set a holiday for specific hours (Defaults to True). | [optional] |
 | **time_start** | **String** |  | [optional] |
 | **time_end** | **String** |  | [optional] |
 | **holiday_list** | [**HolidayListReference**](HolidayListReference.md) |  | [optional] |

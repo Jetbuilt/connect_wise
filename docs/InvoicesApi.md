@@ -1,6 +1,6 @@
 # ConnectWise::InvoicesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -154,7 +154,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_invoices_by_id
@@ -236,12 +236,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_invoices_by_id_pdf
 
-> get_finance_invoices_by_id_pdf(id, client_id, opts)
+> File get_finance_invoices_by_id_pdf(id, client_id, opts)
 
 Get Invoice
 
@@ -267,7 +267,8 @@ opts = {
 
 begin
   # Get Invoice
-  api_instance.get_finance_invoices_by_id_pdf(id, client_id, opts)
+  result = api_instance.get_finance_invoices_by_id_pdf(id, client_id, opts)
+  p result
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicesApi->get_finance_invoices_by_id_pdf: #{e}"
 end
@@ -275,9 +276,9 @@ end
 
 #### Using the get_finance_invoices_by_id_pdf_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> get_finance_invoices_by_id_pdf_with_http_info(id, client_id, opts)
+> <Array(File, Integer, Hash)> get_finance_invoices_by_id_pdf_with_http_info(id, client_id, opts)
 
 ```ruby
 begin
@@ -285,7 +286,7 @@ begin
   data, status_code, headers = api_instance.get_finance_invoices_by_id_pdf_with_http_info(id, client_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => File
 rescue ConnectWise::ApiError => e
   puts "Error when calling InvoicesApi->get_finance_invoices_by_id_pdf_with_http_info: #{e}"
 end
@@ -308,7 +309,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+**File**
 
 ### Authorization
 
@@ -317,7 +318,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/pdf
 
 
 ## get_finance_invoices_count
@@ -397,7 +398,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_invoices_by_id
@@ -463,7 +464,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_invoices
@@ -480,7 +481,7 @@ require 'connect_wise'
 
 api_instance = ConnectWise::InvoicesApi.new
 client_id = 'client_id_example' # String | 
-invoice = ConnectWise::Invoice.new({type: 'Agreement'}) # Invoice | invoice
+invoice = ConnectWise::Invoice.new({type: 'Agreement', company: ConnectWise::CompanyReference.new}) # Invoice | invoice
 
 begin
   # Post Invoice
@@ -527,7 +528,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_invoices_by_id
@@ -545,7 +546,7 @@ require 'connect_wise'
 api_instance = ConnectWise::InvoicesApi.new
 id = 56 # Integer | invoiceId
 client_id = 'client_id_example' # String | 
-invoice = ConnectWise::Invoice.new({type: 'Agreement'}) # Invoice | invoice
+invoice = ConnectWise::Invoice.new({type: 'Agreement', company: ConnectWise::CompanyReference.new}) # Invoice | invoice
 
 begin
   # Put Invoice
@@ -593,5 +594,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

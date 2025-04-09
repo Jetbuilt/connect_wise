@@ -4,14 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **company** | [**CompanyReference**](CompanyReference.md) |  |  |
+| **status** | [**OrderStatusReference**](OrderStatusReference.md) |  |  |
+| **sales_rep** | [**MemberReference**](MemberReference.md) |  |  |
 | **id** | **Integer** |  | [optional] |
-| **company** | [**CompanyReference**](CompanyReference.md) |  | [optional] |
 | **contact** | [**ContactReference**](ContactReference.md) |  | [optional] |
 | **phone** | **String** |  | [optional] |
 | **phone_ext** | **String** |  | [optional] |
 | **email** | **String** |  | [optional] |
 | **site** | [**SiteReference**](SiteReference.md) |  | [optional] |
-| **status** | [**OrderStatusReference**](OrderStatusReference.md) |  | [optional] |
 | **opportunity** | [**OpportunityReference**](OpportunityReference.md) |  | [optional] |
 | **order_date** | **Time** |  | [optional] |
 | **due_date** | **Time** |  | [optional] |
@@ -20,7 +21,6 @@
 | **po_number** | **String** |  Max length: 50; | [optional] |
 | **location** | [**SystemLocationReference**](SystemLocationReference.md) |  | [optional] |
 | **department** | [**SystemDepartmentReference**](SystemDepartmentReference.md) |  | [optional] |
-| **sales_rep** | [**MemberReference**](MemberReference.md) |  | [optional] |
 | **notes** | **String** |  | [optional] |
 | **bill_closed_flag** | **Boolean** |  | [optional] |
 | **bill_shipped_flag** | **Boolean** |  | [optional] |
@@ -52,14 +52,15 @@
 require 'connect_wise'
 
 instance = ConnectWise::Order.new(
-  id: null,
   company: null,
+  status: null,
+  sales_rep: null,
+  id: null,
   contact: null,
   phone: null,
   phone_ext: null,
   email: null,
   site: null,
-  status: null,
   opportunity: null,
   order_date: null,
   due_date: null,
@@ -68,7 +69,6 @@ instance = ConnectWise::Order.new(
   po_number: null,
   location: null,
   department: null,
-  sales_rep: null,
   notes: null,
   bill_closed_flag: null,
   bill_shipped_flag: null,

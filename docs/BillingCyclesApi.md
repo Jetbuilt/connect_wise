@@ -1,6 +1,6 @@
 # ConnectWise::BillingCyclesApi
 
-All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/apis/3.0*
+All URIs are relative to *http://na.myconnectwise.net/v4_6_release/apis/3.0*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -11,6 +11,7 @@ All URIs are relative to *http://cloud.na.myconnectwise.net/v4_6_development/api
 | [**get_finance_billing_cycles_by_id_usages_list**](BillingCyclesApi.md#get_finance_billing_cycles_by_id_usages_list) | **GET** /finance/billingCycles/{id}/usages/list | Get List of Usage |
 | [**get_finance_billing_cycles_count**](BillingCyclesApi.md#get_finance_billing_cycles_count) | **GET** /finance/billingCycles/count | Get Count of BillingCycle |
 | [**patch_finance_billing_cycles_by_id**](BillingCyclesApi.md#patch_finance_billing_cycles_by_id) | **PATCH** /finance/billingCycles/{id} | Patch BillingCycle |
+| [**patch_procurement_catalog_by_parent_id_vendors_by_id_by_id**](BillingCyclesApi.md#patch_procurement_catalog_by_parent_id_vendors_by_id_by_id) | **PATCH** /procurement/catalog/{parentId}/vendors/{id}{id} | Patch BillingCycle |
 | [**post_finance_billing_cycles**](BillingCyclesApi.md#post_finance_billing_cycles) | **POST** /finance/billingCycles | Post BillingCycle |
 | [**put_finance_billing_cycles_by_id**](BillingCyclesApi.md#put_finance_billing_cycles_by_id) | **PUT** /finance/billingCycles/{id} | Put BillingCycle |
 
@@ -155,7 +156,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_cycles_by_id
@@ -237,7 +238,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_cycles_by_id_usages
@@ -319,7 +320,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_cycles_by_id_usages_list
@@ -401,7 +402,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## get_finance_billing_cycles_count
@@ -481,7 +482,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## patch_finance_billing_cycles_by_id
@@ -547,7 +548,75 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
+
+
+## patch_procurement_catalog_by_parent_id_vendors_by_id_by_id
+
+> <BillingCycle> patch_procurement_catalog_by_parent_id_vendors_by_id_by_id(id, parent_id, client_id, patch_operation)
+
+Patch BillingCycle
+
+### Examples
+
+```ruby
+require 'time'
+require 'connect_wise'
+
+api_instance = ConnectWise::BillingCyclesApi.new
+id = 56 # Integer | vendorId
+parent_id = 56 # Integer | catalogId
+client_id = 'client_id_example' # String | 
+patch_operation = [ConnectWise::PatchOperation.new] # Array<PatchOperation> | List of PatchOperation
+
+begin
+  # Patch BillingCycle
+  result = api_instance.patch_procurement_catalog_by_parent_id_vendors_by_id_by_id(id, parent_id, client_id, patch_operation)
+  p result
+rescue ConnectWise::ApiError => e
+  puts "Error when calling BillingCyclesApi->patch_procurement_catalog_by_parent_id_vendors_by_id_by_id: #{e}"
+end
+```
+
+#### Using the patch_procurement_catalog_by_parent_id_vendors_by_id_by_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<BillingCycle>, Integer, Hash)> patch_procurement_catalog_by_parent_id_vendors_by_id_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+
+```ruby
+begin
+  # Patch BillingCycle
+  data, status_code, headers = api_instance.patch_procurement_catalog_by_parent_id_vendors_by_id_by_id_with_http_info(id, parent_id, client_id, patch_operation)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <BillingCycle>
+rescue ConnectWise::ApiError => e
+  puts "Error when calling BillingCyclesApi->patch_procurement_catalog_by_parent_id_vendors_by_id_by_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | **Integer** | vendorId |  |
+| **parent_id** | **Integer** | catalogId |  |
+| **client_id** | **String** |  |  |
+| **patch_operation** | [**Array&lt;PatchOperation&gt;**](PatchOperation.md) | List of PatchOperation |  |
+
+### Return type
+
+[**BillingCycle**](BillingCycle.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## post_finance_billing_cycles
@@ -611,7 +680,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 
 
 ## put_finance_billing_cycles_by_id
@@ -677,5 +746,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/vnd.connectwise.com+json; version=2022.1
+- **Accept**: application/vnd.connectwise.com+json; version=2025.1
 

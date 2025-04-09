@@ -14,6 +14,12 @@
 | **closed_loop_internal_analysis_flag** | **Boolean** |  | [optional] |
 | **closed_loop_resolution_flag** | **Boolean** |  | [optional] |
 | **closed_loop_all_flag** | **Boolean** |  | [optional] |
+| **override_billing_setup_flag** | **Boolean** |  | [optional] |
+| **bill_tickets_after_closed_flag** | **Boolean** |  | [optional] |
+| **bill_unapproved_time_expense_flag** | **Boolean** |  | [optional] |
+| **bill_time** | **String** |  | [optional] |
+| **bill_expense** | **String** |  | [optional] |
+| **bill_product** | **String** |  | [optional] |
 | **problem_sort** | **String** |  | [optional] |
 | **internal_analysis_sort** | **String** |  | [optional] |
 | **resolution_sort** | **String** |  | [optional] |
@@ -36,6 +42,12 @@ instance = ConnectWise::BoardInfo.new(
   closed_loop_internal_analysis_flag: null,
   closed_loop_resolution_flag: null,
   closed_loop_all_flag: null,
+  override_billing_setup_flag: null,
+  bill_tickets_after_closed_flag: null,
+  bill_unapproved_time_expense_flag: null,
+  bill_time: null,
+  bill_expense: null,
+  bill_product: null,
   problem_sort: null,
   internal_analysis_sort: null,
   resolution_sort: null,

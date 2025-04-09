@@ -18,6 +18,7 @@
 | **customer_description** | **String** |  | [optional] |
 | **manufacturer_part_number** | **String** |  | [optional] |
 | **vendor_sku** | **String** |  | [optional] |
+| **billable_option** | **String** |  | [optional] |
 | **_info** | **Hash&lt;String, String&gt;** |  | [optional] |
 
 ## Example
@@ -40,6 +41,7 @@ instance = ConnectWise::CatalogItemInfo.new(
   customer_description: null,
   manufacturer_part_number: null,
   vendor_sku: null,
+  billable_option: null,
   _info: null
 )
 ```
